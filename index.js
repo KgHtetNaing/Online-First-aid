@@ -137,8 +137,7 @@ app.post('/webhook', (req, res) => {
                 }).fail(error => {
                     console.log(error)
                 })
-            } else {
-                if (userInput == 'DEVELOPER_DEFINED_PAYLOAD' || userButton == 'DEVELOPER_DEFINED_PAYLOAD') {
+            } else if (userInput == 'DEVELOPER_DEFINED_PAYLOAD' || userButton == 'DEVELOPER_DEFINED_PAYLOAD') {
                      let welcomeMessage = {
                     "recipient": {
                         "id": webhook_event.sender.id
