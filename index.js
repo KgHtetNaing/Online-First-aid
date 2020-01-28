@@ -83,22 +83,48 @@ app.post('/webhook', (req, res) => {
                 var userButton = webhook_event.postback.payload
             }
             if (userInput == 'Hi' || userButton == 'Hi') {
-                let welcomeMessage = {
+                //let welcomeMessage = {
+                //    "recipient": {
+                //        "id": webhook_event.sender.id
+                //    },
+                //    "message": {
+                //        "text": "Hello, Welcome to Online First Aid!"
+                //    }
+                //}
+                let buttonMesage = {
                     "recipient": {
-                        "id": webhook_event.sender.id
+                        "id": "<PSID>"
                     },
                     "message": {
-                        "text": "Hello, Welcome to Online First Aid!"
+                        "attachment": {
+                            "type": "template",
+                            "payload": {
+                                "template_type": "button",
+                                "text": text,
+                                "buttons": [
+                                    {
+                                    "type": "postback",
+                                    "title": "Booking",
+                                     "payload": "booking"
+                                    }
+                                ]
+                                
+                                 }
+                        }
                     }
                 }
+
+                
+
                 requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`,
-                    welcomeMessage
+                buttonMesage
                 ).then(response => {
                     console.log(response)
                 }).fail(error => {
                     console.log(error)
                 })
             }
+
         });
 
         // Returns a '200 OK' response to all requests
