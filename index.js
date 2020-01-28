@@ -109,3 +109,14 @@ app.post('/webhook', (req, res) => {
     }
 
 });
+
+//button
+"payload": {
+    "template_type": "button",
+        "text": "Hi",
+            "buttons": [
+                < 1 >,
+    < 2 >,
+                ...
+                  ]
+}
