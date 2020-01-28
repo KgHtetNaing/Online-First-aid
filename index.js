@@ -128,15 +128,32 @@ app.post('/webhook', (req, res) => {
                     }
                 };
 
-                
+
 
                 requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`,
-                buttonMesage
+                    buttonMesage
                 ).then(response => {
                     console.log(response)
                 }).fail(error => {
                     console.log(error)
                 })
+            } else {
+                if (userInput == 'DEVELOPER_DEFINED_PAYLOAD' || userButton == 'DEVELOPER_DEFINED_PAYLOAD') {
+                     let welcomeMessage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message": {
+                        "text": "Thank you!"
+                    }
+                }
+                    requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`,
+                        welcomeMessage
+                    ).then(response => {
+                        console.log(response)
+                    }).fail(error => {
+                        console.log(error)
+                    })
             }
 
         });
