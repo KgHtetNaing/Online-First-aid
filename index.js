@@ -100,16 +100,7 @@ app.post('/webhook', (req, res) => {
                 })
             }
         });
-        //button
-        "payload": {
-            "template_type": "button",
-                "text": "Hi",
-                    "buttons": [
-                < 1 >,
-    < 2 >,
-                        ...
-                  ]
-        }
+
         // Returns a '200 OK' response to all requests
         res.status(200).send('EVENT_RECEIVED');
     } else {
