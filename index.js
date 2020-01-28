@@ -93,7 +93,7 @@ app.post('/webhook', (req, res) => {
                 //}
                 let buttonMesage = {
                     "recipient": {
-                        "id": "<PSID>"
+                        "id": webhook_event.sender.id
                     },
                     "message": {
                         "attachment": {
