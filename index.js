@@ -104,7 +104,7 @@ app.post('/webhook', (req, res) => {
                                     {
                                         "title": "Welcome!",
                                         "image_url": "https://petersfancybrownhats.com/company_image.png",
-                                        "subtitle": "Online first aid in your service!!",
+                                        "subtitle": "We have the right hat for everyone.",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -114,7 +114,7 @@ app.post('/webhook', (req, res) => {
                                             {
                                                 "type": "web_url",
                                                 "url": "https://petersfancybrownhats.com",
-                                                "title": "Hi"
+                                                "title": "View Website"
                                             }, {
                                                 "type": "postback",
                                                 "title": "Start Chatting",
@@ -168,7 +168,7 @@ app.post('/webhook', (req, res) => {
                     })
             }
 
-        };
+        });
 
         // Returns a '200 OK' response to all requests
         res.status(200).send('EVENT_RECEIVED');
@@ -177,4 +177,4 @@ app.post('/webhook', (req, res) => {
         res.sendStatus(404);
     }
 
-};
+});
