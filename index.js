@@ -137,8 +137,21 @@ app.post('/webhook', (req, res) => {
                 }).fail(error => {
                     console.log(error)
                 })
+<<<<<<< HEAD
             } else if (userInput == 'DEVELOPER_DEFINED_PAYLOAD' || userButton == 'DEVELOPER_DEFINED_PAYLOAD') {
                     
+=======
+            } else {
+                if (userInput == 'DEVELOPER_DEFINED_PAYLOAD' || userButton == 'DEVELOPER_DEFINED_PAYLOAD') {
+                     let welcomeMessage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message": {
+                        "text": "Thank you!"
+                    }
+                }
+>>>>>>> parent of a6d77f7... Update index.js
                     requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`,
                         {
                             "recipient": {
