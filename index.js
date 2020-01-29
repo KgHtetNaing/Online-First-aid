@@ -91,6 +91,8 @@ app.post('/webhook', (req, res) => {
                 //        "text": "Hello, Welcome to Online First Aid!"
                 //    }
                 //}
+
+                //first button
                 let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
@@ -104,7 +106,7 @@ app.post('/webhook', (req, res) => {
                                     {
                                         "title": "Welcome!",
                                         "image_url": "https://petersfancybrownhats.com/company_image.png",
-                                        "subtitle": "We have the right hat for everyone.",
+                                        "subtitle": "Online First-aid in your service.",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -112,13 +114,13 @@ app.post('/webhook', (req, res) => {
                                         },
                                         "buttons": [
                                             {
-                                                "type": "web_url",
-                                                "url": "https://petersfancybrownhats.com",
-                                                "title": "View Website"
+                                                "type": "postback",                                               
+                                                "title": "Injury"
+                                                "payload": "Injury"
                                             }, {
                                                 "type": "postback",
-                                                "title": "Start Chatting",
-                                                "payload": "DEVELOPER_DEFINED_PAYLOAD"
+                                                "title": "Medicine",
+                                                "payload": "medicine"
                                             }
                                         ]
                                     }
@@ -138,11 +140,11 @@ app.post('/webhook', (req, res) => {
                     console.log(error)
                 })
 <<<<<<< HEAD
-            } else if (userInput == 'DEVELOPER_DEFINED_PAYLOAD' || userButton == 'DEVELOPER_DEFINED_PAYLOAD') {
-                    
+            } else if (userInput == 'Injury' || userButton == 'Injury') {
+
 =======
             } else {
-                if (userInput == 'DEVELOPER_DEFINED_PAYLOAD' || userButton == 'DEVELOPER_DEFINED_PAYLOAD') {
+                if (userInput == 'Injury' || userButton == 'Injury') {
                      let welcomeMessage = {
                     "recipient": {
                         "id": webhook_event.sender.id
@@ -152,23 +154,23 @@ app.post('/webhook', (req, res) => {
                     }
                 }
 >>>>>>> parent of a6d77f7... Update index.js
-                    requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`,
-                        {
-                            "recipient": {
-                                "id": webhook_event.sender.id
-                            },
-                            "message": {
-                                "text": "Thank you!"
-                            }
+                requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`,
+                    {
+                        "recipient": {
+                            "id": webhook_event.sender.id
+                        },
+                        "message": {
+                            "text": "Thank you!"
                         }
-                    ).then(response => {
-                        console.log(response)
-                    }).fail(error => {
-                        console.log(error)
-                    })
+                    }
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })
             }
 
-        });
+       });
 
         // Returns a '200 OK' response to all requests
         res.status(200).send('EVENT_RECEIVED');
