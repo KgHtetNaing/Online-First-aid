@@ -20,10 +20,10 @@ app.get('/greeting', (req, res) => {
         "greeting": [
             {
                 "locale": "default",
-                "text": "Hello {{user_first_name}}!You can either choose from the selection or type the available selection"
+                "text": "Hello {{user_first_name}}!"
             }, {
                 "locale": "en_US",
-                "text": "You can either choose from the selection or type the available selection"
+                "text": "You can either choose from the given options or type the available options"
             }
         ]
     }
@@ -406,7 +406,7 @@ app.post('/webhook', (req, res) => {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`These are the steps for stopping the over bleeding.\n1. Apply direct pressure on the cur or wound with a clean cloth or tissue.\n2. If blood still soaks thorugh material, put more cloth without removie the already applied cloth..\n3.If the wound is on the arm or legs, raise it above the heart to slow bleeding.`
+                        "text":`These are the steps for stopping the over bleeding.\n1. Apply direct pressure on the cut or wound with a clean cloth or tissue.\n2. If blood still soaks thorugh material, put more cloth without removing the already applied cloth.\n3.If the wound is on the arm or legs, raise it above the heart to slow bleeding.`
                     }
 
 
@@ -446,8 +446,8 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",                                               
-                                                "title": "Hot water Burnt",
-                                                "payload": "Hot water Burnt"
+                                                "title": "Steam Burn",
+                                                "payload": "Steam Burn"
                                             },
 
                                              
@@ -467,8 +467,8 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",
-                                                "title": "Oil Burnt",
-                                                "payload": "Oil Burnt"
+                                                "title": "Oil Burn",
+                                                "payload": "Oil Burn"
                                             }
                                         ]
                                     },
@@ -485,8 +485,8 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",
-                                                "title": "Poison",
-                                                "payload": "Poison"
+                                                "title": "Electrical Burn",
+                                                "payload": "Electrical Burn"
                                             }
                                         ]
                                     },
@@ -503,8 +503,8 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",
-                                                "title": "Bone Fracture",
-                                                "payload": "Bone Fracture"
+                                                "title": "Chemical Burn",
+                                                "payload": "Chemical Burn"
                                             }
                                         ]
                                     },
