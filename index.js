@@ -357,7 +357,7 @@ app.post('/webhook', (req, res) => {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":"welcome"
+                        "text":"These are the steps for cuuring the nose bleeding. <br>1. Sit Upright and lean forward. 2. Do not pack the nose.3. Use decongestant (eg. breathing steam, placing a wet warm towel) 4. Pinch the part of the nose below the nasal bones for about 10 minutes."
                     }
 
 
