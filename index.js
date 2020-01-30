@@ -20,7 +20,7 @@ requestify.post(`https://graph.facebook.com/v2.6/me/messenger_profile?access_tok
                 "text": "Hello {{user_first_name}}!"
             }, {
                 "locale": "en_US",
-                "text": "Timeless apparel for the masses."
+                "text": "You can either choose from the selection or type the available selection."
             }
         ]
     }
