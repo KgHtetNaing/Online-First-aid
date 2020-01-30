@@ -297,7 +297,7 @@ app.post('/webhook', (req, res) => {
 
 
                                    {
-                                        "title": "Choose your injury type!",
+                                        "title": "Choose your injury!",
                                         "image_url": "https://petersfancybrownhats.com/company_image.png",
                                         "subtitle": "Online First-aid in your service.",
                                         "default_action": {
@@ -315,7 +315,7 @@ app.post('/webhook', (req, res) => {
                                     },
 
                                     {
-                                        "title": "Welcome!",
+                                        "title": "Choose Your injury!",
                                         "image_url": "https://petersfancybrownhats.com/company_image.png",
                                         "subtitle": "Online First-aid in your service.",
                                         "default_action": {
@@ -348,7 +348,18 @@ app.post('/webhook', (req, res) => {
                     console.log(error)
                 })
 
-            }
+            } //Injury end
+
+                else if(userInput == 'Nose Bleeding' || userButton == 'Nose Bleeding')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":"welcome"
+                    }
+            }}
             
 
         }) //end foreach
