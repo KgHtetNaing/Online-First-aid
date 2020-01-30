@@ -82,7 +82,7 @@ app.post('/webhook', (req, res) => {
             if (webhook_event.postback) {
                 var userButton = webhook_event.postback.payload
             }
-            /*
+            
             if (userInput == 'Hi' || userButton == 'Hi') {
                 
                 let buttonMesage = {
@@ -131,7 +131,7 @@ app.post('/webhook', (req, res) => {
                     console.log(error)
                 })
 
-            } */
+            } 
             
 
         }) //end foreach
