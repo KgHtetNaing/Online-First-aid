@@ -9,7 +9,10 @@ const
 
 const pageaccesstoken = 'EAAihIcIsCAgBAGQ1yAr1BXbayDXVGesKXamXMBdEwaMzjkfHT5hZAHZBtUYrc8hjEQiVzFin8eb4NBK9tuOBFub7WAVwXCMl2L5AsqbD1OjG3Dh99IsYeMjZCLiYLcZAFG0fo5CZA6YCODRe1OCLsE21OTRZCXDmGknF9HBdSKSAZDZD'
 
-requestify.post(`https://graph.facebook.com/v2.6/me/messenger_profile?access_token=${pageaccesstoken}`,
+
+
+app.get('/greeting', (req, res) => {
+	requestify.post(`https://graph.facebook.com/v2.6/me/messenger_profile?access_token=${pageaccesstoken}`,
     {
         "get_started": {
             "payload": "Hi"
@@ -29,6 +32,8 @@ requestify.post(`https://graph.facebook.com/v2.6/me/messenger_profile?access_tok
 }).fail(error => {
     console.log(error)
 })
+
+}
 
 // Sets server port and logs message on success
 app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
@@ -367,7 +372,7 @@ app.post('/webhook', (req, res) => {
                     console.log(response)
                 }).fail(error => {
                     console.log(error)
-                })  //nosebleed
+                })  //nosebleed end
             
 
         }
@@ -379,7 +384,29 @@ app.post('/webhook', (req, res) => {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`These are the steps for curing the nose bleeding.\n1. Sit Upright and lean forward.\n2. Do not pack the nose.\n3. Use decongestant (eg. breathing steam, placing a wet warm towel)\n 4. Pinch the part of the nose below the nasal bones for about 10 minutes.`
+                        "text":`These are the steps for curing the bleeding wound.\n1. Gently clean the wound with soap and warm water.\n2. Apply antibiotics and cover the wound with the bandage.\n3.Change the bandage daily.`
+                    }
+
+
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  //nosebleed
+            
+
+        } //bleeding wound end
+
+        else if(userInput == 'Over Bleeding' || userButton == 'Over bleeding')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`These are the steps for stopping the over bleeding.\n1. Apply direct pressure on the cur or wound with a clean cloth or tissue.\n2. If blood still soaks thorugh material, put more cloth without removie the already applied cloth..\n3.If the wound is on the arm or legs, raise it above the heart to slow bleeding.`
                     }
 
 
@@ -393,6 +420,7 @@ app.post('/webhook', (req, res) => {
             
 
         }
+
 
              
 
