@@ -357,7 +357,8 @@ app.post('/webhook', (req, res) => {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":"These are the steps for cuuring the nose bleeding. <br>1. Sit Upright and lean forward. 2. Do not pack the nose.3. Use decongestant (eg. breathing steam, placing a wet warm towel) 4. Pinch the part of the nose below the nasal bones for about 10 minutes."
+                        "text":"These are the steps for curing the nose bleeding. 1. Sit Upright and lean forward. 2. Do not pack the nose.3. Use decongestant (eg. breathing steam, placing a wet warm towel) 4. Pinch the part of the nose below the nasal bones for about 10 minutes."
+                        "text": 1. Sit upring and lean forward.
                     }
 
 
@@ -367,7 +368,26 @@ app.post('/webhook', (req, res) => {
                     console.log(response)
                 }).fail(error => {
                     console.log(error)
-                })
+                })  //nosebleeding end
+
+            else if(userInput == 'Bleeding Wound' || userButton == 'Bleeding Wound')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":"These are the steps for curing the bleeding wound. owel) 4. Pinch the part of the nose below the nasal bones for about 10 minutes."
+                    }
+
+
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  //nosebleeding end
             
 
         }
