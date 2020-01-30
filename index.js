@@ -372,10 +372,10 @@ app.post('/webhook', (req, res) => {
                     console.log(response)
                 }).fail(error => {
                     console.log(error)
-                })  //nosebleed end
+                })  
             
 
-        }
+        } //nosebleed end
 
          else if(userInput == 'Bleeding Wound' || userButton == 'Bleeding Wound')
              {
@@ -394,7 +394,7 @@ app.post('/webhook', (req, res) => {
                     console.log(response)
                 }).fail(error => {
                     console.log(error)
-                })  //nosebleed
+                })  
             
 
         } //bleeding wound end
@@ -416,10 +416,136 @@ app.post('/webhook', (req, res) => {
                     console.log(response)
                 }).fail(error => {
                     console.log(error)
-                })  //nosebleed
+                })  
             
 
-        }
+        } //Overbleeding end
+
+        else if(userInput == 'Over Bleeding' || userButton == 'Over bleeding')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`These are the steps for stopping the over bleeding.\n1. Apply direct pressure on the cur or wound with a clean cloth or tissue.\n2. If blood still soaks thorugh material, put more cloth without removie the already applied cloth..\n3.If the wound is on the arm or legs, raise it above the heart to slow bleeding.`
+                    }
+
+
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
+            
+
+        } //overbleeding end
+
+         else if(userInput == 'Burnt' || userButton == 'Burnt'){
+            	let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                    	"attachment": {
+                            "type": "template",
+                            "payload": {
+                                "template_type": "generic",
+                                "elements": [
+                                    {
+                                        "title": "Choose your injury type!",
+                                        "image_url": "https://petersfancybrownhats.com/company_image.png",
+                                        "subtitle": "Online First-aid in your service.",
+                                        "default_action": {
+                                            "type": "web_url",
+                                            "url": "https://petersfancybrownhats.com/view?item=103",
+                                            "webview_height_ratio": "tall",
+                                        },
+                                        "buttons": [
+                                            {
+                                                "type": "postback",                                               
+                                                "title": "Hot water Burnt",
+                                                "payload": "Hot water Burnt"
+                                            },
+
+                                             
+                                        ]
+                                    },
+
+
+                                   {
+                                        "title": "Choose your injury type!",
+                                        "image_url": "https://petersfancybrownhats.com/company_image.png",
+                                        "subtitle": "Online First-aid in your service.",
+                                        "default_action": {
+                                            "type": "web_url",
+                                            "url": "https://petersfancybrownhats.com/view?item=103",
+                                            "webview_height_ratio": "tall",
+                                        },
+                                        "buttons": [
+                                            {
+                                                "type": "postback",
+                                                "title": "Oil Burnt",
+                                                "payload": "Oil Burnt"
+                                            }
+                                        ]
+                                    },
+
+                                    {
+                                        "title": "Welcome!",
+                                        "image_url": "https://petersfancybrownhats.com/company_image.png",
+                                        "subtitle": "Online First-aid in your service.",
+                                        "default_action": {
+                                            "type": "web_url",
+                                            "url": "https://petersfancybrownhats.com/view?item=103",
+                                            "webview_height_ratio": "tall",
+                                        },
+                                        "buttons": [
+                                            {
+                                                "type": "postback",
+                                                "title": "Poison",
+                                                "payload": "Poison"
+                                            }
+                                        ]
+                                    },
+
+                                    {
+                                        "title": "Welcome!",
+                                        "image_url": "https://petersfancybrownhats.com/company_image.png",
+                                        "subtitle": "Online First-aid in your service.",
+                                        "default_action": {
+                                            "type": "web_url",
+                                            "url": "https://petersfancybrownhats.com/view?item=103",
+                                            "webview_height_ratio": "tall",
+                                        },
+                                        "buttons": [
+                                            {
+                                                "type": "postback",
+                                                "title": "Bone Fracture",
+                                                "payload": "Bone Fracture"
+                                            }
+                                        ]
+                                    },
+                                    
+                                 ]
+                            }
+                        }
+                    
+                    }
+                };
+
+                requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })
+
+            }
+
+
 
 
              
