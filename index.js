@@ -134,7 +134,7 @@ app.post('/webhook', (req, res) => {
             } */
             
 
-        } //end foreach
+        }) //end foreach
 
     // Returns a '200 OK' response to all requests
         	res.status(200).send('EVENT_RECEIVED');  
