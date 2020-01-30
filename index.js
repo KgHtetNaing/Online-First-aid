@@ -399,7 +399,7 @@ app.post('/webhook', (req, res) => {
 
         } //bleeding wound end
 
-        else if(userInput == 'Over Bleeding' || userButton == 'Over bleeding')
+        else if(userInput == 'Over Bleeding' || userButton == 'Over Bleeding')
              {
                 let buttonMesage = {
                     "recipient": {
@@ -421,27 +421,7 @@ app.post('/webhook', (req, res) => {
 
         } //Overbleeding end
 
-        else if(userInput == 'Over Bleeding' || userButton == 'Over bleeding')
-             {
-                let buttonMesage = {
-                    "recipient": {
-                        "id": webhook_event.sender.id
-                    },
-                    "message":{
-                        "text":`These are the steps for stopping the over bleeding.\n1. Apply direct pressure on the cur or wound with a clean cloth or tissue.\n2. If blood still soaks thorugh material, put more cloth without removie the already applied cloth..\n3.If the wound is on the arm or legs, raise it above the heart to slow bleeding.`
-                    }
-
-
-            }
-            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-                ).then(response => {
-                    console.log(response)
-                }).fail(error => {
-                    console.log(error)
-                })  
-            
-
-        } //overbleeding end
+      
 
          else if(userInput == 'Burnt' || userButton == 'Burnt'){
             	let buttonMesage = {
