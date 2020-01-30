@@ -82,17 +82,9 @@ app.post('/webhook', (req, res) => {
             if (webhook_event.postback) {
                 var userButton = webhook_event.postback.payload
             }
+            /*
             if (userInput == 'Hi' || userButton == 'Hi') {
-                //let welcomeMessage = {
-                //    "recipient": {
-                //        "id": webhook_event.sender.id
-                //    },
-                //    "message": {
-                //        "text": "Hello, Welcome to Online First Aid!"
-                //    }
-                //}
-
-                //first button
+                
                 let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
@@ -132,22 +124,21 @@ app.post('/webhook', (req, res) => {
 
 
 
-                requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`,
-                    buttonMesage
+                requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
                 ).then(response => {
                     console.log(response)
                 }).fail(error => {
                     console.log(error)
                 })
 
-            } 
+            } */
             
 
-        }
+        } //end foreach
 
     // Returns a '200 OK' response to all requests
         	res.status(200).send('EVENT_RECEIVED');  
-    } 
+    } //end if == page
     else{
         // Returns a '404 Not Found' if event is not from a page subscription
         res.sendStatus(404);
