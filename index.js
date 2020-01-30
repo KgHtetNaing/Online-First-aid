@@ -20,7 +20,7 @@ requestify.post(`https://graph.facebook.com/v2.6/me/messenger_profile?access_tok
                 "text": "Hello {{user_first_name}}!"
             }, {
                 "locale": "en_US",
-                "text": "Timeless apparel for the masses."
+                "text": "You can choose your injury from the given selection or type injury from the list."
             }
         ]
     }
@@ -358,7 +358,7 @@ app.post('/webhook', (req, res) => {
                     },
                     "message":{
                         "text":"These are the steps for curing the nose bleeding. 1. Sit Upright and lean forward. 2. Do not pack the nose.3. Use decongestant (eg. breathing steam, placing a wet warm towel) 4. Pinch the part of the nose below the nasal bones for about 10 minutes."
-                        "text": "1. Sit upring and lean forward."
+
                     }
 
 
