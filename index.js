@@ -131,13 +131,13 @@ app.post('/webhook', (req, res) => {
                     console.log(error)
                 })
 
-            }else if(userInput == 'hello' || userButton == 'hello'){
+            }else if(userInput == 'medicine' || userButton == 'medicine'){
             	let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                    	"text": "Hello World"
+                    	"text": "you selected medicine"
                     }
                 }
 
