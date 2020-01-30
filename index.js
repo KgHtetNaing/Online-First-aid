@@ -131,7 +131,24 @@ app.post('/webhook', (req, res) => {
                     console.log(error)
                 })
 
-            } 
+            }else if(userInput == 'hello' || userButton == 'hello'){
+            	let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                    	"text": "Hello World"
+                    }
+                }
+
+                requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })
+
+            }
             
 
         }) //end foreach
