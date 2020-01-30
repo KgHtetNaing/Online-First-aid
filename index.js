@@ -139,56 +139,16 @@ app.post('/webhook', (req, res) => {
                 }).fail(error => {
                     console.log(error)
                 })
-<<<<<<< HEAD
-            } else if (userInput == 'Injury' || userButton == 'Injury') {
 
-=======
-            } else {
-                if (userInput == 'Injury' || userButton == 'Injury') {
-                     let welcomeMessage = {
-                    "recipient": {
-                        "id": webhook_event.sender.id
-                    },
-                    "message": {
-                        "text": "Thank you!"
-                    }
-                }
->>>>>>> parent of a6d77f7... Update index.js
-                requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`,
-                    {
-                        "recipient": {
-                            "id": webhook_event.sender.id
-                        },
-                        "message": {
-                            "text": "Thank you!"
-                        }
-                    }
-                ).then(response => {
-                    console.log(response)
-                }).fail(error => {
-                    console.log(error)
-                })
-            }
-<<<<<<< HEAD
+            } 
+            
 
-       });
-
-=======
-        });
-        //button
-        "payload": {
-            "template_type": "button",
-                "text": "Hi",
-                    "buttons": [
-                < 1 >,
-    < 2 >,
-                        ...
-                  ]
         }
->>>>>>> parent of 7cd4faa... Update index.js
-        // Returns a '200 OK' response to all requests
-        res.status(200).send('EVENT_RECEIVED');
-    } else {
+
+    // Returns a '200 OK' response to all requests
+        	res.status(200).send('EVENT_RECEIVED');  
+    } 
+    else{
         // Returns a '404 Not Found' if event is not from a page subscription
         res.sendStatus(404);
     }
