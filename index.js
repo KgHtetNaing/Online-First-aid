@@ -161,7 +161,8 @@ app.post('/webhook', (req, res) => {
                     console.log(error)
                 })
 
-            }else if(userInput == 'Injury' || userButton == 'Injury'){
+            } //Welcome end
+            else if(userInput == 'Injury' || userButton == 'Injury'){
             	let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
@@ -252,7 +253,7 @@ app.post('/webhook', (req, res) => {
                         }
                     
                     }
-                }
+                };
 
                 requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
                 ).then(response => {
@@ -261,7 +262,7 @@ app.post('/webhook', (req, res) => {
                     console.log(error)
                 })
 
-            }
+            } //Injurytype end
             
 
         }) //end foreach
