@@ -17,7 +17,7 @@ requestify.post(`https://graph.facebook.com/v2.6/me/messenger_profile?access_tok
         "greeting": [
             {
                 "locale": "default",
-                "text": "Hello {{user_first_name}}!"
+                "text": "Hello {{user_first_name}}!You can either choose from the selection or type the available selection"
             }, {
                 "locale": "en_US",
                 "text": "You can either choose from the selection or type the available selection"
