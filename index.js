@@ -31,7 +31,7 @@ app.get('/greeting', (req, res) => {
     console.log(response)
 }).fail(error => {
     console.log(error)
-})
+});
 
 });
 
