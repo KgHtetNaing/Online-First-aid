@@ -109,10 +109,6 @@ app.post('/webhook', (req, res) => {
                                                 "type": "postback",                                               
                                                 "title": "Injury",
                                                 "payload": "Injury"
-                                            }, {
-                                                "type": "postback",
-                                                "title": "Medicine",
-                                                "payload": "medicine"
                                             }
                                         ]
                                     },
@@ -128,12 +124,8 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",                                               
-                                                "title": "Injury",
-                                                "payload": "Injury"
-                                            }, {
-                                                "type": "postback",
-                                                "title": "Medicine",
-                                                "payload": "medicine"
+                                                "title": "Emergency",
+                                                "payload": "Emergency"
                                             }
                                         ]
                                     },
@@ -148,13 +140,9 @@ app.post('/webhook', (req, res) => {
                                         },
                                         "buttons": [
                                             {
-                                                "type": "postback",                                               
-                                                "title": "Injury",
-                                                "payload": "Injury"
-                                            }, {
                                                 "type": "postback",
                                                 "title": "Medicine",
-                                                "payload": "medicine"
+                                                "payload": "Medicine"
                                             }
                                         ]
                                     }
@@ -173,13 +161,39 @@ app.post('/webhook', (req, res) => {
                     console.log(error)
                 })
 
-            }else if(userInput == 'medicine' || userButton == 'medicine'){
+            }else if(userInput == 'Injury' || userButton == 'Injury'){
             	let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                    	"text": "you selected medicine"
+                    	"attachment": {
+                            "type": "template",
+                            "payload": {
+                                "template_type": "generic",
+                                "elements": [
+                                    {
+                                        "title": "Select the type of injury",
+                                        "image_url": "https://petersfancybrownhats.com/company_image.png",
+                                        "subtitle": "Online First-aid in your service.",
+                                        "default_action": {
+                                            "type": "web_url",
+                                            "url": "https://petersfancybrownhats.com/view?item=103",
+                                            "webview_height_ratio": "tall",
+                                        },
+                                        "buttons": [
+                                            {
+                                                "type": "postback",                                               
+                                                "title": "Bleeding",
+                                                "payload": "Bleeding"
+                                            }
+                                        ]
+                                    }
+                                    
+                                 ]
+                            }
+                        }
+                    
                     }
                 }
 
