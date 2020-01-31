@@ -99,16 +99,17 @@ app.post('/webhook', (req, res) => {
                             "type": "template",
                             "payload": {
                                 "template_type": "button",
-                                "elements": [
-                                    {
-                                        // "title": "Welcome!",
-                                        // "image_url": "https://petersfancybrownhats.com/company_image.png",
-                                        // "subtitle": "Online First-aid in your service.",
-                                        // "default_action": {
-                                            "type": "web_url",
-                                            "url": "https://petersfancybrownhats.com/view?item=103",
-                                            "webview_height_ratio": "tall",
-                                        },
+                                "text":"What do you want to do",
+                                // "elements": [
+                                //     {
+                                //         "title": "Welcome!",
+                                //         "image_url": "https://petersfancybrownhats.com/company_image.png",
+                                //         "subtitle": "Online First-aid in your service.",
+                                //         "default_action": {
+                                //             "type": "web_url",
+                                //             "url": "https://petersfancybrownhats.com/view?item=103",
+                                //             "webview_height_ratio": "tall",
+                                //         },
                                         "buttons": [
                                             {
                                                 "type": "postback",                                               
