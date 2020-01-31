@@ -23,7 +23,7 @@ app.get('/greeting', (req, res) => {
                 "text": "Hello {{user_first_name}}!"
             }, {
                 "locale": "en_US",
-                "text": `You can either choose from the given options or type the available options.\nThis system is not the replacement of the doctors or clinics. Patients should still seek for the treatment from the doctor even after the treatment from the shown methods.`
+                "text":"This system is not the replacement of the doctors or clinics. Patients should still seek for the treatment from the doctor even after the treatment from the shown methods."
             }
         ]
     }
@@ -98,13 +98,13 @@ app.post('/webhook', (req, res) => {
                         "attachment": {
                             "type": "template",
                             "payload": {
-                                "template_type": "generic",
+                                "template_type": "button",
                                 "elements": [
                                     {
-                                        "title": "Welcome!",
-                                        "image_url": "https://petersfancybrownhats.com/company_image.png",
-                                        "subtitle": "Online First-aid in your service.",
-                                        "default_action": {
+                                        // "title": "Welcome!",
+                                        // "image_url": "https://petersfancybrownhats.com/company_image.png",
+                                        // "subtitle": "Online First-aid in your service.",
+                                        // "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
                                             "webview_height_ratio": "tall",
@@ -524,6 +524,28 @@ app.post('/webhook', (req, res) => {
                 })
 
             }
+
+           else if(userInput == 'Steam Burn' || userButton == 'Steam Burn')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`These are the steps for curing the steam burn.\n1.Apply cool (not cold) over the burn area for about 20 minutes.\n2.Cool compresses (cloth dipped in cool water) Antibiotic oinments (aloe vera cream), Honey`
+                    }
+
+
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
+            
+
+        } //steambrun end
 
 
 
