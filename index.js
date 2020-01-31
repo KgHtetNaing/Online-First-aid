@@ -23,7 +23,7 @@ app.get('/greeting', (req, res) => {
                 "text": "Hello {{user_first_name}}!"
             }, {
                 "locale": "en_US",
-                "text": "You can either choose from the given options or type the available options"
+                "text": `You can either choose from the given options or type the available options.\nThis system is not the replacement of the doctors or clinics. Patients should still seek for the treatment from the doctor even after the treatment from the shown methods.`
             }
         ]
     }
