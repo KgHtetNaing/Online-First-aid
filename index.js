@@ -218,7 +218,7 @@ app.post('/webhook', (req, res) => {
                                     },
 
                                     {
-                                        "title": "Welcome!",
+                                        "title": "Choose your injury type!",
                                         "image_url": "https://petersfancybrownhats.com/company_image.png",
                                         "subtitle": "Online First-aid in your service.",
                                         "default_action": {
@@ -236,7 +236,7 @@ app.post('/webhook', (req, res) => {
                                     },
 
                                     {
-                                        "title": "Welcome!",
+                                        "title": "Choose your injury type!",
                                         "image_url": "https://petersfancybrownhats.com/company_image.png",
                                         "subtitle": "Online First-aid in your service.",
                                         "default_action": {
@@ -362,7 +362,7 @@ app.post('/webhook', (req, res) => {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`These are the steps for curing the nose bleeding.\n1. Sit Upright and lean forward.\n2. Do not pack the nose.\n3. Use decongestant (eg. breathing steam, placing a wet warm towel)\n 4. Pinch the part of the nose below the nasal bones for about 10 minutes.`
+                        "text":`These are the steps for treating the nose bleeding.\n1. Sit Upright and lean forward.\n2. Do not pack the nose.\n3. Use decongestant (eg. breathing steam, placing a wet warm towel)\n 4. Pinch the part of the nose below the nasal bones for about 10 minutes.`
                     }
 
 
@@ -384,7 +384,7 @@ app.post('/webhook', (req, res) => {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`These are the steps for curing the bleeding wound.\n1. Gently clean the wound with soap and warm water.\n2. Apply antibiotics and cover the wound with the bandage.\n3.Change the bandage daily.`
+                        "text":`These are the steps for treating the bleeding wound.\n1. Gently clean the wound with soap and warm water.\n2. Apply antibiotics and cover the wound with the bandage.\n3.Change the bandage daily.`
                     }
 
 
@@ -455,24 +455,6 @@ app.post('/webhook', (req, res) => {
                                     },
 
 
-                                   {
-                                        "title": "Choose your injury type!",
-                                        "image_url": "https://petersfancybrownhats.com/company_image.png",
-                                        "subtitle": "Online First-aid in your service.",
-                                        "default_action": {
-                                            "type": "web_url",
-                                            "url": "https://petersfancybrownhats.com/view?item=103",
-                                            "webview_height_ratio": "tall",
-                                        },
-                                        "buttons": [
-                                            {
-                                                "type": "postback",
-                                                "title": "Oil Burn",
-                                                "payload": "Oil Burn"
-                                            }
-                                        ]
-                                    },
-
                                     {
                                         "title": "Welcome!",
                                         "image_url": "https://petersfancybrownhats.com/company_image.png",
@@ -532,7 +514,7 @@ app.post('/webhook', (req, res) => {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`These are the steps for curing the steam burn.\n1.Apply cool (not cold) over the burn area for about 20 minutes.\n2.Cool compresses (cloth dipped in cool water) Antibiotic oinments (aloe vera cream), Honey`
+                        "text":`These are the steps for treating the steam burn.\n1.Apply cool (not cold) water over the burn area for about 20 minutes.\n2.Use cool compresses (cloth dipped in cool water) if water is not available. Do not use toothpaste.\n3.Take pain reliever if necessary.\n4.Reduce sun exposure`
                     }
 
 
@@ -545,7 +527,29 @@ app.post('/webhook', (req, res) => {
                 })  
             
 
-        } //steambrun end
+        } //steamburn end
+
+         else if(userInput == 'Electric Burn' || userButton == 'Electric Burn')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`These are the steps for treating electric burn.\n1.Perform CPR(shown in Emergency section) if the patient is unresponsive.\n2.Can not let the patient become chilled.\n3.Cover the burn aread with a sterile bandage or clean cloth.Do not use a blanket or towel as loose fiber can stick to the burnt area.`
+                    }
+
+
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
+            
+
+        } 
 
 
 
