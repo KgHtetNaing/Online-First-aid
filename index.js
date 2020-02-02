@@ -475,7 +475,7 @@ app.post('/webhook', (req, res) => {
 
                                     {
                                         "title": "Welcome!",
-                                        "image_url": "C:\Users\noelk\Documents\GitHub\Online-First-aid\Images\electricalburn.jpg",
+                                        "image_url": "",
                                         "subtitle": "Online First-aid in your service.",
                                         "default_action": {
                                             "type": "web_url",
@@ -625,7 +625,7 @@ app.post('/webhook', (req, res) => {
 
                                     {
                                         "title": "Welcome!",
-                                        "image_url": "C:\Users\noelk\Documents\GitHub\Online-First-aid\Images\electricalburn.jpg",
+                                        "image_url": "",
                                         "subtitle": "Online First-aid in your service.",
                                         "default_action": {
                                             "type": "web_url",
@@ -643,7 +643,7 @@ app.post('/webhook', (req, res) => {
 
                                      {
                                         "title": "Welcome!",
-                                        "image_url": "C:\Users\noelk\Documents\GitHub\Online-First-aid\Images\electricalburn.jpg",
+                                        "image_url": "",
                                         "subtitle": "Online First-aid in your service.",
                                         "default_action": {
                                             "type": "web_url",
