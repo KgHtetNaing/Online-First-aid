@@ -529,7 +529,7 @@ app.post('/webhook', (req, res) => {
 
         } //steamburn end
 
-         else if(userInput == 'Electric Burn' || userButton == 'Electric Burn')
+         else if(userInput == 'Electrical Burn' || userButton == 'Electrical Burn')
              {
                 let buttonMesage = {
                     "recipient": {
@@ -549,8 +549,29 @@ app.post('/webhook', (req, res) => {
                 })  
             
 
-        } 
+        } //electriclaburn end
 
+         else if(userInput == 'Chemical Burn' || userButton == 'Chemical Burn')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`These are the steps for treating Chemical burn.\n1.Remove the cause of the burn by running the cool water on it for 10 minutes.For dry chemicals, use brush or gloves.\nRemove clothing or accessory which has been contaminated by the chemical.\nBandge the burn with sterile gauze bandage or a clean cloth. Do not use fluffy cotton. Bandge loosely to prevent from putting pressure on the burned skin.\n\nIf the patient stil feel burn after the flushing, flush the area again with water.`
+                    }
+
+
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
+            
+
+        }
 
 
 
