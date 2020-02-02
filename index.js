@@ -362,7 +362,7 @@ app.post('/webhook', (req, res) => {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`These are the steps for treating the nose bleeding.\n1. Sit Upright and lean forward.\n2. Do not pack the nose.\n3. Use decongestant (eg. breathing steam, placing a wet warm towel)\n 4. Pinch the part of the nose below the nasal bones for about 10 minutes.`
+                        "text":`These are the steps for treating the nose bleeding.\n\n1. Sit Upright and lean forward.\n\n2. Do not pack the nose.\n\n3. Use decongestant (eg. breathing steam, placing a wet warm towel)\n\n4. Pinch the part of the nose below the nasal bones for about 10 minutes.`
                     }
 
 
@@ -384,7 +384,7 @@ app.post('/webhook', (req, res) => {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`These are the steps for treating the bleeding wound.\n1. Gently clean the wound with soap and warm water.\n2. Apply antibiotics and cover the wound with the bandage.\n3.Change the bandage daily.`
+                        "text":`These are the steps for treating the bleeding wound.\n\n1. Gently clean the wound with soap and warm water.\n\n2. Apply antibiotics and cover the wound with the bandage.\n\n3.Change the bandage daily.`
                     }
 
 
@@ -406,7 +406,7 @@ app.post('/webhook', (req, res) => {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`These are the steps for stopping the over bleeding.\n1. Apply direct pressure on the cut or wound with a clean cloth or tissue.\n2. If blood still soaks thorugh material, put more cloth without removing the already applied cloth.\n3.If the wound is on the arm or legs, raise it above the heart to slow bleeding.`
+                        "text":`These are the steps for stopping the over bleeding.\n\n1. Apply direct pressure on the cut or wound with a clean cloth or tissue.\n\n2. If blood still soaks thorugh material, put more cloth without removing the already applied cloth.\n\n3.If the wound is on the arm or legs, raise it above the heart to slow bleeding.`
                     }
 
 
@@ -475,7 +475,7 @@ app.post('/webhook', (req, res) => {
 
                                     {
                                         "title": "Welcome!",
-                                        "image_url": "https://petersfancybrownhats.com/company_image.png",
+                                        "image_url": "C:\Users\noelk\Documents\GitHub\Online-First-aid\Images\electricalburn.jpg",
                                         "subtitle": "Online First-aid in your service.",
                                         "default_action": {
                                             "type": "web_url",
@@ -505,7 +505,7 @@ app.post('/webhook', (req, res) => {
                     console.log(error)
                 })
 
-            }
+            }//burninjury end
 
            else if(userInput == 'Steam Burn' || userButton == 'Steam Burn')
              {
@@ -514,7 +514,7 @@ app.post('/webhook', (req, res) => {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`These are the steps for treating the steam burn.\n1.Apply cool (not cold) water over the burn area for about 20 minutes.\n2.Use cool compresses (cloth dipped in cool water) if water is not available. Do not use toothpaste.\n3.Take pain reliever if necessary.\n4.Reduce sun exposure`
+                        "text":`These are the steps for treating the steam burn.\n\n1.Apply cool (not cold) water over the burn area for about 20 minutes.\n\n2.Use cool compresses (cloth dipped in cool water) if water is not available. Do not use toothpaste.\n\n3.Take pain reliever if necessary.\n\n4.Reduce sun exposure`
                     }
 
 
@@ -536,7 +536,7 @@ app.post('/webhook', (req, res) => {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`These are the steps for treating electric burn.\n1.Perform CPR(shown in Emergency section) if the patient is unresponsive.\n2.Can not let the patient become chilled.\n3.Cover the burn aread with a sterile bandage or clean cloth.Do not use a blanket or towel as loose fiber can stick to the burnt area.`
+                        "text":`These are the steps for treating electric burn.\n\n1.Perform CPR(shown in Emergency section) if the patient is unresponsive.\n\n2.Can not let the patient become chilled.\n\n3.Cover the burn aread with a sterile bandage or clean cloth.Do not use a blanket or towel as loose fiber can stick to the burnt area.`
                     }
 
 
@@ -558,7 +558,7 @@ app.post('/webhook', (req, res) => {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`These are the steps for treating Chemical burn.\n1.Remove the cause of the burn by running the cool water on it for 10 minutes.For dry chemicals, use brush or gloves.\nRemove clothing or accessory which has been contaminated by the chemical.\nBandge the burn with sterile gauze bandage or a clean cloth. Do not use fluffy cotton. Bandge loosely to prevent from putting pressure on the burned skin.\n\nIf the patient stil feel burn after the flushing, flush the area again with water.`
+                        "text":`These are the steps for treating Chemical burn.\n\n1.Remove the cause of the burn by running the cool water on it for 10 minutes.For dry chemicals, use brush or gloves.\n\n2.Remove clothing or accessory which has been contaminated by the chemical.\n\n3.Bandge the burn with sterile gauze bandage or a clean cloth. Do not use fluffy cotton. Bandge loosely to prevent from putting pressure on the burned skin.\n\n4.If the patient stil feel burn after the flushing, flush the area again with water.`
                     }
 
 
@@ -571,7 +571,109 @@ app.post('/webhook', (req, res) => {
                 })  
             
 
-        }
+        } //chemcialburn end
+
+         else if(userInput == 'Poison' || userButton == 'Poison'){
+            	let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                    	"attachment": {
+                            "type": "template",
+                            "payload": {
+                                "template_type": "generic",
+                                "elements": [
+                                    {
+                                        "title": "Choose your injury type!",
+                                        "image_url": "https://petersfancybrownhats.com/company_image.png",
+                                        "subtitle": "Online First-aid in your service.",
+                                        "default_action": {
+                                            "type": "web_url",
+                                            "url": "https://petersfancybrownhats.com/view?item=103",
+                                            "webview_height_ratio": "tall",
+                                        },
+                                        "buttons": [
+                                            {
+                                                "type": "postback",                                               
+                                                "title": "Drug Toxicity",
+                                                "payload": "Drug Toxicity"
+                                            },
+
+                                             
+                                        ]
+                                    },
+
+
+                                    {
+                                        "title": "Welcome!",
+                                        "image_url": "https://petersfancybrownhats.com/company_image.png",
+                                        "subtitle": "Online First-aid in your service.",
+                                        "default_action": {
+                                            "type": "web_url",
+                                            "url": "https://petersfancybrownhats.com/view?item=103",
+                                            "webview_height_ratio": "tall",
+                                        },
+                                        "buttons": [
+                                            {
+                                                "type": "postback",
+                                                "title": "Poison in the eye",
+                                                "payload": "Poison in the eye"
+                                            }
+                                        ]
+                                    },
+
+                                    {
+                                        "title": "Welcome!",
+                                        "image_url": "C:\Users\noelk\Documents\GitHub\Online-First-aid\Images\electricalburn.jpg",
+                                        "subtitle": "Online First-aid in your service.",
+                                        "default_action": {
+                                            "type": "web_url",
+                                            "url": "https://petersfancybrownhats.com/view?item=103",
+                                            "webview_height_ratio": "tall",
+                                        },
+                                        "buttons": [
+                                            {
+                                                "type": "postback",
+                                                "title": "Swallowed Poison",
+                                                "payload": "Swallowed Poison"
+                                            }
+                                        ]
+                                    },
+
+                                     {
+                                        "title": "Welcome!",
+                                        "image_url": "C:\Users\noelk\Documents\GitHub\Online-First-aid\Images\electricalburn.jpg",
+                                        "subtitle": "Online First-aid in your service.",
+                                        "default_action": {
+                                            "type": "web_url",
+                                            "url": "https://petersfancybrownhats.com/view?item=103",
+                                            "webview_height_ratio": "tall",
+                                        },
+                                        "buttons": [
+                                            {
+                                                "type": "postback",
+                                                "title": "Bug Bite",
+                                                "payload": "Bug Bite"
+                                            }
+                                        ]
+                                    },
+                                    
+                                 ]
+                            }
+                        }
+                    
+                    }
+                };
+
+                requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })
+
+            }
 
 
 
