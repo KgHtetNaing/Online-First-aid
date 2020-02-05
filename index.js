@@ -754,27 +754,10 @@ app.post('/webhook', (req, res) => {
                     "recipient": {
                         "id": webhook_event.sender.id
                     },
-                    // "message":{
-                    //     "text":`These are the steps for treating the bug bite.\n\n1.Remove the tick, stings or hair if still there.\n\n2.Washed the affected area with soap and water.\n\n3.Apply the cold compress or an icepack to the affected area for at least 10 minutes.\n\n4.Raise the affected area if possible, it can helps in reducing the swelling.\n\n5.Prevent from scratching or bursting any blisters to reduce the risk of infection.\n\n6.Home remedies like vinegar and bicarbonate of soda should not be use as they are unlikely to help.`
-                    // },
-                    "message": { 
-                "attachment" : {
-                	"text":`These are the steps for treating the bug bite.\n\n1.Remove the tick, stings or hair if still there.\n\n2.Washed the affected area with soap and water.\n\n3.Apply the cold compress or an icepack to the affected area for at least 10 minutes.\n\n4.Raise the affected area if possible, it can helps in reducing the swelling.\n\n5.Prevent from scratching or bursting any blisters to reduce the risk of infection.\n\n6.Home remedies like vinegar and bicarbonate of soda should not be use as they are unlikely to help.`
-                    
-                    "type" : "template",
-                    "payload": {
-                        "template_type": "button",
-                        "text": "What kind of food?",
-                        "buttons": [
-                        {
-                            "type": "postback",
-                            "title": "snack",
-                            "payload": "snack"
-                        }]
-                    }
-                }
-
-            }
+                    "message":{
+                        "text":`These are the steps for treating the bug bite.\n\n1.Remove the tick, stings or hair if still there.\n\n2.Washed the affected area with soap and water.\n\n3.Apply the cold compress or an icepack to the affected area for at least 10 minutes.\n\n4.Raise the affected area if possible, it can helps in reducing the swelling.\n\n5.Prevent from scratching or bursting any blisters to reduce the risk of infection.\n\n6.Home remedies like vinegar and bicarbonate of soda should not be use as they are unlikely to help.`
+                    },
+                
 
 
             }
@@ -865,6 +848,28 @@ app.post('/webhook', (req, res) => {
                 })
 
             }//bonefracture end
+
+             else if(userInput == 'Broken Bone' || userButton == 'Broken Bone')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`These are the steps for treating broken bone.\n\n1.If the wound is bleeding, try and stop it by using a sterile bandage,a clean cloth or a clean piece of clothing and elevating the injured aread\n\n2.If it is the neck or back which is broken, try to make the patient stay still as much as possible.If it is the limbs which is broken, immobalize using a splint or sling.\n\n3.After that, wrap an ice pack or bag of ice cubes in a cloth and press it onto the injured aread for up to 10 minutes at a time.`
+                    }
+
+
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
+            
+
+        }
 
             
 
