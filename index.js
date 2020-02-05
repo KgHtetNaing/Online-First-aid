@@ -754,20 +754,22 @@ app.post('/webhook', (req, res) => {
                     "recipient": {
                         "id": webhook_event.sender.id
                     },
-                    "message":{
-                        "text":`These are the steps for treating the bug bite.\n\n1.Remove the tick, stings or hair if still there.\n\n2.Washed the affected area with soap and water.\n\n3.Apply the cold compress or an icepack to the affected area for at least 10 minutes.\n\n4.Raise the affected area if possible, it can helps in reducing the swelling.\n\n5.Prevent from scratching or bursting any blisters to reduce the risk of infection.\n\n6.Home remedies like vinegar and bicarbonate of soda should not be use as they are unlikely to help.`
-                    },
+                    // "message":{
+                    //     "text":`These are the steps for treating the bug bite.\n\n1.Remove the tick, stings or hair if still there.\n\n2.Washed the affected area with soap and water.\n\n3.Apply the cold compress or an icepack to the affected area for at least 10 minutes.\n\n4.Raise the affected area if possible, it can helps in reducing the swelling.\n\n5.Prevent from scratching or bursting any blisters to reduce the risk of infection.\n\n6.Home remedies like vinegar and bicarbonate of soda should not be use as they are unlikely to help.`
+                    // },
                     "message": { 
-                attachment : {
-                    type : "template",
-                    payload: {
-                        template_type: "button",
-                        text: "What kind of food?",
-                        buttons: [
+                "attachment" : {
+                	"text":`These are the steps for treating the bug bite.\n\n1.Remove the tick, stings or hair if still there.\n\n2.Washed the affected area with soap and water.\n\n3.Apply the cold compress or an icepack to the affected area for at least 10 minutes.\n\n4.Raise the affected area if possible, it can helps in reducing the swelling.\n\n5.Prevent from scratching or bursting any blisters to reduce the risk of infection.\n\n6.Home remedies like vinegar and bicarbonate of soda should not be use as they are unlikely to help.`
+                    
+                    "type" : "template",
+                    "payload": {
+                        "template_type": "button",
+                        "text": "What kind of food?",
+                        "buttons": [
                         {
-                            type: "postback",
-                            title: "snack",
-                            payload: "snack"
+                            "type": "postback",
+                            "title": "snack",
+                            "payload": "snack"
                         }]
                     }
                 }
