@@ -308,7 +308,7 @@ app.post('/webhook', (req, res) => {
 
                                    {
                                         "title": "Choose your injury!",
-                                        "image_url": "https://drive.google.com/open?id=13qrE-jpvx60cuWOQic5ljCnomcI5oyXk",
+                                        "image_url": "",
                                         "subtitle": "Online First-aid in your service.",
                                         "default_action": {
                                             "type": "web_url",
@@ -320,7 +320,12 @@ app.post('/webhook', (req, res) => {
                                                 "type": "postback",
                                                 "title": "Over Bleeding",
                                                 "payload": "Over Bleeding"
-                                            }
+                                            },
+                                             {
+                                                "type": "postback",                                               
+                                                "title": "About Over Bleeding",
+                                                "payload": "About Over Bleeding"
+                                            },
                                         ]
                                     },
 
@@ -338,7 +343,12 @@ app.post('/webhook', (req, res) => {
                                                 "type": "postback",
                                                 "title": "Bleeding Wound",
                                                 "payload": "Bleeding Wound"
-                                            }
+                                            },
+                                             {
+                                                "type": "postback",                                               
+                                                "title": "About  Bleeding Wound",
+                                                "payload": "About  Bleeding Wound"
+                                            },
                                         ]
                                     },
 
@@ -454,6 +464,11 @@ app.post('/webhook', (req, res) => {
                                                 "title": "Steam Burn",
                                                 "payload": "Steam Burn"
                                             },
+                                             {
+                                                "type": "postback",                                               
+                                                "title": "About Steam Burn",
+                                                "payload": "About Steam Burn"
+                                            },
 
                                              
                                         ]
@@ -474,7 +489,12 @@ app.post('/webhook', (req, res) => {
                                                 "type": "postback",
                                                 "title": "Electrical Burn",
                                                 "payload": "Electrical Burn"
-                                            }
+                                            },
+                                             {
+                                                "type": "postback",                                               
+                                                "title": "About Electrical Burn",
+                                                "payload": "About Electrical Burn"
+                                            },
                                         ]
                                     },
 
@@ -492,7 +512,12 @@ app.post('/webhook', (req, res) => {
                                                 "type": "postback",
                                                 "title": "Chemical Burn",
                                                 "payload": "Chemical Burn"
-                                            }
+                                            },
+                                             {
+                                                "type": "postback",                                               
+                                                "title": "About Chemical Burn",
+                                                "payload": "About Chemical Burn"
+                                            },
                                         ]
                                     },
                                     
@@ -604,6 +629,11 @@ app.post('/webhook', (req, res) => {
                                                 "title": "Drug Toxicity",
                                                 "payload": "Drug Toxicity"
                                             },
+                                             {
+                                                "type": "postback",                                               
+                                                "title": "About Drug Toxicity",
+                                                "payload": "About Drug Toxicity"
+                                            },
 
                                              
                                         ]
@@ -624,7 +654,12 @@ app.post('/webhook', (req, res) => {
                                                 "type": "postback",
                                                 "title": "Poison in the eye",
                                                 "payload": "Poison in the eye"
-                                            }
+                                            },
+                                             {
+                                                "type": "postback",                                               
+                                                "title": "About Poison in the eye",
+                                                "payload": "About Poison in the eye"
+                                            },
                                         ]
                                     },
 
@@ -644,7 +679,12 @@ app.post('/webhook', (req, res) => {
                                                 "type": "postback",
                                                 "title": "Bug Bite",
                                                 "payload": "Bug Bite"
-                                            }
+                                            }.
+                                             {
+                                                "type": "postback",                                               
+                                                "title": "About Bug Bite",
+                                                "payload": "About Bug Bite"
+                                            },
                                         ]
                                     },
                                     
@@ -684,7 +724,7 @@ app.post('/webhook', (req, res) => {
                 })  
             
 
-        }//drugtoxicity end
+        	}//drugtoxicity end
 
          else if(userInput == 'Poison in the eye' || userButton == 'Poison in the eye')
              {
@@ -728,7 +768,7 @@ app.post('/webhook', (req, res) => {
                 })  
             
 
-        }
+        }//bugbite end
 
             
 
