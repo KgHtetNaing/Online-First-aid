@@ -308,7 +308,7 @@ app.post('/webhook', (req, res) => {
 
                                    {
                                         "title": "Choose your injury!",
-                                        "image_url": "",
+                                        "image_url": "https://petersfancybrownhats.com/company_image.png",
                                         "subtitle": "Online First-aid in your service.",
                                         "default_action": {
                                             "type": "web_url",
@@ -768,7 +768,85 @@ app.post('/webhook', (req, res) => {
                 })  
             
 
-        }
+        } //buybite end
+
+         else if(userInput == 'Bone Fracture' || userButton == 'Bone Fracture'){
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "attachment": {
+                            "type": "template",
+                            "payload": {
+                                "template_type": "generic",
+                                "elements": [
+                                    {
+                                        "title": "Choose your injury!",
+                                        "image_url": "https://petersfancybrownhats.com/company_image.png",
+                                        "subtitle": "Online First-aid in your service.",
+                                        "default_action": {
+                                            "type": "web_url",
+                                            "url": "https://petersfancybrownhats.com/view?item=103",
+                                            "webview_height_ratio": "tall",
+                                        },
+                                        "buttons": [
+                                            {
+                                                "type": "postback",                                               
+                                                "title": "Broken Bone",
+                                                "payload": "Broken Bone"
+                                            },
+                                            {
+                                                "type": "postback",                                               
+                                                "title": "About Broken Bone",
+                                                "payload": "About Broken Bone"
+                                            },
+
+                                             
+                                        ]
+                                    },
+
+
+                                   {
+                                        "title": "Choose your injury!",
+                                        "image_url": "https://petersfancybrownhats.com/company_image.png",
+                                        "subtitle": "Online First-aid in your service.",
+                                        "default_action": {
+                                            "type": "web_url",
+                                            "url": "https://petersfancybrownhats.com/view?item=103",
+                                            "webview_height_ratio": "tall",
+                                        },
+                                        "buttons": [
+                                            {
+                                                "type": "postback",
+                                                "title": "Bone Disclocation",
+                                                "payload": "Bone Disclocation"
+                                            },
+                                             {
+                                                "type": "postback",                                               
+                                                "title": "About Bone Disclocation",
+                                                "payload": "About Bone Disclocation"
+                                            },
+                                        ]
+                                    },
+
+                                                                 
+                                    
+                                 ]
+                            }
+                        }
+                    
+                    }
+                };
+
+                requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })
+
+            }
 
             
 
