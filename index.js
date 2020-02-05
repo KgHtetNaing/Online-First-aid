@@ -679,7 +679,7 @@ app.post('/webhook', (req, res) => {
                                                 "type": "postback",
                                                 "title": "Bug Bite",
                                                 "payload": "Bug Bite"
-                                            }.
+                                            },
                                              {
                                                 "type": "postback",                                               
                                                 "title": "About Bug Bite",
@@ -724,7 +724,7 @@ app.post('/webhook', (req, res) => {
                 })  
             
 
-        	}//drugtoxicity end
+        }//drugtoxicity end
 
          else if(userInput == 'Poison in the eye' || userButton == 'Poison in the eye')
              {
@@ -768,7 +768,7 @@ app.post('/webhook', (req, res) => {
                 })  
             
 
-        }//bugbite end
+        }
 
             
 
