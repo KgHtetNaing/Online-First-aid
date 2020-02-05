@@ -294,11 +294,15 @@ app.post('/webhook', (req, res) => {
                                                 "type": "postback",                                               
                                                 "title": "Nose Bleeding",
                                                 "payload": "Nose Bleeding"
-                                            },
+                                            }
 
+                                             
+                                        ],
+
+                                        "buttons": [
                                             {
                                                 "type": "postback",                                               
-                                                "title": "About Injury",
+                                                "title": "About Nose Bleeding",
                                                 "payload": "About Nose Bleeding"
                                             }
 
