@@ -308,7 +308,7 @@ app.post('/webhook', (req, res) => {
 
                                    {
                                         "title": "Choose your injury!",
-                                        "image_url": "https://petersfancybrownhats.com/company_image.png",
+                                        "image_url": "https://drive.google.com/open?id=13qrE-jpvx60cuWOQic5ljCnomcI5oyXk",
                                         "subtitle": "Online First-aid in your service.",
                                         "default_action": {
                                             "type": "web_url",
