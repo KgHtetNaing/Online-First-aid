@@ -286,7 +286,7 @@ app.post('/webhook', (req, res) => {
                                         "subtitle": "Online First-aid in your service.",
                                         "default_action": {
                                             "type": "web_url",
-                                            "url": "https://petersfancybrownhats.com/view?item=103",
+                                           
                                             "webview_height_ratio": "tall",
                                         },
                                         "buttons": [
@@ -295,6 +295,12 @@ app.post('/webhook', (req, res) => {
                                                 "title": "Nose Bleeding",
                                                 "payload": "Nose Bleeding"
                                             },
+
+                                            {
+                                                "type": "postback",                                               
+                                                "title": "About Injury",
+                                                "payload": "About Nose Bleeding"
+                                            }
 
                                              
                                         ]
