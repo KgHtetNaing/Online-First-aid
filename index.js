@@ -172,90 +172,22 @@ app.post('/webhook', (req, res) => {
                     "recipient": {
                         "id": webhook_event.sender.id
                     },
-                    "message":{
-                    	"attachment": {
-                            "type": "template",
-                            "payload": {
-                                "template_type": "generic",
-                                "elements": [
-                                    {
-                                        "title": "Choose your injury type!",
-                                        // "image_url": "https://petersfancybrownhats.com/company_image.png",
-                                        // "subtitle": "Online First-aid in your service.",
-                                        // "default_action": {
-                                        //     "type": "web_url",
-                                        //     "url": "https://petersfancybrownhats.com/view?item=103",
-                                        //     "webview_height_ratio": "tall",
-                                        // },
-                                        "buttons": [
-                                            {
-                                                "type": "postback",                                               
-                                                "title": "Bleeding",
-                                                "payload": "Bleeding"
-                                            },
-
-                                             
-                                        ]
-                                    },
-
-
-                                   {
-                                        "title": "Choose your injury type!",
-                                        "image_url": "https://petersfancybrownhats.com/company_image.png",
-                                        "subtitle": "Online First-aid in your service.",
-                                        "default_action": {
-                                            "type": "web_url",
-                                            "url": "https://petersfancybrownhats.com/view?item=103",
-                                            "webview_height_ratio": "tall",
-                                        },
-                                        "buttons": [
-                                            {
-                                                "type": "postback",
-                                                "title": "Burnt",
-                                                "payload": "Burnt"
-                                            }
-                                        ]
-                                    },
-
-                                    {
-                                        "title": "Choose your injury type!",
-                                        "image_url": "https://petersfancybrownhats.com/company_image.png",
-                                        "subtitle": "Online First-aid in your service.",
-                                        "default_action": {
-                                            "type": "web_url",
-                                            "url": "https://petersfancybrownhats.com/view?item=103",
-                                            "webview_height_ratio": "tall",
-                                        },
-                                        "buttons": [
-                                            {
-                                                "type": "postback",
-                                                "title": "Poison",
-                                                "payload": "Poison"
-                                            }
-                                        ]
-                                    },
-
-                                    {
-                                        "title": "Choose your injury type!",
-                                        "image_url": "https://petersfancybrownhats.com/company_image.png",
-                                        "subtitle": "Online First-aid in your service.",
-                                        "default_action": {
-                                            "type": "web_url",
-                                            "url": "https://petersfancybrownhats.com/view?item=103",
-                                            "webview_height_ratio": "tall",
-                                        },
-                                        "buttons": [
-                                            {
-                                                "type": "postback",
-                                                "title": "Bone Fracture",
-                                                "payload": "Bone Fracture"
-                                            }
-                                        ]
-                                    },
-                                    
-                                 ]
-                            }
-                        }
+                    "message": { 
+                "attachment": {
+                    "type" : "template",
+                    "payload": {
+                        "template_type": "button",
+                        "text": "What kind of food?",
+                        "buttons": [
+                        {
+                            "type": "postback",
+                            "title": "snack",
+                            "payload": "snack"
+                        }]
+                    }
+                }
+     
+             }
                     
                     }
                 };
