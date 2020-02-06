@@ -172,12 +172,33 @@ app.post('/webhook', (req, res) => {
                     "recipient": {
                         "id": webhook_event.sender.id
                     },
-                   message: { 
+                    "message":{
+                    	"attachment": {
+                            "type": "template",
+                            "payload": {
+                                "template_type": "generic",
+                                "elements": [
+                                   message: { 
                 attachment : {
                     type : "template",
                     payload: {
                         template_type: "button",
-                        
+                        text: "What kind of food?",
+                        buttons: [
+                        {
+                            type: "postback",
+                            title: "snack",
+                            payload: "snack"
+                        }]
+                    }
+                }
+
+            }message: { 
+                attachment : {
+                    type : "template",
+                    payload: {
+                        template_type: "button",
+                        text: "What kind of food?",
                         buttons: [
                         {
                             type: "postback",
@@ -188,6 +209,12 @@ app.post('/webhook', (req, res) => {
                 }
 
             }
+                                    
+                                 ]
+                            }
+                        }
+                    
+                    }
                 };
 
                 requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
