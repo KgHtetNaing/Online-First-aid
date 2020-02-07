@@ -891,10 +891,42 @@ app.post('/webhook', (req, res) => {
                 })  
             
 
-        } //
+        } //bonedisclocation end
+
+        else if(userInput == 'Emergency' || userButton == 'Emergency')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                   "message": { 
+                "attachment" : {
+                    "type" : "template",
+                    "payload": {
+                        "template_type": "button",
+                        "text": "What kind of food?",
+                        "buttons": [
+                        {
+                            "type": "postback",
+                            "title": "snack",
+                            "payload": "snack"
+                        }]
+                    }
+                }
+     
+             }
+
+
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })     
 
             
-
+               }
 
 
              
