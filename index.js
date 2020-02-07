@@ -904,7 +904,7 @@ app.post('/webhook', (req, res) => {
                     "type" : "template",
                     "payload": {
                         "template_type": "button",
-                        "text": "What kind of food?",
+                        
                         "buttons": [
                         {
                             "type": "postback",
