@@ -172,22 +172,90 @@ app.post('/webhook', (req, res) => {
                     "recipient": {
                         "id": webhook_event.sender.id
                     },
-                    "message": { 
-                "attachment": {
-                    "type" : "template",
-                    "payload": {
-                        "template_type": "button",
-                        "text": "What kind of food?",
-                        "buttons": [
-                        {
-                            "type": "postback",
-                            "title": "snack",
-                            "payload": "snack"
-                        }]
-                    }
-                }
-     
-             }
+                    "message":{
+                    	"attachment": {
+                            "type": "template",
+                            "payload": {
+                                "template_type": "generic",
+                                "elements": [
+                                    {
+                                        "title": "Choose your injury type!",
+                                        "image_url": "https://petersfancybrownhats.com/company_image.png",
+                                        "subtitle": "Online First-aid in your service.",
+                                        "default_action": {
+                                            "type": "web_url",
+                                            "url": "https://petersfancybrownhats.com/view?item=103",
+                                            "webview_height_ratio": "tall",
+                                        },
+                                        "buttons": [
+                                            {
+                                                "type": "postback",                                               
+                                                "title": "Bleeding",
+                                                "payload": "Bleeding"
+                                            },
+
+                                             
+                                        ]
+                                    },
+
+
+                                   {
+                                        "title": "Choose your injury type!",
+                                        "image_url": "https://petersfancybrownhats.com/company_image.png",
+                                        "subtitle": "Online First-aid in your service.",
+                                        "default_action": {
+                                            "type": "web_url",
+                                            "url": "https://petersfancybrownhats.com/view?item=103",
+                                            "webview_height_ratio": "tall",
+                                        },
+                                        "buttons": [
+                                            {
+                                                "type": "postback",
+                                                "title": "Burnt",
+                                                "payload": "Burnt"
+                                            }
+                                        ]
+                                    },
+
+                                    {
+                                        "title": "Choose your injury type!",
+                                        "image_url": "https://petersfancybrownhats.com/company_image.png",
+                                        "subtitle": "Online First-aid in your service.",
+                                        "default_action": {
+                                            "type": "web_url",
+                                            "url": "https://petersfancybrownhats.com/view?item=103",
+                                            "webview_height_ratio": "tall",
+                                        },
+                                        "buttons": [
+                                            {
+                                                "type": "postback",
+                                                "title": "Poison",
+                                                "payload": "Poison"
+                                            }
+                                        ]
+                                    },
+
+                                    {
+                                        "title": "Choose your injury type!",
+                                        "image_url": "https://petersfancybrownhats.com/company_image.png",
+                                        "subtitle": "Online First-aid in your service.",
+                                        "default_action": {
+                                            "type": "web_url",
+                                            "url": "https://petersfancybrownhats.com/view?item=103",
+                                            "webview_height_ratio": "tall",
+                                        },
+                                        "buttons": [
+                                            {
+                                                "type": "postback",
+                                                "title": "Bone Fracture",
+                                                "payload": "Bone Fracture"
+                                            }
+                                        ]
+                                    },
+                                    
+                                 ]
+                            }
+                        }
                     
                     }
                 };
@@ -309,7 +377,7 @@ app.post('/webhook', (req, res) => {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`These are the steps for treating the nose bleeding before the healthcare arrive.\n\n1. Sit Upright and lean forward.\n\n2. Do not pack the nose.\n\n3. Use decongestant (eg. breathing steam, placing a wet warm towel)\n\n4. Pinch the part of the nose below the nasal bones for about 10 minutes.`
+                        "text":`These are the steps for treating the nose bleeding .\n\n1. Sit Upright and lean forward.\n\n2. Do not pack the nose.\n\n3. Use decongestant (eg. breathing steam, placing a wet warm towel)\n\n4. Pinch the part of the nose below the nasal bones for about 10 minutes.`
                     }
 
 
