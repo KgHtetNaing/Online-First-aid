@@ -102,7 +102,7 @@ app.post('/webhook', (req, res) => {
                                 "elements": [
                                     {
                                         "title": "Welcome!",
-                                        "image_url": "https://commons.wikimedia.org/wiki/File:Cat03.jpg",
+                                        "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/41/Sunflower_from_Silesia2.jpg",
                                         "subtitle": "Online First-aid in your service.",
                                         "default_action": {
                                             "type": "web_url",
@@ -904,7 +904,7 @@ app.post('/webhook', (req, res) => {
                     "type" : "template",
                     "payload": {
                         "template_type": "button",
-                        "text": "",
+                        "text": "What emergency do you need?",
                         "buttons": [
                         {
                             "type": "postback",
