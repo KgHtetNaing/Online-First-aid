@@ -87,8 +87,52 @@ app.post('/webhook', (req, res) => {
             if (webhook_event.postback) {
                 var userButton = webhook_event.postback.payload
             }
+
+            if(userInput == 'Hi' || userButton == 'Hello')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                   "message": { 
+                "attachment" : {
+                    "type" : "template",
+                    "payload": {
+                        "template_type": "button",
+                        "text": "Emergency Treatment",
+                        "buttons": [
+                        {
+                            "type": "postback",
+                            "title": "Call Emergency",
+                            "payload": "Call"
+                        },
+
+                         {
+                            "type": "postback",
+                            "title": "Treatment",
+                            "payload": "Treatment"
+                        },
+
+                         
+                        ]
+                    }
+                }
+     
+             }
+
+
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })     
+
             
-            if (userInput == 'Hi' || userButton == 'Hi') {
+               }
+            
+           else if (userInput == 'Treatment' || userButton == 'Treatment') {
                 
                 let buttonMesage = {
                     "recipient": {
@@ -937,8 +981,8 @@ app.post('/webhook', (req, res) => {
 
                          {
                             "type": "postback",
-                            "title": "Burnt",
-                            "payload": "Burnt"
+                            "title": "Snake Bite",
+                            "payload": "Snake Bite"
                         },
 
                           {
@@ -966,7 +1010,7 @@ app.post('/webhook', (req, res) => {
                 })     
 
             
-               }//button test
+               }//emergency
 
 
           else if(userInput == 'About Nose Bleeding' || userButton == 'About Nose Bleeding')
@@ -1217,7 +1261,53 @@ app.post('/webhook', (req, res) => {
                     console.log(response)
                 }).fail(error => {
                     console.log(error)
-                })//about bonedislocaton end
+                })
+            
+
+        }//about bonedislocaton end
+
+         else if(userInput == 'Drowning' || userButton == 'Drowning')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`1.First, try to wake the patient.\n\n2.Lie the patient on his back and open his airway by tilting his chin and head backwards.\n\n3.Pinch his nose and keep their head tilted back as you give rescue breath into their mouth from yours.Each breath should last for 1 second.\n\n4.Perform CPR(shown in emergency) for 1 minute (120 compressions).\n\n5.After that, call for the emergency contact. `
+                    },
+                
+
+
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })
+            
+
+        }//drowning end
+
+         else if(userInput == 'Snake Bite' || userButton == 'Snake Bite')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`1.First, try to calm down the patient and try not to make him move. Poison does not make it into the blood stream directly. It makes into the lymph and by not moving poison in the lymph will not get into the blood.\n\n2.Do not try to identify or catch the snake if out of capability as it can result in more victims. Hospitals can make several tests to identify the snake and give most appropriate treatment.\n\n3.Use a pad or plastic like cling wrap on the snake bite to soak up or protect the venom for later testing.\n\n4.Use an elasticised bandage and roll it over the snake bite.\n\n5.Use another bandage starting just above the fingers or toes and moving upwards on the bitten limb.\n\n6.If there is no bandage, you can use other stretchy materials like torn-up t-shirts, stockings or other fabircs)\n\n7.Make the snake bite on the bandage and immobalize the limb by splinting the limb with stick or other straight objects.\n\n8.Do not cut, suck or wash the wound as it can cause more harm then good. `
+                    },
+                
+
+
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })
             
 
         }
