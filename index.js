@@ -346,8 +346,8 @@ app.post('/webhook', (req, res) => {
                                             },
                                              {
                                                 "type": "postback",                                               
-                                                "title": "About  Bleeding Wound",
-                                                "payload": "About  Bleeding Wound"
+                                                "title": "About Bleeding Wound",
+                                                "payload": "About Bleeding Wound"
                                             },
                                         ]
                                     },
@@ -451,7 +451,7 @@ app.post('/webhook', (req, res) => {
                                 "elements": [
                                     {
                                         "title": "Choose your injury !",
-                                        "image_url": "https://petersfancybrownhats.com/company_image.png",
+                                        "image_url": "https://library.kissclipart.com/20181218/cxe/kissclipart-burn-child-first-aid-patient-fcca7c43278b9d02.png",
                                         "subtitle": "Please get proper healthcare even after the treatment!",
                                         "default_action": {
                                             "type": "web_url",
@@ -477,7 +477,7 @@ app.post('/webhook', (req, res) => {
 
                                     {
                                         "title": "Choose your injury!",
-                                        "image_url": "https://petersfancybrownhats.com/company_image.png",
+                                        "image_url": "https://www.wikihow.com/images/thumb/d/d7/Treat-Electrical-Burns-Step-20.jpg/aid544981-v4-728px-Treat-Electrical-Burns-Step-20.jpg",
                                         "subtitle": "Please get proper healthcare even after the treatment!",
                                         "default_action": {
                                             "type": "web_url",
@@ -500,7 +500,7 @@ app.post('/webhook', (req, res) => {
 
                                     {
                                         "title": "Choose your injury!",
-                                        "image_url": "",
+                                        "image_url": "https://comps.canstockphoto.com/drain-cleaner-burn-illustration_csp5353742.jpg",
                                         "subtitle": "Please get proper healthcare even after the treatment!.",
                                         "default_action": {
                                             "type": "web_url",
@@ -968,7 +968,7 @@ app.post('/webhook', (req, res) => {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`Nose bleeding occurs for many reasons. But mostly because of dramatic weather changes, injur and dry air. Even though it is not very severe, it can still impose certain danger of letting blood run back into throat and block the breathing`
+                        "text":`Nose bleeding occurs for many reasons. But mostly because of dramatic weather changes, injury and dry air. Even though it is not very severe, it can still impose certain danger of letting blood run back into throat and block the breathing`
                     },
                 
 
@@ -991,7 +991,7 @@ app.post('/webhook', (req, res) => {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`Overbleeding is when an injury bleed alot and the bleeding cannot be stopped. It is dangerous and lethal.`
+                        "text":`Overbleeding is when an injury bleed alot and the bleeding cannot be stopped which is usually caused by injury. It is dangerous and lethal.`
                     },
                 
 
@@ -1028,7 +1028,76 @@ app.post('/webhook', (req, res) => {
                 })  
             
 
-        }
+        }//about bleeding wound end
+
+         else if(userInput == 'About Steam Burn' || userButton == 'About Steam Burn')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`Steam burn occurs when got burn by the hot liquid or hot vapor. The lethality depends on the degree of burns.`
+                    },
+                
+
+
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
+            
+
+        }//steamburn end
+
+        else if(userInput == 'About Electrical Burn' || userButton == 'About Electrical Burn')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`Electrical burn occurs when an electric make contact with the body. Even minor burn can be severe.Electrical burn cause more danage then steam and chemical burn. Require immediate treatment. `
+                    },
+                
+
+
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
+            
+
+        }//about electricalburn end
+
+        else if(userInput == 'About Chemical Burn' || userButton == 'About Chemical Burn')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`Chemical burns occur when the skin make contact with an acid or base or makeup products. The severity depends on how long and how much of body contact with the chemical.`
+                    },
+                
+
+
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
+            
+
+        }//about chemical burn end
 
 
              
