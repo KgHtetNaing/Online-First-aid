@@ -904,13 +904,24 @@ app.post('/webhook', (req, res) => {
                     "type" : "template",
                     "payload": {
                         "template_type": "button",
-                        "text": "What emergency do you need?",
+                        "text": "This selection include Overbleeding, Nose Bleeding and Bleeding Wound",
                         "buttons": [
                         {
                             "type": "postback",
-                            "title": "snack",
-                            "payload": "snack"
+                            "title": "Bleeding",
+                            "payload": "Bleeding"
                         }]
+                    },
+
+                    "payload": {
+                        "template_type": "button",
+                        "text": "This selection include Steam Burn, Electrical Burn and Chemical Burn",
+                        "buttons": [
+                        {
+                            "type": "postback",
+                            "title": "Burnt",
+                            "payload": "Burnt"
+                        }],
                     }
                 }
      
