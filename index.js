@@ -914,8 +914,20 @@ app.post('/webhook', (req, res) => {
 
                          {
                             "type": "postback",
-                            "title": "Bleeding",
-                            "payload": "Bleeding"
+                            "title": "Burnt",
+                            "payload": "Burnt"
+                        },
+
+                          {
+                            "type": "postback",
+                            "title": "Poison",
+                            "payload": "Poison"
+                        },
+
+                          {
+                            "type": "postback",
+                            "title": "Bone Fracture",
+                            "payload": "Bone Fracture"
                         },
 
                         ]
