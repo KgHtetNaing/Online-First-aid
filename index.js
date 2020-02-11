@@ -88,7 +88,7 @@ app.post('/webhook', (req, res) => {
                 var userButton = webhook_event.postback.payload
             }
 
-            if(userInput == 'Hi' || userButton == 'Hello')
+            if(userInput == 'Hi' || userInput == 'Hello' || userInput == 'Get Started' || userButton == 'Get Started')
              {
                 let buttonMesage = {
                     "recipient": {
