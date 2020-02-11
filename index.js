@@ -104,8 +104,8 @@ app.post('/webhook', (req, res) => {
                       	 {
            				 "type":"phone_number",
            				 "title":"Call emergency ambulance",
-           				 "payload":"192"
-         				 },
+           				 "payload":"+95192"
+         				 }, 
 
                          {
                             "type": "postback",
