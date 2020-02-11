@@ -102,7 +102,7 @@ app.post('/webhook', (req, res) => {
                                 "elements": [
                                     {
                                         "title": "Welcome!",
-                                        "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/41/Sunflower_from_Silesia2.jpg",
+                                        "image_url": "https://previews.123rf.com/images/yupiramos/yupiramos1506/yupiramos150610219/41427239-first-aid-design-over-white-background-vector-illustration-.jpg",
                                         "subtitle": "Shows treaments for the injuries",
                                         "default_action": {
                                             "type": "web_url",
@@ -119,8 +119,8 @@ app.post('/webhook', (req, res) => {
                                     },
                                     {
                                         "title": "Welcome!",
-                                        "image_url": "https://petersfancybrownhats.com/company_image.png",
-                                        "subtitle": "Online First-aid in your service.",
+                                        "image_url": "https://www.jehangirhospital.com/images/centres-of-excellence-image/coe_inside_emergency_trauma.jpg",
+                                        "subtitle": "Shows emergency cases (drowning, snake bite, method for CPR,emergency contacts).",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -136,8 +136,8 @@ app.post('/webhook', (req, res) => {
                                     },
                                     {
                                         "title": "Welcome!",
-                                        "image_url": "https://petersfancybrownhats.com/company_image.png",
-                                        "subtitle": "Online First-aid in your service.",
+                                        "image_url": "https://english-blog.s3.amazonaws.com/uploads/2018/03/C_Users_GOMEDII_AppData_Local_Packages_Microsoft.SkypeApp_kzf8qxf38zg5c_LocalState_159b4db9-f791-4aa0-8431-350e45c596c9.jpg",
+                                        "subtitle": "Can buy first-aid kit and other medicines.",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -146,8 +146,8 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",
-                                                "title": "Medicine",
-                                                "payload": "Medicine"
+                                                "title": "Purchasement",
+                                                "payload": "Purchasement"
                                             }
                                         ]
                                     }
@@ -180,7 +180,7 @@ app.post('/webhook', (req, res) => {
                                 "elements": [
                                     {
                                         "title": "Choose your injury type!",
-                                        "image_url": "https://petersfancybrownhats.com/company_image.png",
+                                        "image_url": "https://cdn3.vectorstock.com/i/1000x1000/90/27/finger-with-blood-drop-on-white-background-vector-19899027.jpg",
                                         "subtitle": "Nose bleeding, over bleeding, bleeding wound",
                                         "default_action": {
                                             "type": "web_url",
@@ -201,7 +201,7 @@ app.post('/webhook', (req, res) => {
 
                                    {
                                         "title": "Choose your injury type!",
-                                        "image_url": "https://petersfancybrownhats.com/company_image.png",
+                                        "image_url": "https://cdn1.pegasaas.io/2d65/img/wp-content/uploads/2019/09/Brauns-Law-Burn-Injury-Lawyer-e1568040798860-524x402---524x402.jpg",
                                         "subtitle": "Steam burn, electrical burn, chemical burn",
                                         "default_action": {
                                             "type": "web_url",
@@ -211,7 +211,7 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",
-                                                "title": "Burnt",
+                                                "title": "Burns",
                                                 "payload": "Burnt"
                                             }
                                         ]
@@ -219,7 +219,7 @@ app.post('/webhook', (req, res) => {
 
                                     {
                                         "title": "Choose your injury type!",
-                                        "image_url": "https://petersfancybrownhats.com/company_image.png",
+                                        "image_url": "https://images.ctfassets.net/cnu0m8re1exe/2QNU6xdc3SfDWEroBDqMJg/7f5af4db4c432f265e22259b64ff02fa/bee-poison.jpg?w=650&h=433&fit=fill",
                                         "subtitle": "drug toxicity, poison in the eye, bug bite.",
                                         "default_action": {
                                             "type": "web_url",
@@ -237,7 +237,7 @@ app.post('/webhook', (req, res) => {
 
                                     {
                                         "title": "Choose your injury type!",
-                                        "image_url": "https://petersfancybrownhats.com/company_image.png",
+                                        "image_url": "https://st4.depositphotos.com/7477946/19915/i/1600/depositphotos_199156806-stock-photo-first-aid-hand-broken-hand.jpg",
                                         "subtitle": "broken bone, bone dislocation",
                                         "default_action": {
                                             "type": "web_url",
@@ -247,7 +247,7 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",
-                                                "title": "Bone Fracture",
+                                                "title": "Bone Injuries",
                                                 "payload": "Bone Fracture"
                                             }
                                         ]
