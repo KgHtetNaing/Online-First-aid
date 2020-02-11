@@ -120,7 +120,7 @@ app.post('/webhook', (req, res) => {
                                     {
                                         "title": "Welcome!",
                                         "image_url": "https://www.jehangirhospital.com/images/centres-of-excellence-image/coe_inside_emergency_trauma.jpg",
-                                        "subtitle": "Shows emergency cases (drowning, snake bite, method for CPR,emergency contacts).",
+                                        "subtitle": "Shows emergency cases (drowning, snake bite, method for CPR).",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -927,12 +927,12 @@ app.post('/webhook', (req, res) => {
                     "type" : "template",
                     "payload": {
                         "template_type": "button",
-                        "text": "Please select the injury for the treatment",
+                        "text": "Emergency Treatment",
                         "buttons": [
                         {
                             "type": "postback",
-                            "title": "Bleeding",
-                            "payload": "Bleeding"
+                            "title": "Drowning",
+                            "payload": "Drowning"
                         },
 
                          {
@@ -940,6 +940,14 @@ app.post('/webhook', (req, res) => {
                             "title": "Burnt",
                             "payload": "Burnt"
                         },
+
+                          {
+                            "type": "postback",
+                            "title": "CPR",
+                            "payload": "CPR"
+                        },
+
+
 
 
                         ]
@@ -1209,7 +1217,7 @@ app.post('/webhook', (req, res) => {
                     console.log(response)
                 }).fail(error => {
                     console.log(error)
-                })  
+                })//about bonedislocaton end
             
 
         }
