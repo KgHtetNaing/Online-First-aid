@@ -616,7 +616,7 @@ app.post('/webhook', (req, res) => {
                                 "elements": [
                                     {
                                         "title": "Choose your injury !",
-                                        "image_url": "https://petersfancybrownhats.com/company_image.png",
+                                        "image_url": "https://apps-cloud.n-tv.de/img/20947246-1554366750000/16-9/750/34725025.jpg",
                                         "subtitle": "Please get proper healthcare even after the treatment!",
                                         "default_action": {
                                             "type": "web_url",
@@ -642,7 +642,7 @@ app.post('/webhook', (req, res) => {
 
                                     {
                                         "title": "Choose your injury!",
-                                        "image_url": "https://petersfancybrownhats.com/company_image.png",
+                                        "image_url": "https://lh6.googleusercontent.com/proxy/0DYatcTMLCU7sx07kORhF4Xoqd4_-IW-GOj04sKoyIJohoG0ObUNmASxtcSp87wEJ1x8nG1xNS4hXc56dHojfzmDD12w33PqpFOL6bAepUir-7AYua9X4YjgSWxVSs-eZG8",
                                         "subtitle": "Please get proper healthcare even after the treatment!.",
                                         "default_action": {
                                             "type": "web_url",
@@ -667,7 +667,7 @@ app.post('/webhook', (req, res) => {
 
                                      {
                                         "title": "Choose your injury!",
-                                        "image_url": "",
+                                        "image_url": "https://media.istockphoto.com/photos/bug-bites-picture-id519420274",
                                         "subtitle": "Please get proper healthcare even after the treatment!.",
                                         "default_action": {
                                             "type": "web_url",
@@ -784,7 +784,7 @@ app.post('/webhook', (req, res) => {
                                 "elements": [
                                     {
                                         "title": "Choose your injury!",
-                                        "image_url": "https://petersfancybrownhats.com/company_image.png",
+                                        "image_url": "https://cdn.24.co.za/files/Cms/General/d/5259/ea5f47648615427182386d541d1dc1ea.jpg",
                                         "subtitle": "Please get proper healthcare even after the treatment!.",
                                         "default_action": {
                                             "type": "web_url",
@@ -810,7 +810,7 @@ app.post('/webhook', (req, res) => {
 
                                    {
                                         "title": "Choose your injury!",
-                                        "image_url": "https://petersfancybrownhats.com/company_image.png",
+                                        "image_url": "https://www.summitmedicalgroup.com/media/db/relayhealth-images/fingdisl_3.jpg",
                                         "subtitle": "Please get proper healthcare even after the treatment!",
                                         "default_action": {
                                             "type": "web_url",
@@ -1098,6 +1098,121 @@ app.post('/webhook', (req, res) => {
             
 
         }//about chemical burn end
+
+        else if(userInput == 'About Drug Toxicity' || userButton == 'About Drug Toxicity')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`Drug toxicity can occur because of the overdose of the drugs or if the medicine or poison which is not suitable for the body is taken. It is highly lethal if the treatment is not taken immediately.`
+                    },
+                
+
+
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
+            
+
+        }//about drug toxicity end
+
+        else if(userInput == 'About Poison in the eye' || userButton == 'About Poison in the eye')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`Poison in the eye can cause when the poison get into the eyes either directly or indirectly (eg.thorugh hands which touched chemical). Beauty products and insecticides are most common poisons to get in the eye. Can be severe if not treated immediately.`
+                    },
+                
+
+
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
+            
+
+        }//about poisonintheeye end
+
+            else if(userInput == 'About Bug Bite' || userButton == 'About Bug Bite')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`This can be caused when the poisonous bugs bite the body. Very common and not lethal in most cases and only causes itiching and pain.`
+                    },
+                
+
+
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
+            
+
+        }//about bug bite end
+
+         else if(userInput == 'About Broken Bone' || userButton == 'About Broken Bone')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`This can be caused when the bone is broken due to accidents like tripping or falling or got hit by something. The symptons include swelling or brusing over the bones. Pain in the injured area which gets worse when the area is moved or pressure is applied. Can cause severe injuries in some cases.`
+                    },
+                
+
+
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
+            
+
+        }//about brokenbone end
+
+            else if(userInput == 'About Bone Disclocation' || userButton == 'About Bone Disclocation')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`Bone discloation is the case where one bone is forced to move out of the position or temporarily deform in joint area where two bones meet. This differs from broken bone as this is not as severe as the broken bone and can be treated well if the person with well-informed medical knowledge is there. Can cause a lot of pain and most commonly happen in fingers and shoulders. `
+                    },
+                
+
+
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
+            
+
+        }
 
 
              
