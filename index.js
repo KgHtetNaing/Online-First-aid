@@ -912,6 +912,12 @@ app.post('/webhook', (req, res) => {
                             "payload": "Bleeding"
                         },
 
+                         {
+                            "type": "postback",
+                            "title": "Bleeding",
+                            "payload": "Bleeding"
+                        },
+
                         ]
                     }
                 }
