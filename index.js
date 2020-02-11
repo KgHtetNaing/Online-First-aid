@@ -103,7 +103,7 @@ app.post('/webhook', (req, res) => {
                                     {
                                         "title": "Welcome!",
                                         "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/41/Sunflower_from_Silesia2.jpg",
-                                        "subtitle": "Online First-aid in your service.",
+                                        "subtitle": "Shows treaments for the injuries",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -181,7 +181,7 @@ app.post('/webhook', (req, res) => {
                                     {
                                         "title": "Choose your injury type!",
                                         "image_url": "https://petersfancybrownhats.com/company_image.png",
-                                        "subtitle": "Online First-aid in your service.",
+                                        "subtitle": "Nose bleeding, over bleeding, bleeding wound",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -202,7 +202,7 @@ app.post('/webhook', (req, res) => {
                                    {
                                         "title": "Choose your injury type!",
                                         "image_url": "https://petersfancybrownhats.com/company_image.png",
-                                        "subtitle": "Online First-aid in your service.",
+                                        "subtitle": "Steam burn, electrical burn, chemical burn",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -220,7 +220,7 @@ app.post('/webhook', (req, res) => {
                                     {
                                         "title": "Choose your injury type!",
                                         "image_url": "https://petersfancybrownhats.com/company_image.png",
-                                        "subtitle": "Online First-aid in your service.",
+                                        "subtitle": "drug toxicity, poison in the eye, bug bite.",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -238,7 +238,7 @@ app.post('/webhook', (req, res) => {
                                     {
                                         "title": "Choose your injury type!",
                                         "image_url": "https://petersfancybrownhats.com/company_image.png",
-                                        "subtitle": "Online First-aid in your service.",
+                                        "subtitle": "broken bone, bone dislocation",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -282,8 +282,8 @@ app.post('/webhook', (req, res) => {
                                 "elements": [
                                     {
                                         "title": "Choose your injury!",
-                                        "image_url": "https://petersfancybrownhats.com/company_image.png",
-                                        "subtitle": "Online First-aid in your service.",
+                                        "image_url": "https://cdn.cdnparenting.com/articles/2018/01/704685511-H.jpg",
+                                        "subtitle": "Please get proper healthcare even after the treatment!.",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -308,8 +308,8 @@ app.post('/webhook', (req, res) => {
 
                                    {
                                         "title": "Choose your injury!",
-                                        "image_url": "https://petersfancybrownhats.com/company_image.png",
-                                        "subtitle": "Online First-aid in your service.",
+                                        "image_url": "https://nkilmer2016.weebly.com/uploads/6/0/7/5/60755477/9132875.jpg?1452002303",
+                                        "subtitle": "Please get proper healthcare even after the treatment!",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -331,8 +331,8 @@ app.post('/webhook', (req, res) => {
 
                                     {
                                         "title": "Choose Your injury!",
-                                        "image_url": "https://petersfancybrownhats.com/company_image.png",
-                                        "subtitle": "Online First-aid in your service.",
+                                        "image_url": "https://www.wikihow.com/images/thumb/5/5d/Treat-a-Minor-Cut-Step-1-Version-2.jpg/aid2103769-v4-728px-Treat-a-Minor-Cut-Step-1-Version-2.jpg.webp",
+                                        "subtitle": "Please get proper healthcare even after the treatment!!",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -452,7 +452,7 @@ app.post('/webhook', (req, res) => {
                                     {
                                         "title": "Choose your injury !",
                                         "image_url": "https://petersfancybrownhats.com/company_image.png",
-                                        "subtitle": "Online First-aid in your service.",
+                                        "subtitle": "Please get proper healthcare even after the treatment!",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -478,7 +478,7 @@ app.post('/webhook', (req, res) => {
                                     {
                                         "title": "Choose your injury!",
                                         "image_url": "https://petersfancybrownhats.com/company_image.png",
-                                        "subtitle": "Online First-aid in your service.",
+                                        "subtitle": "Please get proper healthcare even after the treatment!",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -501,7 +501,7 @@ app.post('/webhook', (req, res) => {
                                     {
                                         "title": "Choose your injury!",
                                         "image_url": "",
-                                        "subtitle": "Online First-aid in your service.",
+                                        "subtitle": "Please get proper healthcare even after the treatment!.",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -617,7 +617,7 @@ app.post('/webhook', (req, res) => {
                                     {
                                         "title": "Choose your injury !",
                                         "image_url": "https://petersfancybrownhats.com/company_image.png",
-                                        "subtitle": "Online First-aid in your service.",
+                                        "subtitle": "Please get proper healthcare even after the treatment!",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -643,7 +643,7 @@ app.post('/webhook', (req, res) => {
                                     {
                                         "title": "Choose your injury!",
                                         "image_url": "https://petersfancybrownhats.com/company_image.png",
-                                        "subtitle": "Online First-aid in your service.",
+                                        "subtitle": "Please get proper healthcare even after the treatment!.",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -668,7 +668,7 @@ app.post('/webhook', (req, res) => {
                                      {
                                         "title": "Choose your injury!",
                                         "image_url": "",
-                                        "subtitle": "Online First-aid in your service.",
+                                        "subtitle": "Please get proper healthcare even after the treatment!.",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -769,7 +769,7 @@ app.post('/webhook', (req, res) => {
                 })  
             
 
-        } //buybite end
+        } //bugbite end
 
          else if(userInput == 'Bone Fracture' || userButton == 'Bone Fracture'){
                 let buttonMesage = {
@@ -785,7 +785,7 @@ app.post('/webhook', (req, res) => {
                                     {
                                         "title": "Choose your injury!",
                                         "image_url": "https://petersfancybrownhats.com/company_image.png",
-                                        "subtitle": "Online First-aid in your service.",
+                                        "subtitle": "Please get proper healthcare even after the treatment!.",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -811,7 +811,7 @@ app.post('/webhook', (req, res) => {
                                    {
                                         "title": "Choose your injury!",
                                         "image_url": "https://petersfancybrownhats.com/company_image.png",
-                                        "subtitle": "Online First-aid in your service.",
+                                        "subtitle": "Please get proper healthcare even after the treatment!",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -871,7 +871,7 @@ app.post('/webhook', (req, res) => {
 
         }//brokenbone end
 
-         else if(userInput == 'Bone Disclocation' || userButton == 'Broken Bone')
+         else if(userInput == 'Bone Disclocation' || userButton == 'Bone Disclocation')
              {
                 let buttonMesage = {
                     "recipient": {
@@ -892,6 +892,29 @@ app.post('/webhook', (req, res) => {
             
 
         } //bonedisclocation end
+
+         else if(userInput == 'About N' || userButton == 'Bug Bite')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`These are the steps for treating the bug bite before the healthcare arrive.\n\n1.Remove the tick, stings or hair if still there.\n\n2.Washed the affected area with soap and water.\n\n3.Apply the cold compress or an icepack to the affected area for at least 10 minutes.\n\n4.Raise the affected area if possible, it can helps in reducing the swelling.\n\n5.Prevent from scratching or bursting any blisters to reduce the risk of infection.\n\n6.Home remedies like vinegar and bicarbonate of soda should not be use as they are unlikely to help.`
+                    },
+                
+
+
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
+            
+
+        }
 
         else if(userInput == 'Emergency' || userButton == 'Emergency')
              {
@@ -918,17 +941,6 @@ app.post('/webhook', (req, res) => {
                             "payload": "Burnt"
                         },
 
-                          {
-                            "type": "postback",
-                            "title": "Poison",
-                            "payload": "Poison"
-                        },
-
-                          {
-                            "type": "postback",
-                            "title": "Bone Fracture",
-                            "payload": "Bone Fracture"
-                        },
 
                         ]
                     }
@@ -946,7 +958,77 @@ app.post('/webhook', (req, res) => {
                 })     
 
             
-               }
+               }//button test
+
+
+          else if(userInput == 'About Nose Bleeding' || userButton == 'About Nose Bleeding')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`Nose bleeding occurs for many reasons. But mostly because of dramatic weather changes, injur and dry air. Even though it is not very severe, it can still impose certain danger of letting blood run back into throat and block the breathing`
+                    },
+                
+
+
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
+            
+
+        }//about nose bleed end
+
+         else if(userInput == 'About Over Bleeding' || userButton == 'About Over Bleeding')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`Overbleeding is when an injury bleed alot and the bleeding cannot be stopped. It is dangerous and lethal.`
+                    },
+                
+
+
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
+            
+
+        }//about over bleeding end
+
+         else if(userInput == 'About Bleeding Wound' || userButton == 'About Bleeding Wound')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`Bleeding wound is a minor wound with bleeding which is usually caused becuase of injuries. Even though it is not lethal in most cases, there are still danger of getting infection.`
+                    },
+                
+
+
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
+            
+
+        }
 
 
              
