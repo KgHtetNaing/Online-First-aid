@@ -104,7 +104,7 @@ app.post('/webhook', (req, res) => {
                       	 {
            				 "type":"phone_number",
            				 "title":"Call emergency ambulance",
-           				 "payload":"+95192"
+           				 "payload":"119"
          				 }, 
 
                          {
@@ -1310,30 +1310,19 @@ app.post('/webhook', (req, res) => {
                 })
             
 
-        }//snakebite end
+       	 }//snakebite end
 
-       else if(userInput == 'Call' || userButton == 'Call')
-             {
+     	
+       	 else if(userInput == "CPR" || userButton == "CPR")
+       	  {
                 let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
                     },
-                "message":{
-    			"attachment":{
-      			"type":"template",
-      			"payload":{
-        "template_type":"button",
-        "text":"Need further assistance? Talk to a representative",
-        "buttons":[
-          {
-            "type":"phone_number",
-            "title":"Call Representative",
-            "payload":"+15105551234"
-          }
-        ]
-      }
-    }
-  }
+                    "message":{
+                        "text":`1.Position your hand. Ensure that the patient is lying on his back on the firm surface. Kneel beside him and place the heel of the hand on the center of the chest. \n\n2.Interlock fingers. Keep your hand straight, cover the first hand with the heel of other hand and interlock the fingers of both hands together. Keep your fingers raised so they do no touch the patient's chest or rib cage. \n\n3.Give chest compressions. Lean forward so that your shoulders are directly over the patient's chest and press down on the chest about two inches. Release the pressure, but not your hands and let the chest come back up. Repeat to give 30 compressions at a rate of 100 compressions per minute.\n\n4.Open the airway. Move to the patient's head. Tilt his head and lift his chin to open the airway again. \n\n5.Give resuce breaths. Pinch the patient's nose and give a resuce breath into the patient's mouth from your mouth. Blow until you can see the patient's chest rise..\n\n6.Watch chest fall. Remove your mouth from the patient's and look at the chest fall of the patient. Repeat step five and six once. \n\n7.Repeat chest compressions and resuce breaths. Repeat the 30 chest compressions, followed by two resuce breaths. `
+                    },
+                
 
 
             }
@@ -1342,10 +1331,12 @@ app.post('/webhook', (req, res) => {
                     console.log(response)
                 }).fail(error => {
                     console.log(error)
-                })     
-
+                })
             
-               }
+
+       	 }
+
+       	 
 
 
              
