@@ -144,6 +144,25 @@ app.post('/webhook', (req, res) => {
                             "payload": {
                                 "template_type": "generic",
                                 "elements": [
+
+                                	 {
+                                        "title": "Welcome!",
+                                        "image_url": "https://www.jehangirhospital.com/images/centres-of-excellence-image/coe_inside_emergency_trauma.jpg",
+                                        "subtitle": "Shows emergency cases (drowning, snake bite, method for CPR).",
+                                        "default_action": {
+                                            "type": "web_url",
+                                            "url": "https://petersfancybrownhats.com/view?item=103",
+                                            "webview_height_ratio": "tall",
+                                        },
+                                        "buttons": [
+                                            {
+                                                "type": "postback",                                               
+                                                "title": "Emergency Treatment",
+                                                "payload": "Emergency"
+                                            }
+                                        ]
+                                    },
+                                    
                                     {
                                         "title": "Welcome!",
                                         "image_url": "https://previews.123rf.com/images/yupiramos/yupiramos1506/yupiramos150610219/41427239-first-aid-design-over-white-background-vector-illustration-.jpg",
@@ -161,23 +180,7 @@ app.post('/webhook', (req, res) => {
                                             }
                                         ]
                                     },
-                                    {
-                                        "title": "Welcome!",
-                                        "image_url": "https://www.jehangirhospital.com/images/centres-of-excellence-image/coe_inside_emergency_trauma.jpg",
-                                        "subtitle": "Shows emergency cases (drowning, snake bite, method for CPR).",
-                                        "default_action": {
-                                            "type": "web_url",
-                                            "url": "https://petersfancybrownhats.com/view?item=103",
-                                            "webview_height_ratio": "tall",
-                                        },
-                                        "buttons": [
-                                            {
-                                                "type": "postback",                                               
-                                                "title": "Emergency Treatment",
-                                                "payload": "Emergency"
-                                            }
-                                        ]
-                                    },
+                                   
                                     {
                                         "title": "Welcome!",
                                         "image_url": "https://english-blog.s3.amazonaws.com/uploads/2018/03/C_Users_GOMEDII_AppData_Local_Packages_Microsoft.SkypeApp_kzf8qxf38zg5c_LocalState_159b4db9-f791-4aa0-8431-350e45c596c9.jpg",
