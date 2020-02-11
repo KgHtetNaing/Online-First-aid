@@ -99,7 +99,7 @@ app.post('/webhook', (req, res) => {
                     "type" : "template",
                     "payload": {
                         "template_type": "button",
-                        "text": "Emergency Treatment",
+                        "text": "Choose your option",
                         "buttons": [
                         {
                             "type": "postback",
@@ -173,7 +173,7 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",                                               
-                                                "title": "Emergency",
+                                                "title": "Emergency Treatment",
                                                 "payload": "Emergency"
                                             }
                                         ]
@@ -1310,7 +1310,42 @@ app.post('/webhook', (req, res) => {
                 })
             
 
-        }
+        }//snakebite end
+
+       else if(userInput == 'Call' || userButton == 'Call')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                "message":{
+    			"attachment":{
+      			"type":"template",
+      			"payload":{
+        "template_type":"button",
+        "text":"Need further assistance? Talk to a representative",
+        "buttons":[
+          {
+            "type":"phone_number",
+            "title":"Call Representative",
+            "payload":"+15105551234"
+          }
+        ]
+      }
+    }
+  }
+
+
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })     
+
+            
+               }
 
 
              
