@@ -911,23 +911,6 @@ app.post('/webhook', (req, res) => {
                             "title": "Bleeding",
                             "payload": "Bleeding"
                         },
-                         {
-                            "type": "postback",
-                            "title": "Burnt",
-                            "payload": "Burnt"
-                        },
-
-                         {
-                            "type": "postback",
-                            "title": "Poison",
-                            "payload": "Poison"
-                        },
-
-                         {
-                            "type": "postback",
-                            "title": "Bone Fracture",
-                            "payload": "Bone Fracture"
-                        },
 
                         ]
                     }
