@@ -101,11 +101,11 @@ app.post('/webhook', (req, res) => {
                         "template_type": "button",
                         "text": "Choose your option",
                         "buttons": [
-                        {
-                            "type": "postback",
-                            "title": "Call Emergency",
-                            "payload": "Call"
-                        },
+                      	 {
+           				 "type":"phone_number",
+           				 "title":"Call Representative",
+           				 "payload":"+15105551234"
+         				 },
 
                          {
                             "type": "postback",
