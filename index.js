@@ -103,14 +103,14 @@ app.post('/webhook', (req, res) => {
                         "buttons": [
                       	 {
            				 "type":"phone_number",
-           				 "title":"Call emergency ambulance",
+           				 "title":"အရေးပေါ်ခေါ်ဆိုမှု",
            				 "payload":"+95119"
          				 }, 
 
                          {
                             "type": "postback",
-                            "title": "Treatment",
-                            "payload": "Treatment"
+                            "title": "ကုသမှု",
+                            "payload": "ကုသမှု"
                         },
 
                          
@@ -132,7 +132,7 @@ app.post('/webhook', (req, res) => {
             
                }
             
-           else if (userInput == 'Treatment' || userButton == 'Treatment') {
+           else if (userInput == 'ကုသမှု' || userButton == 'ကုသမှု') {
                 
                 let buttonMesage = {
                     "recipient": {
@@ -147,7 +147,7 @@ app.post('/webhook', (req, res) => {
                                     {
                                         "title": "Welcome!",
                                         "image_url": "https://www.jehangirhospital.com/images/centres-of-excellence-image/coe_inside_emergency_trauma.jpg",
-                                        "subtitle": "Shows treaments for the injuries",
+                                        "subtitle": " ပါဝင်သည်.ကုသနည်များ (ရေနစ်ခြင်း,မြွေကိုက်ဒဏ်ရာ, CPR ကုသမှုနည်းလမ်း)",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -156,15 +156,15 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",                                               
-                                                "title": "Emergency Treatment",
-                                                "payload": "Emergency"
+                                                "title": "အရေးပေါ် ကုသမှု",
+                                                "payload": "အရေးပေါ် ကုသမှု"
                                             }
                                         ]
                                     },
                                     {
                                         "title": "Welcome!",                                        
                                         "image_url": "https://previews.123rf.com/images/yupiramos/yupiramos1506/yupiramos150610219/41427239-first-aid-design-over-white-background-vector-illustration-.jpg",
-                                        "subtitle": "Shows emergency cases (drowning, snake bite, method for CPR).",
+                                        "subtitle": "ဒဏ်ရာကုသရန်နည်းများ.",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -173,8 +173,8 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",                                               
-                                                "title": "Injury",
-                                                "payload": "Injury"
+                                                "title": "ကုသမှုနည်းလမ်းများ",
+                                                "payload": "ကုသမှုနည်းလမ်းများ"
                                             }
                                         ]
                                     },
@@ -211,7 +211,7 @@ app.post('/webhook', (req, res) => {
                 })
 
             } //Welcome end
-            else if(userInput == 'Injury' || userButton == 'Injury'){
+            else if(userInput == 'ကုသမှုနည်းလမ်းများ' || userButton == 'ကုသမှုနည်းလမ်းများ'){
             	let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
@@ -225,7 +225,7 @@ app.post('/webhook', (req, res) => {
                                     {
                                         "title": "Choose your injury type!",
                                         "image_url": "https://cdn3.vectorstock.com/i/1000x1000/90/27/finger-with-blood-drop-on-white-background-vector-19899027.jpg",
-                                        "subtitle": "Nose bleeding, over bleeding, bleeding wound",
+                                        "subtitle": "ပါ၀င်သည့်ကုသနည်းမျာ: (နှာခေါင်းသွေးထွက်ဒဏ်ရာ,ပြင်းထန်သွေးထွက်ဒဏ်ရာ,ပုံမှန်သွေးထွက်အနာ)",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -234,8 +234,8 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",                                               
-                                                "title": "Bleeding",
-                                                "payload": "Bleeding"
+                                                "title": "သွေးထွက်ဒဏ်ရာများ",
+                                                "payload": "သွေးထွက်ဒဏ်ရာများ"
                                             },
 
                                              
@@ -246,7 +246,7 @@ app.post('/webhook', (req, res) => {
                                    {
                                         "title": "Choose your injury type!",
                                         "image_url": "https://cdn1.pegasaas.io/2d65/img/wp-content/uploads/2019/09/Brauns-Law-Burn-Injury-Lawyer-e1568040798860-524x402---524x402.jpg",
-                                        "subtitle": "Steam burn, electrical burn, chemical burn",
+                                        "subtitle": "ပါ၀င်သည့်ကုသနည်းမျာ: (ရေနွေးငွေ့လောင်ဒဏ်ရာ,လျှပ်စစ်လောင်ဒဏ်ရာ,ဓာတုလောင်ကျွမ်:ဒဏ်ရာ)",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -255,8 +255,8 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",
-                                                "title": "Burns",
-                                                "payload": "Burnt"
+                                                "title": "လောင်ကျွမ်းဒဏ်ရာများ",
+                                                "payload": "လောင်ကျွမ်းဒဏ်ရာများ"
                                             }
                                         ]
                                     },
@@ -264,7 +264,7 @@ app.post('/webhook', (req, res) => {
                                     {
                                         "title": "Choose your injury type!",
                                         "image_url": "https://images.ctfassets.net/cnu0m8re1exe/2QNU6xdc3SfDWEroBDqMJg/7f5af4db4c432f265e22259b64ff02fa/bee-poison.jpg?w=650&h=433&fit=fill",
-                                        "subtitle": "drug toxicity, poison in the eye, bug bite.",
+                                        "subtitle": "ပါ၀င်သည့်ကုသနည်းမျာ: (ဆေးဝါးအလွန်အကျွံသုံးစွဲမှု,မျက်လုံးထဲအဆိပ်၀င်,အင်းဆက်ပိုးကိုက်ဒဏ်ရာ).",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -273,8 +273,8 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",
-                                                "title": "Poison",
-                                                "payload": "Poison"
+                                                "title": "အဆိပ်သင့်ဒဏ်ရာမျာ",
+                                                "payload": "အဆိပ်သင့်ဒဏ်ရာမျာ"
                                             }
                                         ]
                                     },
@@ -282,7 +282,7 @@ app.post('/webhook', (req, res) => {
                                     {
                                         "title": "Choose your injury type!",
                                         "image_url": "https://st4.depositphotos.com/7477946/19915/i/1600/depositphotos_199156806-stock-photo-first-aid-hand-broken-hand.jpg",
-                                        "subtitle": "broken bone, bone dislocation",
+                                        "subtitle": "အရိုးကျိုးခြင်:,အဆစ်လွဲ",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -291,8 +291,8 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",
-                                                "title": "Bone Injuries",
-                                                "payload": "Bone Fracture"
+                                                "title": "အရိုးဒဏ်ရာ",
+                                                "payload": "အရိုးဒဏ်ရာ"
                                             }
                                         ]
                                     },
@@ -313,7 +313,7 @@ app.post('/webhook', (req, res) => {
 
             } //Injurytype end
 
-                        else if(userInput == 'Bleeding' || userButton == 'Bleeding'){
+                        else if(userInput == 'သွေးထွက်ဒဏ်ရာများ' || userButton == 'သွေးထွက်ဒဏ်ရာများ'){
                 let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
@@ -327,7 +327,7 @@ app.post('/webhook', (req, res) => {
                                     {
                                         "title": "Choose your injury!",
                                         "image_url": "https://cdn.cdnparenting.com/articles/2018/01/704685511-H.jpg",
-                                        "subtitle": "Please get proper healthcare even after the treatment!.",
+                                        "subtitle": "ကျေးဇူးပြု၍ ကုသမှုခံယူပြီးနောက်၌ပင်သင့်တော်သောကျန်းမာရေးစောင့်ရှောက်မှုကိုရယူပါ!.",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -336,13 +336,13 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",                                               
-                                                "title": "Nose Bleeding",
-                                                "payload": "Nose Bleeding"
+                                                "title": "နှာခေါင်းသွေးထွက်ဒဏ်ရာ",
+                                                "payload": "နှာခေါင်းသွေးထွက်ဒဏ်ရာ"
                                             },
                                             {
                                                 "type": "postback",                                               
-                                                "title": "About Nose Bleeding",
-                                                "payload": "About Nose Bleeding"
+                                                "title": "နှာခေါင်းသွေးထွက်ဒဏ်ရာအကြောင်:",
+                                                "payload": "နှာခေါင်းသွေးထွက်ဒဏ်ရာအကြောင်:"
                                             },
 
                                              
@@ -353,7 +353,7 @@ app.post('/webhook', (req, res) => {
                                    {
                                         "title": "Choose your injury!",
                                         "image_url": "https://nkilmer2016.weebly.com/uploads/6/0/7/5/60755477/9132875.jpg?1452002303",
-                                        "subtitle": "Please get proper healthcare even after the treatment!",
+                                        "subtitle": "ကျေးဇူးပြု၍ ကုသမှုခံယူပြီးနောက်၌ပင်သင့်တော်သောကျန်းမာရေးစောင့်ရှောက်မှုကိုရယူပါ!",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -362,13 +362,13 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",
-                                                "title": "Over Bleeding",
-                                                "payload": "Over Bleeding"
+                                                "title": "ပြင်းထန်သွေးထွက်ဒဏ်ရာ",
+                                                "payload": "ပြင်းထန်သွေးထွက်ဒဏ်ရာ"
                                             },
                                              {
                                                 "type": "postback",                                               
-                                                "title": "About Over Bleeding",
-                                                "payload": "About Over Bleeding"
+                                                "title": "ပြင်းထန်သွေးထွက်ဒဏ်ရာအကြောင်:",
+                                                "payload": "ပြင်းထန်သွေးထွက်ဒဏ်ရာအကြောင်:"
                                             },
                                         ]
                                     },
@@ -376,7 +376,7 @@ app.post('/webhook', (req, res) => {
                                     {
                                         "title": "Choose Your injury!",
                                         "image_url": "https://www.wikihow.com/images/thumb/5/5d/Treat-a-Minor-Cut-Step-1-Version-2.jpg/aid2103769-v4-728px-Treat-a-Minor-Cut-Step-1-Version-2.jpg.webp",
-                                        "subtitle": "Please get proper healthcare even after the treatment!!",
+                                        "subtitle": "ကျေးဇူးပြု၍ ကုသမှုခံယူပြီးနောက်၌ပင်သင့်တော်သောကျန်းမာရေးစောင့်ရှောက်မှုကိုရယူပါ",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -385,13 +385,13 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",
-                                                "title": "Bleeding Wound",
-                                                "payload": "Bleeding Wound"
+                                                "title": "ပုံမှန်သွေးထွက်အနာ",
+                                                "payload": "ပုံမှန်သွေးထွက်အနာ"
                                             },
                                              {
                                                 "type": "postback",                                               
-                                                "title": "About Bleeding Wound",
-                                                "payload": "About Bleeding Wound"
+                                                "title": "ပုံမှန်သွေးထွက်အနာအကြောင်:",
+                                                "payload": "ပုံမှန်သွေးထွက်အနာအကြောင်:"
                                             },
                                         ]
                                     },
@@ -414,14 +414,14 @@ app.post('/webhook', (req, res) => {
 
             } //Injury end
 
-                else if(userInput == 'Nose Bleeding' || userButton == 'Nose Bleeding')
+                else if(userInput == 'နှာခေါင်းသွေးထွက်ဒဏ်ရာ' || userButton == 'နှာခေါင်းသွေးထွက်ဒဏ်ရာ')
              {
                 let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`These are the steps for treating the nose bleeding .\n\n1. Sit Upright and lean forward.\n\n2. Do not pack the nose.\n\n3. Use decongestant (eg. breathing steam, placing a wet warm towel)\n\n4. Pinch the part of the nose below the nasal bones for about 10 minutes.`
+                        "text":`\n\n1.တည့်တည့်ထိုင်ပြီး ကိုယ်ကို အရှေ့သို့ကိုင်းထားပါ.\n\n2.နှာခေါင်းရိုးအောက်ပိုင်းကို ၁၀မိနစ်ခန့်ဖိပေးထားပါ.\n\n3.ရေခဲ သို့မဟုတ် ခဲနေသောအရာများကို ပုဝါနဲ့ထုပ်ကာ နှာခေါင်းပေါ်သို့ဖိပေးပါ\n\n4.သွေးထွက်မရပ်သေးပါက နှာခေါင်းရိုးအောက်ကို ၅မိနစ်ခန့်ထပ်ဖိပေးပါ.`
                     }
 
 
@@ -436,14 +436,14 @@ app.post('/webhook', (req, res) => {
 
         } //nosebleed end
 
-         else if(userInput == 'Bleeding Wound' || userButton == 'Bleeding Wound')
+         else if(userInput == 'ပုံမှန်သွေးထွက်အနာ' || userButton == 'ပုံမှန်သွေးထွက်အနာ')
              {
                 let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`These are the steps for treating the bleeding wound before the healthcare arrive.\n\n1. Gently clean the wound with soap and warm water.\n\n2. Apply antibiotics and cover the wound with the bandage.\n\n3.Change the bandage daily.`
+                        "text":`\n\n1. အနာကိုဆပ်ပြာနှင့်ရေနွေးဖြင့်ညင်သာစွာဆေးကြောပါ.\n\n2. အနာပေါ်သုံးသည့်ပိုးသတ်‌ဆေးသုံးပြီး ပတ်တီး ဖြင့်ပတ်ပါ.\n\n3.နေ့စဉ်ပတ်တီးကိုလဲပါ.`
                     }
 
 
@@ -458,14 +458,14 @@ app.post('/webhook', (req, res) => {
 
         } //bleeding wound end
 
-        else if(userInput == 'Over Bleeding' || userButton == 'Over Bleeding')
+        else if(userInput == 'ပြင်းထန်သွေးထွက်ဒဏ်ရာ' || userButton == 'ပြင်းထန်သွေးထွက်ဒဏ်ရာ')
              {
                 let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`These are the steps for stopping the over bleeding before the healthcare arrive.\n\n1. Apply direct pressure on the cut or wound with a clean cloth or tissue.\n\n2. If blood still soaks thorugh material, put more cloth without removing the already applied cloth.\n\n3.If the wound is on the arm or legs, raise it above the heart to slow bleeding.`
+                        "text":`\n\n1. သန်.ရှင်းသောအ၀တ် သို့မဟုတ်တစ်ရှူးဖြင့်ဖြတ် အနာကိုတိုက်ရိုက်ဖိအားပေးပါ.\n\n2.အုပ်ထားသည့်အ၀တ်ထဲသို့သွေးများစိမ့်လာပါက အုပ်ထားသည့်အ၀တ်ကိုမဖယ်ဘဲ နောက်အ၀တ်တစ်ခုကိုအပေါ်မှ ထပ်ဖိပါ\n\n3.အနာသည်လက်မောင်းသို့မဟုတ်ခြေထောက်ပေါ်မှာဆိုပါက သွေးထွက်နည်းအောင် ဒဏ်ရာကို နှလုံးအပေါ်သို့ရောက်‌အောင်‌မြှောက်ထားပေးပါ`
                     }
 
 
@@ -482,7 +482,7 @@ app.post('/webhook', (req, res) => {
 
       
 
-         else if(userInput == 'Burnt' || userButton == 'Burnt'){
+         else if(userInput == 'လောင်ကျွမ်းဒဏ်ရာများ' || userButton == 'လောင်ကျွမ်းဒဏ်ရာများ'){
             	let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
@@ -496,7 +496,7 @@ app.post('/webhook', (req, res) => {
                                     {
                                         "title": "Choose your injury !",
                                         "image_url": "https://library.kissclipart.com/20181218/cxe/kissclipart-burn-child-first-aid-patient-fcca7c43278b9d02.png",
-                                        "subtitle": "Please get proper healthcare even after the treatment!",
+                                        "subtitle": "ကျေးဇူးပြု၍ ကုသမှုခံယူပြီးနောက်၌ပင်သင့်တော်သောကျန်းမာရေးစောင့်ရှောက်မှုကိုရယူပါ!",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -505,13 +505,13 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",                                               
-                                                "title": "Steam Burn",
-                                                "payload": "Steam Burn"
+                                                "title": "ရေနွေးငွေ့လောင်ဒဏ်ရာ",
+                                                "payload": "ရေနွေးငွေ့လောင်ဒဏ်ရာ"
                                             },
                                              {
                                                 "type": "postback",                                               
-                                                "title": "About Steam Burn",
-                                                "payload": "About Steam Burn"
+                                                "title": "ရေနွေးငွေ့လောင်ဒဏ်ရာအကြောင်:",
+                                                "payload": "ရေနွေးငွေ့လောင်ဒဏ်ရာအကြောင်:"
                                             },
 
                                              
@@ -522,7 +522,7 @@ app.post('/webhook', (req, res) => {
                                     {
                                         "title": "Choose your injury!",
                                         "image_url": "https://www.wikihow.com/images/thumb/d/d7/Treat-Electrical-Burns-Step-20.jpg/aid544981-v4-728px-Treat-Electrical-Burns-Step-20.jpg",
-                                        "subtitle": "Please get proper healthcare even after the treatment!",
+                                        "subtitle": "ကျေးဇူးပြု၍ ကုသမှုခံယူပြီးနောက်၌ပင်သင့်တော်သောကျန်းမာရေးစောင့်ရှောက်မှုကိုရယူပါ!",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -531,13 +531,13 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",
-                                                "title": "Electrical Burn",
-                                                "payload": "Electrical Burn"
+                                                "title": "လျှပ်စစ်လောင်ဒဏ်ရာ",
+                                                "payload": "လျှပ်စစ်လောင်ဒဏ်ရာ"
                                             },
                                              {
                                                 "type": "postback",                                               
-                                                "title": "About Electrical Burn",
-                                                "payload": "About Electrical Burn"
+                                                "title": "လျှပ်စစ်လောင်ဒဏ်ရာအကြောင်:",
+                                                "payload": "လျှပ်စစ်လောင်ဒဏ်ရာအကြောင်:"
                                             },
                                         ]
                                     },
@@ -545,7 +545,7 @@ app.post('/webhook', (req, res) => {
                                     {
                                         "title": "Choose your injury!",
                                         "image_url": "https://comps.canstockphoto.com/drain-cleaner-burn-illustration_csp5353742.jpg",
-                                        "subtitle": "Please get proper healthcare even after the treatment!.",
+                                        "subtitle": "ကျေးဇူးပြု၍ ကုသမှုခံယူပြီးနောက်၌ပင်သင့်တော်သောကျန်းမာရေးစောင့်ရှောက်မှုကိုရယူပါ!",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -554,13 +554,13 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",
-                                                "title": "Chemical Burn",
-                                                "payload": "Chemical Burn"
+                                                "title": "ဓာတုလောင်ကျွမ်းဒဏ်ရာ",
+                                                "payload": "ဓာတုလောင်ကျွမ်းဒဏ်ရာ"
                                             },
                                              {
                                                 "type": "postback",                                               
-                                                "title": "About Chemical Burn",
-                                                "payload": "About Chemical Burn"
+                                                "title": "ဓာတုလောင်ကျွမ်းဒဏ်ရာအကြောင်:",
+                                                "payload": "ဓာတုလောင်ကျွမ်းဒဏ်ရာအကြောင်:"
                                             },
                                         ]
                                     },
@@ -581,14 +581,14 @@ app.post('/webhook', (req, res) => {
 
             }//burninjury end
 
-           else if(userInput == 'Steam Burn' || userButton == 'Steam Burn')
+           else if(userInput == 'ရေနွေးငွေ့လောင်ဒဏ်ရာ' || userButton == 'ရေနွေးငွေ့လောင်ဒဏ်ရာ')
              {
                 let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`These are the steps for treating the steam burn before the healthcare arrive.\n\n1.Apply cool (not cold) water over the burn area for about 20 minutes.\n\n2.Use cool compresses (cloth dipped in cool water) if water is not available. Do not use toothpaste.\n\n3.Take pain reliever if necessary.\n\n4.Reduce sun exposure`
+                        "text":`\n\n1.အပူလောင်ဒဏ်ရာပေါ်သို့ ရေအေး (အရမ်းမအေး) ကို မိနစ် ၂၀ ခန့်လောင်းချပေးပါ.\n\n2.သွားတိုက်ဆေးဖြင့်အုံထားခြင်းမပြုရ\n\n3.လိုအပ်ပါက pain-killer ကိုသုံးပါ.\n\n4.နေရောင်ဖြင့်ထိခြင်းမှရှောင်ပါ`
                     }
 
 
@@ -603,7 +603,7 @@ app.post('/webhook', (req, res) => {
 
         } //steamburn end
 
-         else if(userInput == 'Electrical Burn' || userButton == 'Electrical Burn')
+         else if(userInput == 'လျှပ်စစ်လောင်ဒဏ်ရာ' || userButton == 'လျှပ်စစ်လောင်ဒဏ်ရာ')
              {
                 let buttonMesage = {
                     "recipient": {
