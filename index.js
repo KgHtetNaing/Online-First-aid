@@ -35,6 +35,12 @@ app.get('/greeting', (req, res) => {
 
 });
 
+// menu get function
+app.get('/setupPersistentMenu',function(req,res)
+    {
+        setupPersistentMenu(res);
+    })
+
 // Sets server port and logs message on success
 app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
 
@@ -610,7 +616,7 @@ app.post('/webhook', (req, res) => {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`These are the steps for treating electric burn before the healthcare arrive.\n\n1.Perform CPR(shown in Emergency section) if the patient is unresponsive.\n\n2.Can not let the patient become chilled.\n\n3.Cover the burn aread with a sterile bandage or clean cloth.Do not use a blanket or towel as loose fiber can stick to the burnt area.`
+                        "text":`\n\n1.ဒဏ်ရာကို ရေစိမ်ခြင်း၊ရေစိုဝတ်နှင့်အုံပေးခြင်းပြုလုပ်ပါ။ရေခဲနှင့်တိုက်ရိုက်ထိ ခြင်းမပြုရ\n\n2.မီးလောင်ရာနေရာကိုပိုးသတ်ထားသောပတ်တီးသို့မဟုတ်သန့်ရှင်းသောအဝတ်ဖြင့်ဖုံးထားပါ။စောင်သို့မဟုတ်မျက်နှာသုတ်ပုဝါကိုမသုံးပါနှင့်။ချည်မျှင်များမီးလောင်ဒဏ်ရာကိုကပ်သွားနိုင်သည်။.\n\n3.ဆရာဝန်ညွှန်ကြားထားသည့် လိမ်းဆေးများအသုံးပြုနိုင်သည်။ သွားတိုက်ဆေးသုံးခြင်းကိုရှောင်ကြဉ်ပါ`
                     }
 
 
@@ -625,14 +631,14 @@ app.post('/webhook', (req, res) => {
 
         } //electriclaburn end
 
-         else if(userInput == 'Chemical Burn' || userButton == 'Chemical Burn')
+         else if(userInput == 'ဓာတုလောင်ကျွမ်းဒဏ်ရာ' || userButton == 'ဓာတုလောင်ကျွမ်းဒဏ်ရာ')
              {
                 let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`These are the steps for treating Chemical burn before the healthcare arrive.\n\n1.Remove the cause of the burn by running the cool water on it for 10 minutes.For dry chemicals, use brush or gloves.\n\n2.Remove clothing or accessory which has been contaminated by the chemical.\n\n3.Bandge the burn with sterile gauze bandage or a clean cloth. Do not use fluffy cotton. Bandge loosely to prevent from putting pressure on the burned skin.\n\n4.If the patient stil feel burn after the flushing, flush the area again with water.`
+                        "text":`\n\n1.အသားပေါ်ရှိဓာတုအရာများကို ရေအေးဖြင့် ၁၀မိနစ်ခန့် လောင်းချပေးပါ။ ဓာတုအရာများအစိုမဟုတ်ပါက လက်အိတ် (တဆင့်ခံအရာတခုခု) သုံးပြီးဖယ်ရှားပါ။\n\n2.ဓာတုအရာဖြင့်ထိထားအဝတ်အစားများသို့မဟုတ်ဆက်စပ်ပစ္စည်းများကိုဖယ်ရှားပါ.\n\n3.မီးလောင်ရာနေရာကိုပိုးသတ်ထားသောပတ်တီးသို့မဟုတ်သန့်ရှင်းသောအဝတ်ဖြင့်ဖုံးထားပါ။ဒဏ်ရာကို အတင်းဖိအားမဖြစ်စေရန် ပတ်တီးကို တင်းကြပ်စွားမစီးပါနှင့်\n\n4.ရေဆေးပြီးသည့်‌နောက် ဒဏ်ရာသည် ဆက်လက်၍ အပူလောင်နေသေးပါက ထပ်မံ၍ ရေဆေးပါ.`
                     }
 
 
@@ -1334,7 +1340,9 @@ app.post('/webhook', (req, res) => {
                 })
             
 
-       	 }
+       	 }//cpr end
+
+
 
        	 
 
@@ -1352,3 +1360,65 @@ app.post('/webhook', (req, res) => {
     }
 
 });
+
+
+// menu function
+
+ function setupPersistentMenu(res){
+        var messageData = { 
+            "persistent_menu":[
+                {
+                  "locale":"default",
+                  "composer_input_disabled":false,
+                  "call_to_actions":
+                [
+                      {
+                        "title":"Information",
+                        "type":"nested",
+                        "call_to_actions":
+                        [
+                            {
+                              "title":"Helps",
+                              "type":"postback",
+                              "payload":"HELP_PAYLOAD"
+                            },
+                            {
+                              "title":"Contact Me",
+                              "type":"postback",
+                              "payload":"CONTACT_INFO_PAYLOAD"
+                            }
+                        ]
+                      },
+                      {
+                        "title":"Player Register",
+                        "type":"web_url",
+                        "url":"https://mtboxing.herokuapp.com/register",
+                        "webview_height_ratio":"full"
+                      },
+                      {
+                        "type": "postback",
+                        "title": "Outfit suggestions",
+                        "payload": "CURATION"
+                      }
+                ]
+            }
+          ]          
+        };
+        // Start the request
+        request({
+            url: 'https://graph.facebook.com/v2.6/me/messenger_profile?access_token='+ PAGE_ACCESS_TOKEN,
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            form: messageData
+        },
+        function (error, response, body) {
+            if (!error && response.statusCode == 200) {
+                // Print out the response body
+                res.send(body);
+
+            } else { 
+                // TODO: Handle errors
+                res.send(body);
+            }
+        });
+    }
