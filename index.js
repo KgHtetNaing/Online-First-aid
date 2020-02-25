@@ -1394,7 +1394,7 @@ function setupPersistentMenu(res){
                         ]
                       },
                       {
-                        "title":"Player Register",
+                        "title":"Player Registration",
                         "type":"web_url",
                         "url":"https://mtboxing.herokuapp.com/register",
                         "webview_height_ratio":"full"
