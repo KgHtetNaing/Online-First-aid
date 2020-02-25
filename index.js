@@ -169,9 +169,23 @@ app.post('/webhook', (req, res) => {
                     console.log(error)
                 })
             }
+<<<<<<< HEAD
 
        });
 
+=======
+        });
+        //button
+        "payload": {
+            "template_type": "button",
+                "text": "Hi",
+                    "buttons": [
+                < 1 >,
+    < 2 >,
+                        ...
+                  ]
+        }
+>>>>>>> parent of 7cd4faa... Update index.js
         // Returns a '200 OK' response to all requests
         res.status(200).send('EVENT_RECEIVED');
     } else {
