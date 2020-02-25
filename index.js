@@ -39,7 +39,7 @@ app.get('/greeting', (req, res) => {
 app.get('/setupPersistentMenu',function(req,res)
     {
         setupPersistentMenu(res);
-    })
+    });
 
 // Sets server port and logs message on success
 app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
@@ -70,7 +70,7 @@ app.get('/webhook', (req, res) => {
             res.sendStatus(403);
         }
     }
-});
+});//end of get webhook
 
 // Creates the endpoint for our webhook 
 app.post('/webhook', (req, res) => {
