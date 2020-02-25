@@ -1409,7 +1409,7 @@ function setupPersistentMenu(res){
           ]          
         };
         // Start the request
-        requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+        requestify.post(`https://graph.facebook.com/v2.6/me/messenger_profile?access_token=${pageaccesstoken}`, messageData
                 ).then(response => {
                     console.log(response)
                 }).fail(error => {
