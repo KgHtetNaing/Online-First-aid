@@ -1342,6 +1342,57 @@ app.post('/webhook', (req, res) => {
 
        	 }//cpr end
 
+       	 function setupPersistentMenu(res){
+        var messageData = { 
+            "persistent_menu":[
+                {
+                  "locale":"default",
+                  "composer_input_disabled":false,
+                  "call_to_actions":
+                [
+                      {
+                        "title":"Information",
+                        "type":"nested",
+                        "call_to_actions":
+                        [
+                            {
+                              "title":"Helps",
+                              "type":"postback",
+                              "payload":"HELP_PAYLOAD"
+                            },
+                            {
+                              "title":"Contact Me",
+                              "type":"postback",
+                              "payload":"CONTACT_INFO_PAYLOAD"
+                            }
+                        ]
+                      },
+                      {
+                        "title":"Player Register",
+                        "type":"web_url",
+                        "url":"https://mtboxing.herokuapp.com/register",
+                        "webview_height_ratio":"full"
+                      },
+                      {
+                        "type": "postback",
+                        "title": "Outfit suggestions",
+                        "payload": "CURATION"
+                      }
+                ]
+            }
+          ]          
+        };
+        // Start the request
+        requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })
+            
+    }
+
+
 
 
        	 
