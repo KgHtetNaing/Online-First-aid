@@ -1342,7 +1342,32 @@ app.post('/webhook', (req, res) => {
 
        	 }//cpr end
 
-       	 function setupPersistentMenu(res){
+       	 
+
+
+
+
+       	 
+
+
+             
+
+        }) //end foreach
+
+    // Returns a '200 OK' response to all requests
+        	res.status(200).send('EVENT_RECEIVED');  
+    } //end if == page
+    else{
+        // Returns a '404 Not Found' if event is not from a page subscription
+        res.sendStatus(404);
+    }
+
+});
+
+
+// menu function
+
+function setupPersistentMenu(res){
         var messageData = { 
             "persistent_menu":[
                 {
@@ -1390,86 +1415,4 @@ app.post('/webhook', (req, res) => {
                     console.log(error)
                 })
             
-    }
-
-
-
-
-       	 
-
-
-             
-
-        }) //end foreach
-
-    // Returns a '200 OK' response to all requests
-        	res.status(200).send('EVENT_RECEIVED');  
-    } //end if == page
-    else{
-        // Returns a '404 Not Found' if event is not from a page subscription
-        res.sendStatus(404);
-    }
-
-});
-
-
-// menu function
-
- function setupPersistentMenu(res){
-        var messageData = { 
-            "persistent_menu":[
-                {
-                  "locale":"default",
-                  "composer_input_disabled":false,
-                  "call_to_actions":
-                [
-                      {
-                        "title":"Information",
-                        "type":"nested",
-                        "call_to_actions":
-                        [
-                            {
-                              "title":"Helps",
-                              "type":"postback",
-                              "payload":"HELP_PAYLOAD"
-                            },
-                            {
-                              "title":"Contact Me",
-                              "type":"postback",
-                              "payload":"CONTACT_INFO_PAYLOAD"
-                            }
-                        ]
-                      },
-                      {
-                        "title":"Player Register",
-                        "type":"web_url",
-                        "url":"https://mtboxing.herokuapp.com/register",
-                        "webview_height_ratio":"full"
-                      },
-                      {
-                        "type": "postback",
-                        "title": "Outfit suggestions",
-                        "payload": "CURATION"
-                      }
-                ]
-            }
-          ]          
-        };
-        // Start the request
-        request({
-            url: 'https://graph.facebook.com/v2.6/me/messenger_profile?access_token='+ PAGE_ACCESS_TOKEN,
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            form: messageData
-        },
-        function (error, response, body) {
-            if (!error && response.statusCode == 200) {
-                // Print out the response body
-                res.send(body);
-
-            } else { 
-                // TODO: Handle errors
-                res.send(body);
-            }
-        });
     }
