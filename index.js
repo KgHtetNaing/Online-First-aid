@@ -185,23 +185,7 @@ app.post('/webhook', (req, res) => {
                                             }
                                         ]
                                     },
-                                    {
-                                        "title": "Welcome!",
-                                        "image_url": "https://english-blog.s3.amazonaws.com/uploads/2018/03/C_Users_GOMEDII_AppData_Local_Packages_Microsoft.SkypeApp_kzf8qxf38zg5c_LocalState_159b4db9-f791-4aa0-8431-350e45c596c9.jpg",
-                                        "subtitle": "Can buy first-aid kit and other medicines.",
-                                        "default_action": {
-                                            "type": "web_url",
-                                            "url": "https://petersfancybrownhats.com/view?item=103",
-                                            "webview_height_ratio": "tall",
-                                        },
-                                        "buttons": [
-                                            {
-                                                "type": "postback",
-                                                "title": "Purchasement",
-                                                "payload": "Purchasement"
-                                            }
-                                        ]
-                                    }
+                                    
                                 ]
                             }
                         }
