@@ -1306,7 +1306,7 @@ app.post('/webhook', (req, res) => {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`1.Position your hand. Ensure that the patient is lying on his back on the firm surface. Kneel beside him and place the heel of the hand on the center of the chest. \n\n2.Interlock fingers. Keep your hand straight, cover the first hand with the heel of other hand and interlock the fingers of both hands together. Keep your fingers raised so they do no touch the patient's chest or rib cage. \n\n3.Give chest compressions. Lean forward so that your shoulders are directly over the patient's chest and press down on the chest about two inches. Release the pressure, but not your hands and let the chest come back up. Repeat to give 30 compressions at a rate of 100 compressions per minute.\n\n4.Open the airway. Move to the patient's head. Tilt his head and lift his chin to open the airway again. \n\n5.Give resuce breaths. Pinch the patient's nose and give a resuce breath into the patient's mouth from your mouth. Blow until you can see the patient's chest rise..\n\n6.Watch chest fall. Remove your mouth from the patient's and look at the chest fall of the patient. Repeat step five and six once. \n\n7.Repeat chest compressions and resuce breaths. Repeat the 30 chest compressions, followed by two resuce breaths. `
+                        "text":`1.လက်ကိုနေရာချပါ။ လူနာကို ကြမ်းပြင်ပေါ်၌ လှဲထားပါ။ လူနာဘေးတွင်ဒူးထောက်ကာ လက်ဖနောင့်ကို လူနာ၏ရင်ဘက်အလယ်တွင်ထားပါ။\n\n2.လက်တဖက်ပေါ်သို့ တဖက်တင်ပါ။ လက်ကိုအ‌ဖြောင့်ထားပါ။လက်ချောင်းများအနည်းငယ်ဖော့ထားပါ။\n\n3.ကုသသူက ကိုယ်ကို ရှေ့သို့ကိုင်းပါ။ ကုသသူ၏ ပုခုံးသည် လူနာ၏ရင်ဘက်နှင့်တသားတည်းဖြစ်ရမည်။ရင်ဘက်ကိုဖိပါ။ရင်ကို ၂လက်မခန့် နိမ့်သွားအောင်ဖိပါ။\n\n4.ဖိပြီးပါက လက်၏ဖိအားကိုလျှော့ပါ၊လက်ကိုမဖယ်လိုက်ပါနှင့်။\n\n5.လူနာအသက်ရှူရ အဆင်‌ပြေအောင် ခေါင်းကိုနောက်သို့စောင်း၍ မေးစေ့ကိုကိုင်ထားပေးပါ\n\n6.နှာခေါင်းကိုညှစ်ထား၍ လူနာ၏ခေါင်းကိုမော့ကာ ပါးစပ်အတွင်းသို့ လေများသွင်းပေးပါ။\n\n7.ရင်ဘက်ဖောင်းလာပါက လေသွင်းပေးသည်ကိုရပ်၍ ရင်ဘက်ပြန်ကျအောင်စောင့်ပါ။\n\n7.`
                     },
                 
 
@@ -1356,32 +1356,31 @@ function setupPersistentMenu(res){
                   "call_to_actions":
                 [
                       {
-                        "title":"Information",
+                        "title":"Contact Us",
                         "type":"nested",
                         "call_to_actions":
                         [
                             {
-                              "title":"Helps",
+                              "title":"Terms & Conditions",
                               "type":"postback",
                               "payload":"HELP_PAYLOAD"
                             },
                             {
-                              "title":"Contact Me",
+                              "title":"About us",
                               "type":"postback",
                               "payload":"CONTACT_INFO_PAYLOAD"
                             }
                         ]
                       },
                       {
-                        "title":"Player Registration",
-                        "type":"web_url",
-                        "url":"https://mtboxing.herokuapp.com/register",
-                        "webview_height_ratio":"full"
+                        "title":"Contact Us",
+                        "type":"postback",
+                        "payload": "Contact Us"
                       },
                       {
                         "type": "postback",
-                        "title": "Outfit suggestions",
-                        "payload": "CURATION"
+                        "title": "ဆေးဝယ်ရန်",
+                        "payload": "ဆေးဝယ်ရန်"
                       }
                 ]
             }
@@ -1396,3 +1395,5 @@ function setupPersistentMenu(res){
                 })
             
     }
+
+    //end of menubar
