@@ -180,8 +180,8 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",                                               
-                                                "title": "ကုသမှုနည်းလမ်းများ",
-                                                "payload": "ကုသမှုနည်းလမ်းများ"
+                                                "title": "သာမန်ကုသမှုနည်းလမ်းများ",
+                                                "payload": "သာမန်ကုသမှုနည်းလမ်းများ"
                                             }
                                         ]
                                     },
@@ -218,7 +218,7 @@ app.post('/webhook', (req, res) => {
                 })
 
             } //Welcome end
-            else if(userInput == 'ကုသမှုနည်းလမ်းများ' || userButton == 'ကုသမှုနည်းလမ်းများ'){
+            else if(userInput == 'သာမန်ကုသမှုနည်းလမ်းများ' || userButton == 'သာမန်ကုသမှုနည်းလမ်းများ'){
             	let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
@@ -280,8 +280,8 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",
-                                                "title": "အဆိပ်သင့်ဒဏ်ရာမျာ",
-                                                "payload": "အဆိပ်သင့်ဒဏ်ရာမျာ"
+                                                "title": "အဆိပ်သင့်ဒဏ်ရာမျာ:",
+                                                "payload": "အဆိပ်သင့်ဒဏ်ရာမျာ:"
                                             }
                                         ]
                                     },
@@ -320,7 +320,7 @@ app.post('/webhook', (req, res) => {
 
             } //Injurytype end
 
-                        else if(userInput == 'သွေးထွက်ဒဏ်ရာများ' || userButton == 'သွေးထွက်ဒဏ်ရာများ'){
+            else if(userInput == 'သွေးထွက်ဒဏ်ရာများ' || userButton == 'သွေးထွက်ဒဏ်ရာများ'){
                 let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
@@ -421,7 +421,7 @@ app.post('/webhook', (req, res) => {
 
             } //Injury end
 
-                else if(userInput == 'နှာခေါင်းသွေးထွက်ဒဏ်ရာ' || userButton == 'နှာခေါင်းသွေးထွက်ဒဏ်ရာ')
+         else if(userInput == 'နှာခေါင်းသွေးထွက်ဒဏ်ရာ' || userButton == 'နှာခေါင်းသွေးထွက်ဒဏ်ရာ')
              {
                 let buttonMesage = {
                     "recipient": {
@@ -610,7 +610,7 @@ app.post('/webhook', (req, res) => {
 
         } //steamburn end
 
-         else if(userInput == 'လျှပ်စစ်လောင်ဒဏ်ရာ' || userButton == 'လျှပ်စစ်လောင်ဒဏ်ရာ')
+    else if(userInput == 'လျှပ်စစ်လောင်ဒဏ်ရာ' || userButton == 'လျှပ်စစ်လောင်ဒဏ်ရာ')
              {
                 let buttonMesage = {
                     "recipient": {
@@ -632,7 +632,7 @@ app.post('/webhook', (req, res) => {
 
         } //electriclaburn end
 
-         else if(userInput == 'ဓာတုလောင်ကျွမ်းဒဏ်ရာ' || userButton == 'ဓာတုလောင်ကျွမ်းဒဏ်ရာ')
+    else if(userInput == 'ဓာတုလောင်ကျွမ်းဒဏ်ရာ' || userButton == 'ဓာတုလောင်ကျွမ်းဒဏ်ရာ')
              {
                 let buttonMesage = {
                     "recipient": {
@@ -654,7 +654,7 @@ app.post('/webhook', (req, res) => {
 
         } //chemcialburn end
 
-         else if(userInput == 'Poison' || userButton == 'Poison'){
+         else if(userInput == 'အဆိပ်သင့်ဒဏ်ရာမျာ:' || userButton == 'အဆိပ်သင့်ဒဏ်ရာမျာ:'){
             	let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
@@ -677,13 +677,13 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",                                               
-                                                "title": "Drug Toxicity",
-                                                "payload": "Drug Toxicity"
+                                                "title": "ဆေးအလွံအကျွံသုံးစွဲမှု",
+                                                "payload": "ဆေးအလွံအကျွံသုံးစွဲမှု"
                                             },
                                              {
                                                 "type": "postback",                                               
-                                                "title": "About Drug Toxicity",
-                                                "payload": "About Drug Toxicity"
+                                                "title": "ဆေးအလွံအကျွံသုံးစွဲမှုအ‌ကြောင်:",
+                                                "payload": "ဆေးအလွံအကျွံသုံးစွဲမှုအ‌ကြောင်:"
                                             },
 
                                              
@@ -703,13 +703,13 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",
-                                                "title": "Poison in the eye",
-                                                "payload": "Poison in the eye"
+                                                "title": "မျက်လုံးထဲသို့အဆိပ်ဝင်",
+                                                "payload": "မျက်လုံးထဲသို့အဆိပ်ဝင်"
                                             },
                                              {
                                                 "type": "postback",                                               
-                                                "title": "About Poison in the eye",
-                                                "payload": "About Poison in the eye"
+                                                "title": "မျက်လုံးထဲသို့အဆိပ်ဝင်အ‌ကြောင်:",
+                                                "payload": "မျက်လုံးထဲသို့အဆိပ်ဝင်အ‌ကြောင်:"
                                             },
                                         ]
                                     },
@@ -728,13 +728,13 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",
-                                                "title": "Bug Bite",
-                                                "payload": "Bug Bite"
+                                                "title": "ပိုးကောင်အဆိပ်",
+                                                "payload": "ပိုးကောင်အဆိပ်"
                                             },
                                              {
                                                 "type": "postback",                                               
-                                                "title": "About Bug Bite",
-                                                "payload": "About Bug Bite"
+                                                "title": "ပိုးကောင်အဆိပ်အ‌ကြောင်:",
+                                                "payload": "ပိုးကောင်အဆိပ်အ‌ကြောင်:"
                                             },
                                         ]
                                     },
@@ -755,14 +755,14 @@ app.post('/webhook', (req, res) => {
 
             }//Poisontype end
 
-             else if(userInput == 'Drug Toxicity' || userButton == 'Drug Toxicity')
+        else if(userInput == 'ဆေးအလွံအကျွံသုံးစွဲမှု' || userButton == 'ဆေးအလွံအကျွံသုံးစွဲမှု')
              {
                 let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`These are the steps for treating drug toxicity before the healthcare arrive.\n\n1.First,place the patient on their side in the recovery position.\n\n2.Ensure that the airway remain open by tilting head back and lifting chin.\n\n3.If the drug toxcity is due to overdose,try pumping the stoamch to remove the drugs	which have not been absorbed. Activated charcoal may be given to prevent the drugs from being absorbed into the blood.\n\n4.Bring the pill containers to the hospital.`
+                        "text":`\n\n1.ပထမဦးစွာ လူနာ၏ကိုယ်ကို ဘယ်ဘက်သို့စောင်ူထားပေးပ.\n\n2.လူနာအသက်ရှူရ အဆင်‌ပြေအောင် ခေါင်းကိုနောက်သို့စောင်း၍ မေးစေ့ကိုကိုင်ထားပေးပါ.\n\n3.အစာအိမ်နေရာကို ဖိ၍ မချေဖျက်ရသေးသည့်ဆေးများ  ပြန်ထွက်အောင်လုပ်ပါ.\n\n4.အပူပေးထားသည့်မီးသွေး (သို့) activated charcoal ဆေးပြားများကို လိုအပ်ပါကလူနာကိုပေးပါ။ ကိုယ်ထဲရှိဆေးများသွေးထဲသို့မရောက်အောင်တားစီးပေးသည်။.\n\n5.ဆေးဘူးများကိုဆေးရုံသို့ယူလာပါ။.`
                     }
 
 
@@ -777,14 +777,14 @@ app.post('/webhook', (req, res) => {
 
         }//drugtoxicity end
 
-         else if(userInput == 'Poison in the eye' || userButton == 'Poison in the eye')
+    else if(userInput == 'မျက်လုံးထဲသို့အဆိပ်ဝင်' || userButton == 'မျက်လုံးထဲသို့အဆိပ်ဝင်')
              {
                 let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`These are the steps for treating poison in the eye before the healthcare arrive.\n\n1.Flush the eye with luckewarm water for about 15 to 30 minutes. Have the eyes rinsed or eyes under a faucet in a gentle shower or with a clean container of tower.\n\n2.The patient should keep the eyes as wide as possible.\n\n3.Do not rub the eyes or place bandages over the eye.\n\n4.The patient should wear sunglasses to reduce light sensitivity as much as possible before the medical care arrive\n\n5.Make sure to know what chemical got into the eye so the medical team can give treatment.`
+                        "text":`\n\n1.မျက်လုံးကိုရေနွေးဖြင့်၁၅မိနစ်ခန့်ဆေးပါ။မျက်လုံးကို သန့်ရှင်းသော အဝတ်ဖြင့်သန့်စင်ပါ။.\n\n2.လူနာ၏မျက်လုံးကိုချဲ့လို့ရသလောက်ချဲ့ထားပါ။.\n\n3.မျက်လုံးကိုလက်နဲ့ပွတ် ခြင်း၊ ပတ်တီးပတ်ခြင်းမပြုရ။.\n\n4.မျက်လုံးထဲသို့ အလင်းဝင်နဲရန် နေကာမျက်မှန်တပ်ပါ\n\n5.မျက်လုံးထဲသို့ ဝင်သွားသည့်ဓာတုအဆိပ်အား ဆရာဝန်များသိနိုင်အောင်ကြိုးစားပါ.`
                     }
 
 
@@ -799,14 +799,14 @@ app.post('/webhook', (req, res) => {
 
         }//poisonintheeye end
 
-        else if(userInput == 'Bug Bite' || userButton == 'Bug Bite')
+    else if(userInput == 'ပိုးကောင်အဆိပ်' || userButton == 'ပိုးကောင်အဆိပ်')
              {
                 let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`These are the steps for treating the bug bite before the healthcare arrive.\n\n1.Remove the tick, stings or hair if still there.\n\n2.Washed the affected area with soap and water.\n\n3.Apply the cold compress or an icepack to the affected area for at least 10 minutes.\n\n4.Raise the affected area if possible, it can helps in reducing the swelling.\n\n5.Prevent from scratching or bursting any blisters to reduce the risk of infection.\n\n6.Home remedies like vinegar and bicarbonate of soda should not be use as they are unlikely to help.`
+                        "text":`\n\n1.ဒဏ်ရာပေါ်တွင်ပိုးကောင်၏အဆိပ်အပိုင်းရှိသေးပါက ဖယ်ရှားပါ။\n\n2.ဒဏ်ရာကိုရေဖြင့်ဆေးပါ.\n\n3.ဒဏ်ရာကိုရေခဲ သို့ ရေခဲထုပ်ဖြင့် ၁၀မိနစ်ခန့် ဖိထားပါ။\n\n4.ဒဏ်ရာကိုကုတ်ခြင်း ဖဲ့ခြင်းမလုပ်ရ.`
                     },
                 
 
@@ -822,7 +822,7 @@ app.post('/webhook', (req, res) => {
 
         } //bugbite end
 
-         else if(userInput == 'Bone Fracture' || userButton == 'Bone Fracture'){
+    else if(userInput == 'အရိုးဒဏ်ရာ' || userButton == 'အရိုးဒဏ်ရာ'){
                 let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
@@ -845,13 +845,13 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",                                               
-                                                "title": "Broken Bone",
-                                                "payload": "Broken Bone"
+                                                "title": "အရိုးကျိုးခြင်:",
+                                                "payload": "အရိုးကျိုးခြင်:"
                                             },
                                             {
                                                 "type": "postback",                                               
-                                                "title": "About Broken Bone",
-                                                "payload": "About Broken Bone"
+                                                "title": "အရိုးကျိုးခြင်:အ‌ကြောင်:",
+                                                "payload": "အရိုးကျိုးခြင်:အ‌ကြောင်:"
                                             },
 
                                              
@@ -871,13 +871,13 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",
-                                                "title": "Bone Disclocation",
-                                                "payload": "Bone Disclocation"
+                                                "title": "အဆစ်လွဲ",
+                                                "payload": "အဆစ်လွဲ"
                                             },
                                              {
                                                 "type": "postback",                                               
-                                                "title": "About Bone Disclocation",
-                                                "payload": "About Bone Disclocation"
+                                                "title": "အဆစ်လွဲခြင်:အ‌ကြောင်:",
+                                                "payload": "အဆစ်လွဲခြင်:အ‌ကြောင်:"
                                             },
                                         ]
                                     },
@@ -900,14 +900,14 @@ app.post('/webhook', (req, res) => {
 
             }//bonefracture end
 
-             else if(userInput == 'Broken Bone' || userButton == 'Broken Bone')
+    else if(userInput == 'အရိုးကျိုးခြင်:' || userButton == 'အရိုးကျိုးခြင်:')
              {
                 let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`These are the steps for treating broken bone before the healthcare arrive.\n\n1.If the wound is bleeding, try and stop it by using a sterile bandage,a clean cloth or a clean piece of clothing and elevating the injured aread\n\n2.If it is the neck or back which is broken, try to make the patient stay still as much as possible.If it is the limbs which is broken, immobalize using a splint or sling.\n\n3.After that, wrap an ice pack or bag of ice cubes in a cloth and press it onto the injured aread for up to 10 minutes at a time.\n\n5.If the patient become unconscious or does not appear to be breathing, perform CPR(shown in Emergency)`
+                        "text":`\n\n1.ဒဏ်ရာသွေးထွက်နေပါက ပိုးသတ်ထားသည့်ပတ်တီး၊ သန့်ရှင်းသောအဝတ်ကို သုံး၍ပတ်ထားပါ။ ဒဏ်ရာရသည့်နေရာကို အ‌ပေါ်သို့‌မြှောက်ထားပါ။\n\n2.အရိုးကြိုးသည့်နေရာမှာ လည်ပင်း သို့ ခါးဖြစ်ပါက လူနာကို တတ်နိုင်သမျှမလှုပ်ရှားစေပါနှင့်။လက် သို့ ‌ခြေဖြစ်ပါက ပတ်တီးအသုံးပြု၍လှုပ်မရအောင်လုပ်ပါ။\n\n3.ပြီးပါက ရေခဲ ကို ဒဏ်ရာရှိရာပေါ်သို့ ၁၀မိနစ်ခန့်ဖိထားပေးပါ။\n\n5.လူနာ အသက်ရှူရခက်နေပါက CPR (အရေးပေါ်ကုသမှုတွင်ပြထား) လုပ်ဆောင်ပါ။`
                     }
 
 
@@ -922,14 +922,14 @@ app.post('/webhook', (req, res) => {
 
         }//brokenbone end
 
-         else if(userInput == 'Bone Disclocation' || userButton == 'Bone Disclocation')
+    else if(userInput == 'အဆစ်လွဲ' || userButton == 'အဆစ်လွဲ')
              {
                 let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`These are the steps for treating broken bone before the healthcare arrive.\n\n1.Leave the joint alone and do not attempt to move or jam a dislocated bone as it can destroy blood vessels.\n\n2.Wrap a cloth around the ice and press it around the discolated bone.\n\nUse painkiller if necessary.`
+                        "text":`\n\n1.အဆစ်လွဲသည့်နေရာကို ဖိခြင်း၊ နေရာရွေ့ခြင်းမပြုပါနှင့်။ဒီအတိုင်းထားပါ။သွေး‌ကြောများပေါက်ခြင်းဖြစ်နိုင်သည်။.\n\n2.အဝတ်ထဲသို့ရေခဲ ထည့်ပတ်၍ ဒဏ်ရာအနီးတဝိုက်ကိုဖိထားပေးပါ။\n\nလိုအပ်ပါက အကိုက်အခဲပျောက်ဆေးသုံးပါ။.`
                     }
 
 
@@ -944,30 +944,9 @@ app.post('/webhook', (req, res) => {
 
         } //bonedisclocation end
 
-         else if(userInput == 'About N' || userButton == 'Bug Bite')
-             {
-                let buttonMesage = {
-                    "recipient": {
-                        "id": webhook_event.sender.id
-                    },
-                    "message":{
-                        "text":`These are the steps for treating the bug bite before the healthcare arrive.\n\n1.Remove the tick, stings or hair if still there.\n\n2.Washed the affected area with soap and water.\n\n3.Apply the cold compress or an icepack to the affected area for at least 10 minutes.\n\n4.Raise the affected area if possible, it can helps in reducing the swelling.\n\n5.Prevent from scratching or bursting any blisters to reduce the risk of infection.\n\n6.Home remedies like vinegar and bicarbonate of soda should not be use as they are unlikely to help.`
-                    },
-                
+       
 
-
-            }
-            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-                ).then(response => {
-                    console.log(response)
-                }).fail(error => {
-                    console.log(error)
-                })  
-            
-
-        }
-
-        else if(userInput == 'Emergency' || userButton == 'Emergency')
+    else if(userInput == 'အရေးပေါ် ကုသမှု' || userButton == 'အရေးပေါ် ကုသမှု')
              {
                 let buttonMesage = {
                     "recipient": {
@@ -982,14 +961,14 @@ app.post('/webhook', (req, res) => {
                         "buttons": [
                         {
                             "type": "postback",
-                            "title": "Drowning",
-                            "payload": "Drowning"
+                            "title": "ရေနစ်ခြင်း",
+                            "payload": "ရေနစ်ခြင်း"
                         },
 
                          {
                             "type": "postback",
-                            "title": "Snake Bite",
-                            "payload": "Snake Bite"
+                            "title": "မြွေကိုက်ဒဏ်ရာ",
+                            "payload": "မြွေကိုက်ဒဏ်ရာ"
                         },
 
                           {
@@ -1020,14 +999,14 @@ app.post('/webhook', (req, res) => {
                }//emergency
 
 
-          else if(userInput == 'About Nose Bleeding' || userButton == 'About Nose Bleeding')
+          else if(userInput == 'နှာခေါင်းသွေးထွက်ဒဏ်ရာအကြောင်:' || userButton == 'နှာခေါင်းသွေးထွက်ဒဏ်ရာအကြောင်:')
              {
                 let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`Nose bleeding occurs for many reasons. But mostly because of dramatic weather changes, injury and dry air. Even though it is not very severe, it can still impose certain danger of letting blood run back into throat and block the breathing`
+                        "text":`နှာခေါင်းသွေ:ထွက်ခြင်:အများဆုံးဖြစ်ရသည့်အကြောင်းအရင်းမှာ ရာသီဥတု ရုတ်တရက်‌ပြောင်းလဲခြင်း၊ အတွင်းဒဏ်ရာတို့‌ကြောင့်ဖြစ်သည်။အရမ်းစိုးရိမ်ဖွယ်မရှိသော်လည်းသွေးများ အထဲသို့ပြန်ဝင်ပါက အသက်ရှုလမ်း‌ကြောင်းပိတ်မိနိုင်သည်။`
                     },
                 
 
@@ -1043,14 +1022,14 @@ app.post('/webhook', (req, res) => {
 
         }//about nose bleed end
 
-         else if(userInput == 'About Over Bleeding' || userButton == 'About Over Bleeding')
+         else if(userInput == 'ပြင်းထန်သွေးထွက်ဒဏ်ရာအကြောင်:' || userButton == 'ပြင်းထန်သွေးထွက်ဒဏ်ရာအကြောင်:')
              {
                 let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`Overbleeding is when an injury bleed alot and the bleeding cannot be stopped which is usually caused by injury. It is dangerous and lethal.`
+                        "text":`ပြင်းထန်သွေးထွက်ဒဏ်ရာဆိုသည်မှာ ဒဏ်ရာမှသွေးအထွက်များကာ သွေးတိတ်ရန်မလုပ်နိုင်သော ဒဏ်ရာဖြစ်သည်။ စိုးရိမ်ဖွယ်ရှိသော ဒဏ်ရာဖြစ်သည်၊အသက်ဆုံးရှုံးနိုင်သည်။.`
                     },
                 
 
@@ -1066,14 +1045,14 @@ app.post('/webhook', (req, res) => {
 
         }//about over bleeding end
 
-         else if(userInput == 'About Bleeding Wound' || userButton == 'About Bleeding Wound')
+         else if(userInput == 'ပုံမှန်သွေးထွက်အနာအကြောင်:' || userButton == 'ပုံမှန်သွေးထွက်အနာအကြောင်:')
              {
                 let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`Bleeding wound is a minor wound with bleeding which is usually caused becuase of injuries. Even though it is not lethal in most cases, there are still danger of getting infection.`
+                        "text":`ပုံမှန်သွေးထွက်အနာသည် သွေးအနည်းငယ်ထွက်‌သော သာမန်ဒဏ်ရာဖြစ်သည်။ အသက်ကိုမထိခိုက်နိုင်သော်လည်း ပိုးဝင် ခြင်းဖြစ်နိုင်သည်။`
                     },
                 
 
@@ -1089,14 +1068,14 @@ app.post('/webhook', (req, res) => {
 
         }//about bleeding wound end
 
-         else if(userInput == 'About Steam Burn' || userButton == 'About Steam Burn')
+         else if(userInput == 'ရေနွေးငွေ့လောင်ဒဏ်ရာအကြောင်:' || userButton == 'ရေနွေးငွေ့လောင်ဒဏ်ရာအကြောင်:')
              {
                 let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`Steam burn occurs when got burn by the hot liquid or hot vapor. The lethality depends on the degree of burns.`
+                        "text":`ရေနွေးငွေ့လောင်ခြင်းဆိုသည်မှာ ရေနွေး သို့ ရေနွေးငွေ့‌ကြောင့်လောင်ခြင်းဖြစ်သည်။ လောင်ကျွမ်းမှုအပေါ်မူတည်၍ ဒဏ်ရာပြင်းထန်မှုကွာခြားသည်။`
                     },
                 
 
@@ -1112,14 +1091,14 @@ app.post('/webhook', (req, res) => {
 
         }//steamburn end
 
-        else if(userInput == 'About Electrical Burn' || userButton == 'About Electrical Burn')
+        else if(userInput == 'လျှပ်စစ်လောင်ဒဏ်ရာအကြောင်:' || userButton == 'လျှပ်စစ်လောင်ဒဏ်ရာအကြောင်:')
              {
                 let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`Electrical burn occurs when an electric make contact with the body. Even minor burn can be severe.Electrical burn cause more danage then steam and chemical burn. Require immediate treatment. `
+                        "text":`လျှပ်စစ်လောင်ကျွမ်းခြင်းဆိုသည်မှာ အသား အတွင်းသို့လျှပ်စစ် ပြင်းထန်စွာစီး၍ ဖြစ်ပေါ်လာသော လောင်ကျွမ်းမှု ဖြစ်သည်။လောင်ကျွမ်းမှုအပေါ်မူတည်၍ ဒဏ်ရာပြင်းထန်မှုကွာခြားသည်။`
                     },
                 
 
@@ -1135,14 +1114,14 @@ app.post('/webhook', (req, res) => {
 
         }//about electricalburn end
 
-        else if(userInput == 'About Chemical Burn' || userButton == 'About Chemical Burn')
+        else if(userInput == 'ဓာတုလောင်ကျွမ်းဒဏ်ရာအကြောင်:' || userButton == 'ဓာတုလောင်ကျွမ်းဒဏ်ရာအကြောင်:')
              {
                 let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`Chemical burns occur when the skin make contact with an acid or base or makeup products. The severity depends on how long and how much of body contact with the chemical.`
+                        "text":`ဓာတုလောင်ကျွမ်းခြင်းဆိုသည်မှာ အက်စစ် သို့မဟုတ် မိတ်ကပ် ကဲ့သို့ ဓာတုအရာများ အသားနှင့်ထိမိခြင်းမှဖြစ်ပေါ်လာခြင်းဖြစ်သည်။ လောင်ကျွမ်းမှုအပေါ်မူတည်၍ ဒဏ်ရာပြင်းထန်မှုကွာခြားသည်။`
                     },
                 
 
@@ -1158,14 +1137,14 @@ app.post('/webhook', (req, res) => {
 
         }//about chemical burn end
 
-        else if(userInput == 'About Drug Toxicity' || userButton == 'About Drug Toxicity')
+        else if(userInput == 'ဆေးအလွံအကျွံသုံးစွဲမှုအ‌ကြောင်:' || userButton == 'ဆေးအလွံအကျွံသုံးစွဲမှုအ‌ကြောင်:')
              {
                 let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`Drug toxicity can occur because of the overdose of the drugs or if the medicine or poison which is not suitable for the body is taken. It is highly lethal if the treatment is not taken immediately.`
+                        "text":`ဆေးအလွန်အကျွံသုံးစွဲမှုဆိုသည်မှာ ဓာတ်မတဲ့သော ဆေး သို့မဟုတ် ဆေးအလွန်အကျွံ သုံးစွဲမှု‌ကြောင့်ဖြစ်ခြင်း ဖြစ်သည်။ ကုသမှု အမြန်မခံယူပါက အသက်ဆုံရှုံးနိုင်သည်။`
                     },
                 
 
@@ -1181,14 +1160,14 @@ app.post('/webhook', (req, res) => {
 
         }//about drug toxicity end
 
-        else if(userInput == 'About Poison in the eye' || userButton == 'About Poison in the eye')
+        else if(userInput == 'မျက်လုံးထဲသို့အဆိပ်ဝင်အ‌ကြောင်:' || userButton == 'မျက်လုံးထဲသို့အဆိပ်ဝင်အ‌ကြောင်:')
              {
                 let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`Poison in the eye can cause when the poison get into the eyes either directly or indirectly (eg.thorugh hands which touched chemical). Beauty products and insecticides are most common poisons to get in the eye. Can be severe if not treated immediately.`
+                        "text":`မျက်လုံးထဲသို့အဆိပ်ဝင်ခြင်းဆိုသည်မှာ ဓာတုအငွေ့၊အရည်၊အမှုန်များ မျက်လုံးထဲသို့ဝင်ခြင်း‌ကြောင့်ဖြစ်သည်။ချက်ချင်းကုသမှုမခံယူပါက ဒဏ်ရာပြင်းနိုင်သည်။`
                     },
                 
 
@@ -1204,14 +1183,14 @@ app.post('/webhook', (req, res) => {
 
         }//about poisonintheeye end
 
-            else if(userInput == 'About Bug Bite' || userButton == 'About Bug Bite')
+            else if(userInput == 'ပိုးကောင်အဆိပ်အ‌ကြောင်:' || userButton == 'ပိုးကောင်အဆိပ်အ‌ကြောင်:')
              {
                 let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`This can be caused when the poisonous bugs bite the body. Very common and not lethal in most cases and only causes itiching and pain.`
+                        "text":`ပိုးကောင်အဆိပ်ဆိုသည်မှာ အဆိပ်ရိသော အကောင်တစ်ကောင်ကကိုက်ခြင်း‌ကြောင့်ဖြစ်သည်။ပုံမှန်အားဖြင့်ဒဏ်ရာပြင်းထန်မှုမရှိပါ။`
                     },
                 
 
@@ -1227,14 +1206,14 @@ app.post('/webhook', (req, res) => {
 
         }//about bug bite end
 
-         else if(userInput == 'About Broken Bone' || userButton == 'About Broken Bone')
+         else if(userInput == 'အရိုးကျိုးခြင်:အ‌ကြောင်:' || userButton == 'အရိုးကျိုးခြင်:အ‌ကြောင်:')
              {
                 let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`This can be caused when the bone is broken due to accidents like tripping or falling or got hit by something. The symptons include swelling or brusing over the bones. Pain in the injured area which gets worse when the area is moved or pressure is applied. Can cause severe injuries in some cases.`
+                        "text":`အရိုးကျိုးခြင်းဆိုသည်မှာ ‌ချောလဲခြင်း သို့ တခုခုနှင့်ပြင်းထန်စွာရိုက်မိသောကြောင့် အတွင်းရှိအရိုးများ ကျိူးသွားခြင်းဖြစ်သည်။ ဒဏ်ရာပြင်းထန်နိုင်သောလည်း အသက်ကိုမထိခိုက်နိုင်။`
                     },
                 
 
@@ -1250,14 +1229,14 @@ app.post('/webhook', (req, res) => {
 
         }//about brokenbone end
 
-            else if(userInput == 'About Bone Disclocation' || userButton == 'About Bone Disclocation')
+            else if(userInput == 'အဆစ်လွဲခြင်:အ‌ကြောင်:' || userButton == 'အဆစ်လွဲခြင်:အ‌ကြောင်:')
              {
                 let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`Bone discloation is the case where one bone is forced to move out of the position or temporarily deform in joint area where two bones meet. This differs from broken bone as this is not as severe as the broken bone and can be treated well if the person with well-informed medical knowledge is there. Can cause a lot of pain and most commonly happen in fingers and shoulders. `
+                        "text":`အဆစ်လွဲခြင်းဆိုသည်မှာ အရိုး ၂ ခုစုံရာနေရာတွင် အရိုးတခုသည် ပုံပျက်ခြင်း၊နေရာရွေ့သွားခြင်းကြောင့်ဖြစ်သည်။ ပုံမှန်အားဖြင့် ဒဏ်ရာမပြင်းပါ၊ အသက်လည်းမထိခိုက်နိုင်ပါ။`
                     },
                 
 
@@ -1273,14 +1252,14 @@ app.post('/webhook', (req, res) => {
 
         }//about bonedislocaton end
 
-         else if(userInput == 'Drowning' || userButton == 'Drowning')
+         else if(userInput == 'ရေနစ်ခြင်း' || userButton == 'ရေနစ်ခြင်း')
              {
                 let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`1.First, try to wake the patient.\n\n2.Lie the patient on his back and open his airway by tilting his chin and head backwards.\n\n3.Pinch his nose and keep their head tilted back as you give rescue breath into their mouth from yours.Each breath should last for 1 second.\n\n4.Perform CPR(shown in emergency) for 1 minute (120 compressions).\n\n5.After that, call for the emergency contact. `
+                        "text":`1.လူနာကိုနှိုးကြည့်ပါ။.\n\n2.လူနာကိုလှဲ၍ အသက်ရှူရလွယ်ကူစေရန် ခေါင်းကိုမော့၍ မေးစေ့ကိုထိန်းထားပေးပါ.\n\n3.နှာခေါင်းကိုညှစ်ထား၍ လူနာ၏ခေါင်းကိုမော့ကာ ပါးစပ်အတွင်းသို့ လေများသွင်းပေးပါ။ လေတခါသွင်းလျှင် ၁ စက်ကန့်မျှ ကြာပါစေ\n\n4.CPR ကို ၁မိနစ်ခန့်လုပ်ဆောင်ပါ `
                     },
                 
 
@@ -1296,14 +1275,14 @@ app.post('/webhook', (req, res) => {
 
         }//drowning end
 
-         else if(userInput == 'Snake Bite' || userButton == 'Snake Bite')
+         else if(userInput == 'မြွေကိုက်ဒဏ်ရာ' || userButton == 'မြွေကိုက်ဒဏ်ရာ')
              {
                 let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`1.First, try to calm down the patient and try not to make him move. Poison does not make it into the blood stream directly. It makes into the lymph and by not moving poison in the lymph will not get into the blood.\n\n2.Do not try to identify or catch the snake if out of capability as it can result in more victims. Hospitals can make several tests to identify the snake and give most appropriate treatment.\n\n3.Use a pad or plastic like cling wrap on the snake bite to soak up or protect the venom for later testing.\n\n4.Use an elasticised bandage and roll it over the snake bite.\n\n5.Use another bandage starting just above the fingers or toes and moving upwards on the bitten limb.\n\n6.If there is no bandage, you can use other stretchy materials like torn-up t-shirts, stockings or other fabircs)\n\n7.Make the snake bite on the bandage and immobalize the limb by splinting the limb with stick or other straight objects.\n\n8.Do not cut, suck or wash the wound as it can cause more harm then good. `
+                        "text":`1လူနာကိုစိတ်ညိမ်အောင်ထား၍ မလှုပ်ရှားအောင်လုပ်ပါ။မြွေဆိပ်သည်သွေးထဲသို့တိုက်ရိုက်ရောက်သည်မဟုတ်သော‌ကြောင့်၊မလှုပ်ရှားပါက အဆိပ်သည်သွေးထဲသို့ရောက်ချိန်ကြာနိုင်သည်။\n\n2.မြွေကိုရှာ‌ဖွေရန်၊ဖမ်းရန်ခက်ခဲပါက မကြိုးစားပါနှင့်။ ဒဏ်ရာရှိသူပိုမိုများလာနိုင်သည်။\n\n3.ပလက်စတစ်အပတ် ကိုအသုံးပြု၍မြွေကိုက်ဒဏ်ရာကိုပတ်ပေးပါ။.\n\n4.ပတ်တီးဖြင့် ဒဏ်ရာကိုပတ်ပေးပါ.\n\n5.နောက်ပတ်တီးကို  ‌ခြေချောင်း လက်ချောင်းမှစ၍ဒဏ်ရာ၏အပေါ်ပိုင်းအထိပတ်ပါ.\n\n6.ပတ်တီးမရှိပါက တီရှပ် သို့ အထည်သားကဲ့သို့ ဆွဲဆန့်၍ရသည့် အရာများကိုအသုံးပြုနိုင်သည်\n\n7.တုတ်ချောင်းကဲ့သို့အရာများကိုသုံးပြု၍ မြွေကိုက်ဒဏ်ရာကိုလှုပ်မရအောင်လုပ်ပါ။\n\n8.ဒဏ်ရာကို ရေဆေးခြင်း၊ အဆိပ်ကိုစုတ်ခြင်း များမလုပ်ရ `
                     },
                 
 
