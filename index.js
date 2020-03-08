@@ -185,7 +185,23 @@ app.post('/webhook', (req, res) => {
                                             }
                                         ]
                                     },
-                                    
+                                    {
+                                        "title": "Welcome!",
+                                        "image_url": "https://stylesatlife.com/wp-content/uploads/2018/03/Daily-Health-Tips.png",
+                                        "subtitle": "သင်၏အ‌‌ခြေအနေပေါ်မူတည်၍နေ့စဉ် ကျမ်းမာစွာနေနိုင်ရန် နည်းလမ်းမျာ:",
+                                        "default_action": {
+                                            "type": "web_url",
+                                            "url": "https://petersfancybrownhats.com/view?item=103",
+                                            "webview_height_ratio": "tall",
+                                        },
+                                        "buttons": [
+                                            {
+                                                "type": "postback",
+                                                "title": "နေ့စဉ်ကျမ်းမာရေ:",
+                                                "payload": "နေ့စဉ်ကျမ်းမာရေ:"
+                                            }
+                                        ]
+                                    }
                                 ]
                             }
                         }
@@ -202,6 +218,52 @@ app.post('/webhook', (req, res) => {
                 })
 
             } //Welcome end
+
+            else if(userInput == 'နေ့စဉ်ကျမ်းမာရေ:' || userButton == 'နေ့စဉ်ကျမ်းမာရေ:'){
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                   "message": { 
+                "attachment" : {
+                    "type" : "template",
+                    "payload": {
+                        "template_type": "button",
+                        "text": "ရောဂါရှိပါသလား။",
+                        "buttons": [
+                      	 {
+           				 "type":"postback",
+           				 "title":"မရှိပါ။",
+           				 "payload":"မရှိပါ။"
+         				 }, 
+
+                         {
+                            "type": "postback",
+                            "title": "ရှိပါသည်။",
+                            "payload": "ရှိပါသည်။"
+                        },
+
+                         
+                        ]
+                    }
+                }
+     
+             }
+
+
+            };
+
+                requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })
+
+            }
+            //dailyhealthlife end
+
+            
             else if(userInput == 'သာမန်ကုသမှုနည်းလမ်းများ' || userButton == 'သာမန်ကုသမှုနည်းလမ်းများ'){
             	let buttonMesage = {
                     "recipient": {
