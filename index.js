@@ -430,9 +430,9 @@ app.post('/webhook', (req, res) => {
                 })  
             
 
-        }
+        }//diabetesend
 
-        else if(userInput == 'ပန်းနာရင်ကြပ်' || userButton == 'ပန်းနာရင်ကြပ်')
+        else if(userInput == 'ပန်းနာရင်ကျပ်' || userButton == 'ပန်းနာရင်ကျပ်')
              {
                 let buttonMesage = {
                     "recipient": {
@@ -452,7 +452,7 @@ app.post('/webhook', (req, res) => {
                 })  
             
 
-        }
+        }//asthmaend
 
          else if(userInput == 'မရှိပါ။' || userButton == 'မရှိပါ။')
              {
@@ -474,7 +474,7 @@ app.post('/webhook', (req, res) => {
                 })  
             
 
-        }
+        }//normalhealthned
 
 
         else if(userInput == 'သာမန်ကုသမှုနည်းလမ်းများ' || userButton == 'သာမန်ကုသမှုနည်းလမ်းများ'){
