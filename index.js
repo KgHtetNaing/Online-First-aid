@@ -279,8 +279,9 @@ app.post('/webhook', (req, res) => {
                                         "image_url": "https://cdn3.vectorstock.com/i/1000x1000/90/27/finger-with-blood-drop-on-white-background-vector-19899027.jpg",
                                         "subtitle": "ရောဂါနှင့်ပတ်သက်၍ ကျမ်းမာလာစေရန် နေထိုင်နည်းများ",
                                         "default_action": {
-                                            "type": "postback",
-                                           
+                                            "type": "web_url",
+                                            "url": "https://petersfancybrownhats.com/view?item=103",
+                                            "webview_height_ratio": "tall",
                                         },
                                         "buttons": [
                                             {
@@ -295,9 +296,9 @@ app.post('/webhook', (req, res) => {
 
 
                                    {
-                                        "title": "Choose your injury type!",
-                                        "image_url": "https://cdn1.pegasaas.io/2d65/img/wp-content/uploads/2019/09/Brauns-Law-Burn-Injury-Lawyer-e1568040798860-524x402---524x402.jpg",
-                                        "subtitle": "ပါ၀င်သည့်ကုသနည်းမျာ: (ရေနွေးငွေ့လောင်ဒဏ်ရာ,လျှပ်စစ်လောင်ဒဏ်ရာ,ဓာတုလောင်ကျွမ်:ဒဏ်ရာ)",
+                                        "title": "Eat Heathy!!, Live Long!!, Live Strong!!",
+                                        "image_url": "https://www8.miamidade.gov/resources/images/news/2019-02-26-heart-attack-evergreen.jpg",
+                                        "subtitle": "ရောဂါနှင့်ပတ်သက်၍ ကျမ်းမာလာစေရန် နေထိုင်နည်းများ",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -306,16 +307,16 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",
-                                                "title": "လောင်ကျွမ်းဒဏ်ရာများ",
-                                                "payload": "လောင်ကျွမ်းဒဏ်ရာများ"
+                                                "title": "နှလုံးရောဂါ",
+                                                "payload": "နှလုံးရောဂါ"
                                             }
                                         ]
                                     },
 
                                     {
-                                        "title": "Choose your injury type!",
-                                        "image_url": "https://images.ctfassets.net/cnu0m8re1exe/2QNU6xdc3SfDWEroBDqMJg/7f5af4db4c432f265e22259b64ff02fa/bee-poison.jpg?w=650&h=433&fit=fill",
-                                        "subtitle": "ပါ၀င်သည့်ကုသနည်းမျာ: (ဆေးဝါးအလွန်အကျွံသုံးစွဲမှု,မျက်လုံးထဲအဆိပ်၀င်,အင်းဆက်ပိုးကိုက်ဒဏ်ရာ).",
+                                        "title": "Eat Heathy!!, Live Long!!, Live Strong!!",
+                                        "image_url": "https://res.cloudinary.com/grohealth/image/upload/v1581695681/DCUK/Content/causes-of-diabetes.png",
+                                        "subtitle": "ရောဂါနှင့်ပတ်သက်၍ ကျမ်းမာလာစေရန် နေထိုင်နည်းများ",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -324,16 +325,16 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",
-                                                "title": "အဆိပ်သင့်ဒဏ်ရာမျာ:",
-                                                "payload": "အဆိပ်သင့်ဒဏ်ရာမျာ:"
+                                                "title": "‌ဆီးချို၊သွေးချို",
+                                                "payload": "‌ဆီးချို၊သွေးချို"
                                             }
                                         ]
                                     },
 
                                     {
-                                        "title": "Choose your injury type!",
-                                        "image_url": "https://st4.depositphotos.com/7477946/19915/i/1600/depositphotos_199156806-stock-photo-first-aid-hand-broken-hand.jpg",
-                                        "subtitle": "အရိုးကျိုးခြင်:,အဆစ်လွဲ",
+                                        "title": "Eat Heathy!!, Live Long!!, Live Strong!!",
+                                        "image_url": "https://imagevars.gulfnews.com/2019/07/18/190718-asthma-patient_16c05a51ac4_large.jpg",
+                                        "subtitle": "ရောဂါနှင့်ပတ်သက်၍ ကျမ်းမာလာစေရန် နေထိုင်နည်းများ",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -342,8 +343,8 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",
-                                                "title": "အရိုးဒဏ်ရာ",
-                                                "payload": "အရိုးဒဏ်ရာ"
+                                                "title": "ပန်းနာရင်ကျပ်",
+                                                "payload": "ပန်းနာရင်ကျပ်"
                                             }
                                         ]
                                     },
@@ -362,10 +363,33 @@ app.post('/webhook', (req, res) => {
                     console.log(error)
                 })
 
+            }//diseaseselection end
+
+
+            else if(userInput == 'သွေးတိုးရောဂါ' || userButton == 'သွေးတိုးရောဂါ')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`\n\n1.ပိုတက်ဆီယမ်နှင့် ဖိုက်ဘာကြွယ်ဝသည့် အစာများ(အာလူး၊ကန်စွန်းဥ၊ခရမ်းချဉ်သီး) စားပါ။.\n\n2.ရေများများသောက်ပါ။.\n\n3.လေ့ကျင့်ခန်းပုံမှန်လုပ်ပါ။\n\n4.အရက် နှင့် ဆေးလိပ် ဖြတ်ပါ။ကဖိန်းများလျှော့ပါ။\n\n5.ဆားကိုအသုံးပြုခြင်းလျှော့ပါ။\n\n6.စိတ်ဖိအားများ နည်းအောင်နေပါ။\n\n6.ကိုယ်အလေးချိန်ကို သင့်အောင်နေပါ။.`
+                    }
+
+
             }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
+            
+
+        }
 
 
-            else if(userInput == 'သာမန်ကုသမှုနည်းလမ်းများ' || userButton == 'သာမန်ကုသမှုနည်းလမ်းများ'){
+        else if(userInput == 'သာမန်ကုသမှုနည်းလမ်းများ' || userButton == 'သာမန်ကုသမှုနည်းလမ်းများ'){
             	let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
