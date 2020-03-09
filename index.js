@@ -276,8 +276,8 @@ app.post('/webhook', (req, res) => {
                                 "elements": [
                                     {
                                         "title": "Eat Heathy!!, Live Long!!, Live Strong!!",
-                                        "image_url": "https://cdn3.vectorstock.com/i/1000x1000/90/27/finger-with-blood-drop-on-white-background-vector-19899027.jpg",
-                                        "subtitle": "ရောဂါနှင့်ပတ်သက်၍ ကျမ်းမာလာစေရန် နေထိုင်နည်းများ",
+                                        "image_url": "https://www.wellnessgarage.ca/uploads/4/8/6/0/48604247/hypertension_orig.png",
+                                        "subtitle": "ရောဂါနှင့်ပတ်သက်၍ ကျန်းမာလာစေရန် နေထိုင်နည်းများ",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -298,7 +298,7 @@ app.post('/webhook', (req, res) => {
                                    {
                                         "title": "Eat Heathy!!, Live Long!!, Live Strong!!",
                                         "image_url": "https://www8.miamidade.gov/resources/images/news/2019-02-26-heart-attack-evergreen.jpg",
-                                        "subtitle": "ရောဂါနှင့်ပတ်သက်၍ ကျမ်းမာလာစေရန် နေထိုင်နည်းများ",
+                                        "subtitle": "ရောဂါနှင့်ပတ်သက်၍ ကျန်းမာလာစေရန် နေထိုင်နည်းများ",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -316,7 +316,7 @@ app.post('/webhook', (req, res) => {
                                     {
                                         "title": "Eat Heathy!!, Live Long!!, Live Strong!!",
                                         "image_url": "https://res.cloudinary.com/grohealth/image/upload/v1581695681/DCUK/Content/causes-of-diabetes.png",
-                                        "subtitle": "ရောဂါနှင့်ပတ်သက်၍ ကျမ်းမာလာစေရန် နေထိုင်နည်းများ",
+                                        "subtitle": "ရောဂါနှင့်ပတ်သက်၍ ကျန်းမာလာစေရန် နေထိုင်နည်းများ",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -334,7 +334,7 @@ app.post('/webhook', (req, res) => {
                                     {
                                         "title": "Eat Heathy!!, Live Long!!, Live Strong!!",
                                         "image_url": "https://imagevars.gulfnews.com/2019/07/18/190718-asthma-patient_16c05a51ac4_large.jpg",
-                                        "subtitle": "ရောဂါနှင့်ပတ်သက်၍ ကျမ်းမာလာစေရန် နေထိုင်နည်းများ",
+                                        "subtitle": "ရောဂါနှင့်ပတ်သက်၍ ကျန်းမာလာစေရန် နေထိုင်နည်းများ",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -366,14 +366,102 @@ app.post('/webhook', (req, res) => {
             }//diseaseselection end
 
 
-            else if(userInput == 'သွေးတိုးရောဂါ' || userButton == 'သွေးတိုးရောဂါ')
+        else if(userInput == 'သွေးတိုးရောဂါ' || userButton == 'သွေးတိုးရောဂါ')
              {
                 let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`\n\n1.ပိုတက်ဆီယမ်နှင့် ဖိုက်ဘာကြွယ်ဝသည့် အစာများ(အာလူး၊ကန်စွန်းဥ၊ခရမ်းချဉ်သီး) စားပါ။.\n\n2.ရေများများသောက်ပါ။.\n\n3.လေ့ကျင့်ခန်းပုံမှန်လုပ်ပါ။\n\n4.အရက် နှင့် ဆေးလိပ် ဖြတ်ပါ။ကဖိန်းများလျှော့ပါ။\n\n5.ဆားကိုအသုံးပြုခြင်းလျှော့ပါ။\n\n6.စိတ်ဖိအားများ နည်းအောင်နေပါ။\n\n6.ကိုယ်အလေးချိန်ကို သင့်အောင်နေပါ။.`
+                        "text":`\n\n1.ပိုတက်ဆီယမ်နှင့် ဖိုက်ဘာကြွယ်ဝသည့် အစာများ(အာလူး၊ကန်စွန်းဥ၊ခရမ်းချဉ်သီး) စားပါ။.\n\n2.ရေများများသောက်ပါ။.\n\n3.လေ့ကျင့်ခန်းပုံမှန်လုပ်ပါ။\n\n4.အရက် နှင့် ဆေးလိပ် ဖြတ်ပါ။ကဖိန်းများလျှော့ပါ။\n\n5.ဆားကိုအသုံးပြုခြင်းလျှော့ပါ။\n\n6.စိတ်ဖိအား နည်းအောင်နေပါ။\n\n6.ကိုယ်အလေးချိန်ကို သင့်အောင်နေပါ။.`
+                    }
+
+
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
+            
+
+        }//hypertensionend
+
+         else if(userInput == 'နှလုံးရောဂါ' || userButton == 'နှလုံးရောဂါ')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`\n\n1.အသီးအနှံများစားပေးပါ။.\n\n2.ကိုယ်လက်လှုပ်ရှားမှု လုပ်ပါ။.\n\n3.ကိုယ်အလေးချိန်ကို သင့်အောင်နေပါ။\n\n4.အရက် နှင့် ဆေးလိပ် ဖြတ်ပါ။\n\n5.ကိုလက်စထရော နှင့် သွေးဖိအားကိုထိမ်းပါ။\n\n6.စိတ်ဖိအား နည်းအောင်နေပါ။`
+                    }
+
+
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
+            
+
+        }//heartdiseaseend
+
+         else if(userInput == 'ဆီးချို၊သွေးချို' || userButton == 'ဆီးချို၊သွေးချို')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`\n\n1.အဆီ၊ဆား နှင့် ပိုတက်စီယမ်များသော အစာများရှောင်ပါ။.\n\n2.အစာကိုအချိန်မှန်စားပါ။.\n\n3.လေ့ကျင့်ခန်းပုံမှန်လုပ်ပါ။\n\n4.ပရိုတင်းများသောအစာများနှင့် အသီး အရွက်များ စားပါ။\n\n5.သွေးထဲသကြားပါဝင်နှုန်းကို တနေ့ ၃ကြိမ်ခန့်စစ်ပါ။\n\n6.အင်စူလင် သုံးပါကအစာ မစားမီတိုင်း သွေးထဲသကြားပါဝင်နှုန်းကိုစစ်ပါ။ သုံးရမည့်အင်စူလင်ပမာဏ ကိုမှန်းနိုင်ရန်ဖြစ်သည်။\n\n7.သွေးထဲသကြားပါဝင်နှုန်းနည်းပါက ဆရာဝန်နှင့်တိုင်ပင်ပါ။`
+                    }
+
+
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
+            
+
+        }
+
+        else if(userInput == 'ပန်းနာရင်ကြပ်' || userButton == 'ပန်းနာရင်ကြပ်')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`\n\n1.ဆေးလိပ်သောက်ခြင်း၊ဆေးလိပ်ငွေ့ရှုခြင်းတို့မှရှောင်ပါ။.\n\n2.လေ့ကျင့်ခန်းများ၊အားကစားများ တက်နိုင်သလောက်လုပ်ပါ။.\n\n3.စိတ်ကျမ်းမာမှုသည် ရောဂါအပေါ်သက်ရောက်မှု ရှိသည်။\n\n4.ဆရာဝန်ပေးထားသော ဆေးများပုံမှန်သောက်ပါ။\n\n5.ဗိုက်တာမင် ဒီ နှင့် မက်ဂနီဆီယမ် များသောအစာများ စားပါ။`
+                    }
+
+
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
+            
+
+        }
+
+         else if(userInput == 'မရှိပါ။' || userButton == 'မရှိပါ။')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`ဒါဆိုရင်ဆက်လက်ပြီး ကျန်းမာစေရန် ဒီအချက်များကိုလိုက်နာပါ။\n\n1.တနေ့ကို ကိုယ်လက်လှုပ်ရှားမှုကိုအနည်းဆုံး မိနစ်၃၀ခန့် လုပ်ဆောင်ပါ။.\n\n2.နေရောင်ဖြင့် ထိတွေ့ပါ။.\n\n3ဆား နဲ့ သကြားကို လျော့သုံးပါ။\n\n4.စားသည့် အချိန် နှင့် ပမာဏကိုပုံမှန်ထားပါ။အစာအုပ်စု ၃စုလုံးစုံအောင်စားပါ။\n\n5.ရေကို အနည်းဆုံး ၂လီတာ သောက်ပါ။\n\n6,ညတိုင်း ၁၀ နာရီခန့်တွင်အိပ်ရာ၀င်ပါ။ တစ်နေ့အိပ်ချိန် ၇ နာရီမှ ၉နာရီ အတွင်းရှိပါစေ။`
                     }
 
 
