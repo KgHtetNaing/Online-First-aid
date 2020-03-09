@@ -325,8 +325,8 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",
-                                                "title": "‌ဆီးချို၊သွေးချို",
-                                                "payload": "‌ဆီးချို၊သွေးချို"
+                                                "title": "‌ဆီးချိုသွေးချို",
+                                                "payload": "‌ဆီးချိုသွေးချို"
                                             }
                                         ]
                                     },
@@ -410,7 +410,7 @@ app.post('/webhook', (req, res) => {
 
         }//heartdiseaseend
 
-         else if(userInput == 'ဆီးချို၊သွေးချို' || userButton == 'ဆီးချို၊သွေးချို')
+         else if(userInput == 'ဆီးချိုသွေးချို' || userButton == 'ဆီးချိုသွေးချို')
              {
                 let buttonMesage = {
                     "recipient": {
