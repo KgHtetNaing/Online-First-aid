@@ -197,8 +197,8 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",
-                                                "title": "နေ့စဉ်ကျမ်းမာရေ:",
-                                                "payload": "နေ့စဉ်ကျမ်းမာရေ:"
+                                                "title": "နေ့စဉ်ကျန်းမာရေ:",
+                                                "payload": "နေ့စဉ်ကျန်းမာရေ:"
                                             }
                                         ]
                                     }
@@ -219,7 +219,7 @@ app.post('/webhook', (req, res) => {
 
             } //Welcome end
 
-            else if(userInput == 'နေ့စဉ်ကျမ်းမာရေ:' || userButton == 'နေ့စဉ်ကျမ်းမာရေ:'){
+            else if(userInput == 'နေ့စဉ်ကျန်းမာရေ:' || userButton == 'နေ့စဉ်ကျန်းမာရေ:'){
                 let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
