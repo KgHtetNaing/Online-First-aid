@@ -1631,11 +1631,7 @@ function setupPersistentMenu(res){
                             }
                         ]
                       },
-                      {
-                        "title":"Contact Us",
-                        "type":"postback",
-                        "payload": "Contact Us"
-                      },
+                      
                       {
                         "type": "postback",
                         "title": "ဆေးဝယ်ရန်",
