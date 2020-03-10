@@ -1622,12 +1622,12 @@ function setupPersistentMenu(res){
                             {
                               "title":"Terms & Conditions",
                               "type":"postback",
-                              "payload":"HELP_PAYLOAD"
+                              "payload":"term"
                             },
                             {
                               "title":"About us",
                               "type":"postback",
-                              "payload":"CONTACT_INFO_PAYLOAD"
+                              "payload":"about"
                             }
                         ]
                       },
@@ -1636,6 +1636,12 @@ function setupPersistentMenu(res){
                         "type": "postback",
                         "title": "ဆေးဝယ်ရန်",
                         "payload": "ဆေးဝယ်ရန်"
+                      }
+
+                      {
+                        "type": "postback",
+                        "title": "Q & A",
+                        "payload": "Q & A"
                       }
                 ]
             }
