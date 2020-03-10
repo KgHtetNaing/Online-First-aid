@@ -410,7 +410,7 @@ app.post('/webhook', (req, res) => {
 
         }//heartdiseaseend
 
-         else if(userInput == 'ဆီးချိုသွေးချို' || userButton == 'ဆီးချိုသွေးချို')
+          else if(userInput == 'ဆီးချိုသွေးချို' || userButton == 'ဆီးချိုသွေးချို')
              {
                 let buttonMesage = {
                     "recipient": {
