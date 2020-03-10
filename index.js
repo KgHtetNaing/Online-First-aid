@@ -1636,7 +1636,7 @@ function setupPersistentMenu(res){
                         "type": "postback",
                         "title": "ဆေးဝယ်ရန်",
                         "payload": "ဆေးဝယ်ရန်"
-                      }
+                      },
 
                       {
                         "type": "postback",
