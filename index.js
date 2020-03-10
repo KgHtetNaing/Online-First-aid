@@ -326,7 +326,7 @@ app.post('/webhook', (req, res) => {
                                             {
                                                 "type": "postback",
                                                 "title": "ဆီးချိုသွေးချို",
-                                                "payload": "diabetes"
+                                                "payload": "ဆီးချိုသွေးချို"
                                             }
                                         ]
                                     },
@@ -410,7 +410,7 @@ app.post('/webhook', (req, res) => {
 
         }//heartdiseaseend
 
-          else if(userInput == 'ဆီးချိုသွေးချို' || userButton == 'diabetes')
+          else if(userInput == 'ဆီးချိုသွေးချို' || userButton == 'ဆီးချိုသွေးချို')
              {
                 let buttonMesage = {
                     "recipient": {
