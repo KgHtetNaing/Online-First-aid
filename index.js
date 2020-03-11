@@ -3,7 +3,7 @@
 // Imports dependencies and set up http server
 const
     express = require('express'),
-
+    firebase = require("firebase-admin"),
     bodyParser = require('body-parser'),
     requestify = require('requestify'),
     app = express().use(bodyParser.json()); // creates express http server
@@ -17,6 +17,17 @@ let questions = {
 }
 
 let userAnswers = {};
+
+firebase.initializeApp({
+  credential: firebase.credential.cert({
+    "private_key": process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n'),
+    "client_email": process.env.FIREBASE_CLIENT_EMAIL,
+    "project_id": process.env.FIREBASE_PROJECT_ID,
+  }),
+  databaseURL: "https://khn-online-first-aid.firebaseio.com"
+});
+
+let db = firebase.firestore();
 
 app.get('/greeting', (req, res) => {
 	requestify.post(`https://graph.facebook.com/v2.6/me/messenger_profile?access_token=${pageaccesstoken}`,
@@ -1672,7 +1683,7 @@ app.post('/webhook', (req, res) => {
             
             }
 
-            else if(userQuickReply == 'buy-first-aid'){
+            else if(userQuickReply == 'buy-first-aid' || userQuickReply == "edit-data"){
             	let message = {
                     "recipient": {
                         "id": webhook_event.sender.id
@@ -1752,7 +1763,27 @@ app.post('/webhook', (req, res) => {
                         "id": webhook_event.sender.id
                     },
                    "message": { 
-                   	 "text":`your name is ${userAnswers.name}, your phone number is ${userAnswers.phone}, and your address is ${userAnswers.address}`
+                   	 "text":`your name is ${userAnswers.name}, your phone number is ${userAnswers.phone}, and your address is ${userAnswers.address}. Is this correct?`,
+                   	 "quick_replies":[
+				      {
+				        "content_type":"text",
+				        "title":"Yes",
+				        "payload":"save-data",
+				        
+				      },
+				      {
+				        "content_type":"text",
+				        "title":"Edit",
+				        "payload":"edit-data",
+				        
+				      },
+				      {
+				        "content_type":"text",
+				        "title":"No",
+				        "payload":"no-save-data",
+				        
+				      }
+				    ]
 					}
             	}            	
 
@@ -1762,6 +1793,13 @@ app.post('/webhook', (req, res) => {
                 }).fail(error => {
                     console.log(error)
                 })
+
+            	console.log("USER",userAnswers);
+            }
+
+
+            else if(userQuickReply == "save-data"){
+            	let addDoc = db.collection("orders").add(userAnswers);
 
             	console.log("USER",userAnswers);
             }
