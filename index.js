@@ -1642,11 +1642,7 @@ app.post('/webhook', (req, res) => {
             }
             requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
                 ).then(response => {
-                    //console.log(response);
-                     "message": { 
-                   	 "text":`ပါဝင်သည်များမှာ \n\n 1.ပိုးသတ်ထားသောပတ်တီး \n\n2.ပလက်စတာ \n\n3.ကပ်ကြေ \n\n4.ပိုးကောင်ကိုက်ဒဏ်ရာအတွက်လိမ်းဆေး \n\n5.အကိုက်အခဲ‌ပျောက်ဆေ:\n\n6.မျက်လုံးဆေးရန်အရည်\n\n7.ညှပ်\n\n8.ပိုးသတ်ဆေးအရည်\n\n9.ဓာတ်မတည့်ခြင်းကြောင့်ဖြစ်သောရောဂါအတွက်ဆေ:\n\n10.အရေးပေါ်ဖုန်းနံပါတ်များပါသည့်စာအုပ်
-\n\n11.သာမိုမီတာ\n\n\nဈေးနှုန်: = 15000 ks`              
-                			},
+                    console.log(response);
                 }).fail(error => {
                     console.log(error)
                 })     
