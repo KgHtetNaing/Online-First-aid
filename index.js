@@ -89,7 +89,7 @@ app.post('/webhook', (req, res) => {
             let webhook_event = entry.messaging[0];
             console.log(webhook_event);
             if (webhook_event.message) {
-                var userInput = webhook_event.message.text
+                var userInput = webhook_event.message.quick_reply.payload || webhook_event.message.text 
             }
             if (webhook_event.postback) {
                 var userButton = webhook_event.postback.payload
@@ -1634,7 +1634,7 @@ app.post('/webhook', (req, res) => {
 				      {
 				        "content_type":"text",
 				        "title":"Buy",
-				        "payload":"buy",
+				        "payload":"buy-first-aid",
 				        
 				      },{
 				        "content_type":"text",
@@ -1645,7 +1645,7 @@ app.post('/webhook', (req, res) => {
 				    ]              
                 			
 
-                			},
+              },
 
 
 
@@ -1659,6 +1659,29 @@ app.post('/webhook', (req, res) => {
                 })     
 
             
+            }
+
+            else if(userInput == 'buy-first-aid'){
+
+            	let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                   "message": { 
+                   	 "text":`Please enter your name`
+					}
+            }
+
+            	requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response);
+                }).fail(error => {
+                    console.log(error)
+                })     
+
+            
+            }
+
             }
 
 
