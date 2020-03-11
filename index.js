@@ -1662,25 +1662,24 @@ app.post('/webhook', (req, res) => {
             }
 
             else if(userInput == 'buy-first-aid'){
-
-            	let buttonMesage = {
+            	let message = {
                     "recipient": {
                         "id": webhook_event.sender.id
                     },
                    "message": { 
                    	 "text":`Please enter your name`
 					}
-            }
+            	}
 
-            	requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+            	requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, message
                 ).then(response => {
                     console.log(response);
                 }).fail(error => {
                     console.log(error)
-                })     
+                })
 
-            
-            }
+
+
 
             }
 
