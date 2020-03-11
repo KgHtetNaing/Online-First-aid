@@ -1579,7 +1579,35 @@ app.post('/webhook', (req, res) => {
                 })
             
 
-       	 }//cpr end
+       	 }
+
+       	 else if(userInput == 'CPR' || userButton == 'CPR')
+             {
+                let buttonMesage = {
+                     "recipient":{
+    "id":"1254459154682919"
+  },
+  "message":{
+    "attachment":{
+      "type":"video", 
+      "payload":{
+        "url":"https://www.youtube.com/watch?v=ozzZVQQTvo4", 
+        "is_reusable":true
+      }
+    }
+  }
+
+
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })     
+
+            
+               }//cpr end
 
 
 
@@ -1703,27 +1731,27 @@ function setupPersistentMenu(res){
             
                }
 
-//                 else if(userInput == 'firstaid' || userButton == 'firstaid')
-//              {
-//                 let buttonMesage = {
-//                     "recipient": {
-//                         "id": webhook_event.sender.id
-//                     },
-//                    "message": { 
-//                    	 "text":`ပါဝင်သည်များမှာ \n\n 1.ပိုးသတ်ထားသောပတ်တီး \n\n2.ပလက်စတာ \n\n3.ကပ်ကြေ \n\n4.ပိုးကောင်ကိုက်ဒဏ်ရာအတွက်လိမ်းဆေး \n\n5.အကိုက်အခဲ‌ပျောက်ဆေ:\n\n6.မျက်လုံးဆေးရန်အရည်\n\n7.ညှပ်\n\n8.ပိုးသတ်ဆေးအရည်\n\n9.ဓာတ်မတည့်ခြင်းကြောင့်ဖြစ်သောရောဂါအတွက်ဆေ:\n\n10.အရေးပေါ်ဖုန်းနံပါတ်များပါသည့်စာအုပ်
-// \n\n11.သာမိုမီတာ\n\n\nဈေးနှုန်: = 15000 ks`              
-//                 			},
-
-                 
+                else if(userInput == 'firstaid' || userButton == 'firstaid')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                   "message": { 
+                   	 "text":`ပါဝင်သည်များမှာ \n\n 1.ပိုးသတ်ထားသောပတ်တီး \n\n2.ပလက်စတာ \n\n3.ကပ်ကြေ \n\n4.ပိုးကောင်ကိုက်ဒဏ်ရာအတွက်လိမ်းဆေး \n\n5.အကိုက်အခဲ‌ပျောက်ဆေ:\n\n6.မျက်လုံးဆေးရန်အရည်\n\n7.ညှပ်\n\n8.ပိုးသတ်ဆေးအရည်\n\n9.ဓာတ်မတည့်ခြင်းကြောင့်ဖြစ်သောရောဂါအတွက်ဆေ:\n\n10.အရေးပေါ်ဖုန်းနံပါတ်များပါသည့်စာအုပ်
+\n\n11.သာမိုမီတာ\n\n\nဈေးနှုန်: = 15000 ks`              
+                			},
 
 
-//             }
-//             requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-//                 ).then(response => {
-//                     console.log(response)
-//                 }).fail(error => {
-//                     console.log(error)
-//                 })     
+
+
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })     
 
             
-//                }
+               }
