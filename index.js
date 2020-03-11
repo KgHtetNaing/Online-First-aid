@@ -1717,6 +1717,55 @@ app.post('/webhook', (req, res) => {
             	console.log("USER",userAnswers);
             }
 
+            else if(userInput && questions.phone == true){
+            	userAnswers.phone = userInput;
+            	questions.phone = false;
+
+            	let message = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                   "message": { 
+                   	 "text":`Last but not least, please give me your address`
+					}
+            	}
+
+            	questions.address = true;
+
+            	requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, message
+                ).then(response => {
+                    console.log(response);
+                }).fail(error => {
+                    console.log(error)
+                })
+
+            	console.log("USER",userAnswers);
+            }
+
+
+            else if(userInput && questions.address == true){
+            	userAnswers.address = userInput;
+            	questions.address = false;
+
+            	let message = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                   "message": { 
+                   	 "text":`your name is ${userAnswers.name}, your phone number is ${userAnswers.phone}, and your address is ${userAnswers.address}`
+					}
+            	}            	
+
+            	requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, message
+                ).then(response => {
+                    console.log(response);
+                }).fail(error => {
+                    console.log(error)
+                })
+
+            	console.log("USER",userAnswers);
+            }
+
 
 
              
