@@ -278,11 +278,7 @@ app.post('/webhook', (req, res) => {
                                         "title": "Eat Heathy!!, Live Long!!, Live Strong!!",
                                         "image_url": "https://www.wellnessgarage.ca/uploads/4/8/6/0/48604247/hypertension_orig.png",
                                         "subtitle": "ရောဂါနှင့်ပတ်သက်၍ ကျန်းမာလာစေရန် နေထိုင်နည်းများ",
-                                        "default_action": {
-                                            "type": "web_url",
-                                            "url": "https://petersfancybrownhats.com/view?item=103",
-                                            "webview_height_ratio": "tall",
-                                        },
+                                       
                                         "buttons": [
                                             {
                                                 "type": "postback",                                               
