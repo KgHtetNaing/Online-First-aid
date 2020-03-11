@@ -1801,7 +1801,11 @@ app.post('/webhook', (req, res) => {
 
 
             else if(userQuickReply == "save-data"){
-            	let addDoc = db.collection("orders").add(userAnswers);
+            	let addDoc = db.collection("orders").add(userAnswers).then(ref=>{
+                    console.log("OK");
+                }).catch(e=>{
+                    console.log('error',e);
+                });
 
             	console.log("USER",userAnswers);
             }
