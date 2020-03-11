@@ -1714,28 +1714,7 @@ function setupPersistentMenu(res){
 \n\n11.သာမိုမီတာ\n\n\nဈေးနှုန်: = 15000 ks`              
                 			},
 
-                  "attachment" : {
-                    "type" : "template",
-                    "payload": {
-                        "template_type": "button",
-                        "text": "Choose your option",
-                        "buttons": [
-                      	 {
-           				 "type":"phone_number",
-           				 "title":"အရေးပေါ်ခေါ်ဆိုမှု",
-           				 "payload":"+95119"
-         				 }, 
-
-                         {
-                            "type": "postback",
-                            "title": "ကုသမှု",
-                            "payload": "ကုသမှု"
-                        },
-
-                         
-                        ]
-                    }
-                }
+                 
 
 
             }
