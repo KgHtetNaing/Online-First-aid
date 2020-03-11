@@ -10,7 +10,13 @@ const
 
 const pageaccesstoken = 'EAAihIcIsCAgBAGQ1yAr1BXbayDXVGesKXamXMBdEwaMzjkfHT5hZAHZBtUYrc8hjEQiVzFin8eb4NBK9tuOBFub7WAVwXCMl2L5AsqbD1OjG3Dh99IsYeMjZCLiYLcZAFG0fo5CZA6YCODRe1OCLsE21OTRZCXDmGknF9HBdSKSAZDZD'
 
+let questions = {
+	"name":false,
+	"phone":false,
+	"address":false
+}
 
+let userAnswers = {};
 
 app.get('/greeting', (req, res) => {
 	requestify.post(`https://graph.facebook.com/v2.6/me/messenger_profile?access_token=${pageaccesstoken}`,
@@ -1638,8 +1644,8 @@ app.post('/webhook', (req, res) => {
 				        
 				      },{
 				        "content_type":"text",
-				        "title":"No",
-				        "payload":"nobuy",
+				        "title":"Cancel",
+				        "payload":"cancel",
 				        
 				      }
 				    ]              
@@ -1671,16 +1677,21 @@ app.post('/webhook', (req, res) => {
 					}
             	}
 
+            	questions.name = true;
+
             	requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, message
                 ).then(response => {
                     console.log(response);
                 }).fail(error => {
                     console.log(error)
                 })
+            }
 
+            else if(userInput && questions.name == true){
+            	userAnswers.name = userInput;
+            	questions.name = false;
 
-
-
+            	console.log("USER",userAnswers);
             }
 
 
