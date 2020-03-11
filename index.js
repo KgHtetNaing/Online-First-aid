@@ -1558,28 +1558,28 @@ app.post('/webhook', (req, res) => {
        	 }//snakebite end
 
      	
-       	 else if(userInput == "CPR" || userButton == "CPR")
-       	  {
-                let buttonMesage = {
-                    "recipient": {
-                        "id": webhook_event.sender.id
-                    },
-                    "message":{
-                        "text":`1.လက်ကိုနေရာချပါ။ လူနာကို ကြမ်းပြင်ပေါ်၌ လှဲထားပါ။ လူနာဘေးတွင်ဒူးထောက်ကာ လက်ဖနောင့်ကို လူနာ၏ရင်ဘက်အလယ်တွင်ထားပါ။\n\n2.လက်တဖက်ပေါ်သို့ တဖက်တင်ပါ။ လက်ကိုအ‌ဖြောင့်ထားပါ။လက်ချောင်းများအနည်းငယ်ဖော့ထားပါ။\n\n3.ကုသသူက ကိုယ်ကို ရှေ့သို့ကိုင်းပါ။ ကုသသူ၏ ပုခုံးသည် လူနာ၏ရင်ဘက်နှင့်တသားတည်းဖြစ်ရမည်။ရင်ဘက်ကိုဖိပါ။ရင်ကို ၂လက်မခန့် နိမ့်သွားအောင်ဖိပါ။\n\n4.ဖိပြီးပါက လက်၏ဖိအားကိုလျှော့ပါ၊လက်ကိုမဖယ်လိုက်ပါနှင့်။\n\n5.လူနာအသက်ရှူရ အဆင်‌ပြေအောင် ခေါင်းကိုနောက်သို့စောင်း၍ မေးစေ့ကိုကိုင်ထားပေးပါ\n\n6.နှာခေါင်းကိုညှစ်ထား၍ လူနာ၏ခေါင်းကိုမော့ကာ ပါးစပ်အတွင်းသို့ လေများသွင်းပေးပါ။\n\n7.ရင်ဘက်ဖောင်းလာပါက လေသွင်းပေးသည်ကိုရပ်၍ ရင်ဘက်ပြန်ကျအောင်စောင့်ပါ။\n\n7.`
-                    },
+       	 // else if(userInput == "CPR" || userButton == "CPR")
+       	 //  {
+         //        let buttonMesage = {
+         //            "recipient": {
+         //                "id": webhook_event.sender.id
+         //            },
+         //            "message":{
+         //                "text":`1.လက်ကိုနေရာချပါ။ လူနာကို ကြမ်းပြင်ပေါ်၌ လှဲထားပါ။ လူနာဘေးတွင်ဒူးထောက်ကာ လက်ဖနောင့်ကို လူနာ၏ရင်ဘက်အလယ်တွင်ထားပါ။\n\n2.လက်တဖက်ပေါ်သို့ တဖက်တင်ပါ။ လက်ကိုအ‌ဖြောင့်ထားပါ။လက်ချောင်းများအနည်းငယ်ဖော့ထားပါ။\n\n3.ကုသသူက ကိုယ်ကို ရှေ့သို့ကိုင်းပါ။ ကုသသူ၏ ပုခုံးသည် လူနာ၏ရင်ဘက်နှင့်တသားတည်းဖြစ်ရမည်။ရင်ဘက်ကိုဖိပါ။ရင်ကို ၂လက်မခန့် နိမ့်သွားအောင်ဖိပါ။\n\n4.ဖိပြီးပါက လက်၏ဖိအားကိုလျှော့ပါ၊လက်ကိုမဖယ်လိုက်ပါနှင့်။\n\n5.လူနာအသက်ရှူရ အဆင်‌ပြေအောင် ခေါင်းကိုနောက်သို့စောင်း၍ မေးစေ့ကိုကိုင်ထားပေးပါ\n\n6.နှာခေါင်းကိုညှစ်ထား၍ လူနာ၏ခေါင်းကိုမော့ကာ ပါးစပ်အတွင်းသို့ လေများသွင်းပေးပါ။\n\n7.ရင်ဘက်ဖောင်းလာပါက လေသွင်းပေးသည်ကိုရပ်၍ ရင်ဘက်ပြန်ကျအောင်စောင့်ပါ။\n\n7.`
+         //            },
                 
 
 
-            }
-            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-                ).then(response => {
-                    console.log(response)
-                }).fail(error => {
-                    console.log(error)
-                })
+         //    }
+         //    requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+         //        ).then(response => {
+         //            console.log(response)
+         //        }).fail(error => {
+         //            console.log(error)
+         //        })
             
 
-       	 }
+       	 // }
 
        	 else if(userInput == 'CPR' || userButton == 'CPR')
              {
@@ -1599,15 +1599,7 @@ app.post('/webhook', (req, res) => {
 
 
             }
-            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-                ).then(response => {
-                    console.log(response)
-                }).fail(error => {
-                    console.log(error)
-                })     
-
-            
-               }//cpr end
+           "https://graph.facebook.com/v6.0/me/messages?access_token=<PAGE_ACCESS_TOKEN>"}//cpr end
 
 
 
