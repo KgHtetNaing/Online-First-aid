@@ -95,7 +95,12 @@ app.post('/webhook', (req, res) => {
             let webhook_event = entry.messaging[0];
             console.log(webhook_event);
             if (webhook_event.message) {
-                var userInput = webhook_event.message.quick_reply.payload || webhook_event.message.text 
+            	if(webhook_event.message.quick_reply.payload){
+            		var userQuickReply = webhook_event.message.quick_reply.payload;
+            	}else{
+            		var userInput = webhook_event.message.text;
+            	}
+                 
             }
             if (webhook_event.postback) {
                 var userButton = webhook_event.postback.payload
@@ -1667,7 +1672,7 @@ app.post('/webhook', (req, res) => {
             
             }
 
-            else if(userInput == 'buy-first-aid'){
+            else if(userQuickReply == 'buy-first-aid'){
             	let message = {
                     "recipient": {
                         "id": webhook_event.sender.id
@@ -1690,6 +1695,24 @@ app.post('/webhook', (req, res) => {
             else if(userInput && questions.name == true){
             	userAnswers.name = userInput;
             	questions.name = false;
+
+            	let message = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                   "message": { 
+                   	 "text":`Great! Now please give me your phone number`
+					}
+            	}
+
+            	questions.phone = true;
+
+            	requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, message
+                ).then(response => {
+                    console.log(response);
+                }).fail(error => {
+                    console.log(error)
+                })
 
             	console.log("USER",userAnswers);
             }
