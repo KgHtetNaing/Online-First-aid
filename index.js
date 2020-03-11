@@ -95,7 +95,7 @@ app.post('/webhook', (req, res) => {
             let webhook_event = entry.messaging[0];
             console.log(webhook_event);
             if (webhook_event.message) {
-            	if(webhook_event.message.quick_reply.payload){
+            	if(webhook_event.message.quick_reply){
             		var userQuickReply = webhook_event.message.quick_reply.payload;
             	}else{
             		var userInput = webhook_event.message.text;
