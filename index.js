@@ -1810,6 +1810,30 @@ app.post('/webhook', (req, res) => {
             	console.log("USER",userAnswers);
             }
 
+                 else if(userInput == "term" || userButton == "term")
+          {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`1.ပြထားသောဆေးကုသနည်းများမှာ ခဏတာ သက်သာစေရန်သာဖြစ်သည်။ ပြထားငည့်အတိုင်းကုသပြီးပါက ဆရာဝန်နှင့်ထပ်ပြရန်လိုအပ်ပါသည်။\n\n2.First-aid kit  တွင်ပါသောဆေးများမှာ ဘေးဥပဒ် မဖြစ်စေရန် အာမခံသည်။
+                    },
+                
+
+
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })
+            
+
+         }}}
+
+
 
 
              
