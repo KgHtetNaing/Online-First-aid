@@ -1877,13 +1877,9 @@ function setupPersistentMenu(res){
                               "payload":"about"
                             }
                         ]
-                      },
-                      
-                      {
-                        "type": "postback",
-                        "title": "ဆေးဝယ်ရန်",
-                        "payload": "ဆေးဝယ်ရန်"
                       }
+                      
+                      
 
                     
                 ]
