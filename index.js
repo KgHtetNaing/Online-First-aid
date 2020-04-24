@@ -1620,11 +1620,7 @@ app.post('/webhook', (req, res) => {
            				 "payload":"firstaid"
          				 }, 
 
-                         {
-                            "type": "postback",
-                            "title": "ဆေးဝါးနှင့်အပိုကိရိယာများဝယ်ရန်",
-                            "payload": "medic"
-                        },
+                      
 
                          
                         ]
@@ -1865,18 +1861,18 @@ function setupPersistentMenu(res){
                         "title":"Contact Us",
                         "type":"nested",
                         "call_to_actions":
-                        [
-                            {
-                              "title":"Terms & Conditions",
-                              "type":"postback",
-                              "payload":"term"
-                            },
-                            {
-                              "title":"About us",
-                              "type":"postback",
-                              "payload":"about"
-                            },
-                             {
+                        },
+                         {
+                         "title":"Terms & Conditions",
+                         "type":"postback",
+                        "payload":"term"
+                        },
+                        {
+                         "title":"About us",
+                        "type":"postback",
+                         "payload":"about"
+                        },
+                       {
                         "type": "postback",
                         "title": "first-aid kitဝယ်ရန်",
                         "payload": "firstaid"
@@ -1889,7 +1885,7 @@ function setupPersistentMenu(res){
                     
                 ]
             }
-          ]          
+                    
         };
         // Start the request
         requestify.post(`https://graph.facebook.com/v2.6/me/messenger_profile?access_token=${pageaccesstoken}`, messageData
