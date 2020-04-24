@@ -1875,7 +1875,12 @@ function setupPersistentMenu(res){
                               "title":"About us",
                               "type":"postback",
                               "payload":"about"
-                            }
+                            },
+                             {
+                        "type": "postback",
+                        "title": "first-aid kitဝယ်ရန်",
+                        "payload": "firstaid"
+                      }
                         ]
                       }
                       
