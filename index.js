@@ -1831,8 +1831,29 @@ app.post('/webhook', (req, res) => {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`1လူနာကိုစိတ်ညိမ်အောင်ထား၍ မလှုပ်ရှားအောင်လုပ်ပါ။မြွေဆိပ်သည်သွေးထဲသို့တိုက်ရိုက်ရောက်သည်မဟုတ်သော‌ကြောင့်၊မလှုပ်ရှားပါက အဆိပ်သည်သွေးထဲသို့ရောက်ချိန်ကြာနိုင်သည်။\n\n2.မြွေကိုရှာ‌ဖွေရန်၊ဖမ်းရန်ခက်ခဲပါက မကြိုးစားပါနှင့်။ ဒဏ်ရာရှိသူပိုမိုများလာနိုင်သည်။\n\n3.ပလက်စတစ်အပတ် ကိုအသုံးပြု၍မြွေကိုက်ဒဏ်ရာကိုပတ်ပေးပါ။.\n\n4.ပတ်တီးဖြင့် ဒဏ်ရာကိုပတ်ပေးပါ.\n\n5.နောက်ပတ်တီးကို  ‌ခြေချောင်း လက်ချောင်းမှစ၍ဒဏ်ရာ၏အပေါ်ပိုင်းအထိပတ်ပါ.\n\n6.ပတ်တီးမရှိပါက တီရှပ် သို့ အထည်သားကဲ့သို့ ဆွဲဆန့်၍ရသည့် အရာများကိုအသုံးပြုနိုင်သည်\n\n7.တုတ်ချောင်းကဲ့သို့အရာများကိုသုံးပြု၍ မြွေကိုက်ဒဏ်ရာကိုလှုပ်မရအောင်လုပ်ပါ။\n\n8.ဒဏ်ရာကို ရေဆေးခြင်း၊ အဆိပ်ကိုစုတ်ခြင်း များမလုပ်ရ `
+                        "text":`Online Firt-aid သည်လူအများ၏ကျမ်းမာရေးအတွက်ဦးတည်၍ထုပ်ထားခြင်းဖြသသည်။ အရေးပေါ်ကိစ္စများနှင့် နေ့စဉ်ကြုံတွေ့နိုင်သောဒဏ်ရာများအတွက် အလွယ်တကူကုသနိုင်သောနည်းလမ်းများကိုဖော်ပြထားပါသည်။` },
+                
+
+
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })
+            
+
+         }
+
+         else if(userInput == 'Q&A' || userButton == 'Q&A')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
                     },
+                    "message":{
+                        "text":`If you have suggestion or feedback, please contact me here. noelkghtet@gmail.com` },
                 
 
 
@@ -1892,8 +1913,13 @@ function setupPersistentMenu(res){
                             },
                              {
                         "type": "postback",
-                        "title": "first-aid kitဝယ်ရန်",
+                        "title": "ဆေးဝယ်ရန်",
                         "payload": "firstaid"
+                      },
+                      {
+                        "type": "postback",
+                        "title": "Q&A",
+                        "payload": "Q&A"
                       }
                         ]
                       }
