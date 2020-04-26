@@ -1682,7 +1682,7 @@ app.post('/webhook', (req, res) => {
                         "id": webhook_event.sender.id
                     },
                    "message": { 
-                   	 "text":`Please enter your name`
+                   	 "text":`နာမည်ရေးပါ။`
 					}
             	}
 
@@ -1705,7 +1705,7 @@ app.post('/webhook', (req, res) => {
                         "id": webhook_event.sender.id
                     },
                    "message": { 
-                   	 "text":`Great! Now please give me your phone number`
+                   	 "text":`ဖုန်းနံပါတ်ရေးပါ။`
 					}
             	}
 
@@ -1730,7 +1730,7 @@ app.post('/webhook', (req, res) => {
                         "id": webhook_event.sender.id
                     },
                    "message": { 
-                   	 "text":`Last but not least, please give me your address`
+                   	 "text":`လိပ်စာရေးပါ။`
 					}
             	}
 
@@ -1756,11 +1756,11 @@ app.post('/webhook', (req, res) => {
                         "id": webhook_event.sender.id
                     },
                    "message": { 
-                   	 "text":`your name is ${userAnswers.name}, your phone number is ${userAnswers.phone}, and your address is ${userAnswers.address}. Is this correct?`,
+                   	 "text":`နာမည်ရေးပါ ${userAnswers.name}, ဖုန်းနံပါတ် ${userAnswers.phone}, လိပ်စာ ${userAnswers.address}.`,
                    	 "quick_replies":[
 				      {
 				        "content_type":"text",
-				        "title":"Yes",
+				        "title":"Correct",
 				        "payload":"save-data",
 				        
 				      },
@@ -1846,7 +1846,7 @@ app.post('/webhook', (req, res) => {
 
          }
 
-         else if(userInput == 'Q&A' || userButton == 'Q&A')
+         else if(userInput == 'Q & A' || userButton == 'Q & A')
              {
                 let buttonMesage = {
                     "recipient": {
