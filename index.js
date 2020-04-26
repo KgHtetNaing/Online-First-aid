@@ -1656,11 +1656,6 @@ app.post('/webhook', (req, res) => {
 				        "title":"Buy",
 				        "payload":"buy-first-aid",
 				        
-				      },{
-				        "content_type":"text",
-				        "title":"Cancel",
-				        "payload":"cancel",
-				        
 				      }
 				    ]              
                 			
@@ -1687,7 +1682,7 @@ app.post('/webhook', (req, res) => {
                         "id": webhook_event.sender.id
                     },
                    "message": { 
-                   	 "text":`Please enter your name`
+                   	 "text":`နာမည်ရေးပါ။`
 					}
             	}
 
@@ -1710,7 +1705,7 @@ app.post('/webhook', (req, res) => {
                         "id": webhook_event.sender.id
                     },
                    "message": { 
-                   	 "text":`Great! Now please give me your phone number`
+                   	 "text":`ဖုန်းနံပါတ်ရေးပါ။`
 					}
             	}
 
@@ -1735,7 +1730,7 @@ app.post('/webhook', (req, res) => {
                         "id": webhook_event.sender.id
                     },
                    "message": { 
-                   	 "text":`Last but not least, please give me your address`
+                   	 "text":`လိပ်စာရေးပါ။`
 					}
             	}
 
@@ -1761,7 +1756,7 @@ app.post('/webhook', (req, res) => {
                         "id": webhook_event.sender.id
                     },
                    "message": { 
-                   	 "text":`your name is ${userAnswers.name}, your phone number is ${userAnswers.phone}, and your address is ${userAnswers.address}. Is this correct?`,
+                   	 "text":`နာမည် ${userAnswers.name}, ဖုန်းနံပါတ် ${userAnswers.phone},လိပ်စာ ${userAnswers.address}. ,
                    	 "quick_replies":[
 				      {
 				        "content_type":"text",
@@ -1829,12 +1824,35 @@ app.post('/webhook', (req, res) => {
 
          }
 
+         else if(userInput == "about" || userButton == "about")
+          {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`Online Firt-aid သည်လူအများ၏ကျမ်းမာရေးအတွက်ဦးတည်၍ထုပ်ထားခြင်းဖြသသည်။ အရေးပေါ်ကိစ္စများနှင့် နေ့စဉ်ကြုံတွေ့နိုင်သောဒဏ်ရာများအတွက် အလွယ်တကူကုသနိုင်သောနည်းလမ်းများကိုဖော်ပြထားပါသည်။`
+                    },
+                
+
+
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })
+            
+
+         }
+
 
 
 
              
 
-        }) //end foreach
+        } //end foreach
 
     // Returns a '200 OK' response to all requests
         	res.status(200).send('EVENT_RECEIVED');  
