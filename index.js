@@ -1656,7 +1656,7 @@ app.post('/webhook', (req, res) => {
 				        "title":"Buy",
 				        "payload":"buy-first-aid",
 				        
-				      }
+				      },
 				    ]              
                 			
 
@@ -1705,7 +1705,7 @@ app.post('/webhook', (req, res) => {
                         "id": webhook_event.sender.id
                     },
                    "message": { 
-                   	 "text":`ဖုန်းနံပါတ်ရေးပါ။`
+                   	 "text":`ဖုန်းနံပါတ်ရေးပါ`
 					}
             	}
 
@@ -1756,11 +1756,11 @@ app.post('/webhook', (req, res) => {
                         "id": webhook_event.sender.id
                     },
                    "message": { 
-                   	 "text":`နာမည် ${userAnswers.name}, ဖုန်းနံပါတ် ${userAnswers.phone},လိပ်စာ ${userAnswers.address}. ,
+                   	 "text":`နာမည် ${userAnswers.name},ဖုန်းနံပါတ် ${userAnswers.phone}, လိပ်စာ ${userAnswers.address}. `,
                    	 "quick_replies":[
 				      {
 				        "content_type":"text",
-				        "title":"Yes",
+				        "title":"Correct",
 				        "payload":"save-data",
 				        
 				      },
@@ -1847,12 +1847,35 @@ app.post('/webhook', (req, res) => {
 
          }
 
+         else if(userInput == "Q&A" || userButton == "Q&A")
+          {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`Please contact me here if you have suggestion or feeback. noelkghtet@gmail.com`
+                    },
+                
+
+
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })
+            
+
+         }
+
 
 
 
              
 
-        } //end foreach
+        }) //end foreach
 
     // Returns a '200 OK' response to all requests
         	res.status(200).send('EVENT_RECEIVED');  
@@ -1892,8 +1915,14 @@ function setupPersistentMenu(res){
                             },
                              {
                         "type": "postback",
-                        "title": "first-aid kitဝယ်ရန်",
+                        "title": "ဆေးဝယ်ရန်",
                         "payload": "firstaid"
+                      }
+
+                      {
+                        "type": "postback",
+                        "title": "Q & A",
+                        "payload": "Q&A"
                       }
                         ]
                       }
