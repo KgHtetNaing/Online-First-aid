@@ -130,7 +130,11 @@ app.post('/webhook', (req, res) => {
                         "template_type": "button",
                         "text": "Choose your option",
                         "buttons": [
-                      	 
+                      	 {
+           				 "type":"phone_number",
+           				 "title":"အရေးပေါ်ခေါ်ဆိုမှု",
+           				 "payload":"+95119"
+         				 }, 
 
                          {
                             "type": "postback",
