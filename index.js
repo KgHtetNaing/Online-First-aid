@@ -1888,58 +1888,58 @@ app.post('/webhook', (req, res) => {
 
 // menu function
 
-function setupPersistentMenu(res){
-        var messageData = { 
-            "persistent_menu":[
-                {
-                  "locale":"default",
-                  "composer_input_disabled":false,
-                  "call_to_actions":
-                [
-                      {
-                        "title":"Contact Us",
-                        "type":"nested",
-                        "call_to_actions":
-                        [
-                            {
-                              "title":"Terms & Conditions",
-                              "type":"postback",
-                              "payload":"term"
-                            },
-                            {
-                              "title":"About us",
-                              "type":"postback",
-                              "payload":"about"
-                            },
-                             {
-                        "type": "postback",
-                        "title": "ဆေးဝယ်ရန်",
-                        "payload": "firstaid"
-                      },
-                      {
-                        "type": "postback",
-                        "title": "Q&A",
-                        "payload": "Q&A"
-                      }
-                        ]
-                      }
+// function setupPersistentMenu(res){
+//         var messageData = { 
+//             "persistent_menu":[
+//                 {
+//                   "locale":"default",
+//                   "composer_input_disabled":false,
+//                   "call_to_actions":
+//                 [
+//                       {
+//                         "title":"Contact Us",
+//                         "type":"nested",
+//                         "call_to_actions":
+//                         [
+//                             {
+//                               "title":"Terms & Conditions",
+//                               "type":"postback",
+//                               "payload":"term"
+//                             },
+//                             {
+//                               "title":"About us",
+//                               "type":"postback",
+//                               "payload":"about"
+//                             },
+//                              {
+//                         "type": "postback",
+//                         "title": "ဆေးဝယ်ရန်",
+//                         "payload": "firstaid"
+//                       },
+//                       {
+//                         "type": "postback",
+//                         "title": "Q&A",
+//                         "payload": "Q&A"
+//                       }
+//                         ]
+//                       }
                       
                       
 
                     
-                ]
-            }
-          ]          
-        };
-        // Start the request
-        requestify.post(`https://graph.facebook.com/v2.6/me/messenger_profile?access_token=${pageaccesstoken}`, messageData
-                ).then(response => {
-                    console.log(response)
-                }).fail(error => {
-                    console.log(error)
-                })
+//                 ]
+//             }
+//           ]          
+//         };
+//         // Start the request
+//         requestify.post(`https://graph.facebook.com/v2.6/me/messenger_profile?access_token=${pageaccesstoken}`, messageData
+//                 ).then(response => {
+//                     console.log(response)
+//                 }).fail(error => {
+//                     console.log(error)
+//                 })
             
-    }
+//     }
 
     //end of menubar
 
