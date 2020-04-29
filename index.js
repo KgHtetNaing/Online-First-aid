@@ -54,10 +54,10 @@ app.get('/greeting', (req, res) => {
 });
 
 // menu get function
-// app.get('/setupPersistentMenu', function(req,res)
-//     {
-//         setupPersistentMenu(res);
-//     });
+app.get('/setupPersistentMenu', function(req,res)
+    {
+        setupPersistentMenu(res);
+    });
 
 // Sets server port and logs message on success
 app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
@@ -130,11 +130,7 @@ app.post('/webhook', (req, res) => {
                         "template_type": "button",
                         "text": "Choose your option",
                         "buttons": [
-                      	 {
-           				 "type":"phone_number",
-           				 "title":"အရေးပေါ်ခေါ်ဆိုမှု",
-           				 "payload":"+95119"
-         				 }, 
+                      	 
 
                          {
                             "type": "postback",
@@ -1888,58 +1884,58 @@ app.post('/webhook', (req, res) => {
 
 // menu function
 
-// function setupPersistentMenu(res){
-//         var messageData = { 
-//             "persistent_menu":[
-//                 {
-//                   "locale":"default",
-//                   "composer_input_disabled":false,
-//                   "call_to_actions":
-//                 [
-//                       {
-//                         "title":"Contact Us",
-//                         "type":"nested",
-//                         "call_to_actions":
-//                         [
-//                             {
-//                               "title":"Terms & Conditions",
-//                               "type":"postback",
-//                               "payload":"term"
-//                             },
-//                             {
-//                               "title":"About us",
-//                               "type":"postback",
-//                               "payload":"about"
-//                             },
-//                              {
-//                         "type": "postback",
-//                         "title": "ဆေးဝယ်ရန်",
-//                         "payload": "firstaid"
-//                       },
-//                       {
-//                         "type": "postback",
-//                         "title": "Q&A",
-//                         "payload": "Q&A"
-//                       }
-//                         ]
-//                       }
+function setupPersistentMenu(res){
+        var messageData = { 
+            "persistent_menu":[
+                {
+                  "locale":"default",
+                  "composer_input_disabled":false,
+                  "call_to_actions":
+                [
+                      {
+                        "title":"Contact Us",
+                        "type":"nested",
+                        "call_to_actions":
+                        [
+                            {
+                              "title":"Terms & Conditions",
+                              "type":"postback",
+                              "payload":"term"
+                            },
+                            {
+                              "title":"About us",
+                              "type":"postback",
+                              "payload":"about"
+                            },
+                             {
+                        "type": "postback",
+                        "title": "ဆေးဝယ်ရန်",
+                        "payload": "firstaid"
+                      },
+                      {
+                        "type": "postback",
+                        "title": "Q&A",
+                        "payload": "Q&A"
+                      }
+                        ]
+                      }
                       
                       
 
                     
-//                 ]
-//             }
-//           ]          
-//         };
-//         // Start the request
-//         requestify.post(`https://graph.facebook.com/v2.6/me/messenger_profile?access_token=${pageaccesstoken}`, messageData
-//                 ).then(response => {
-//                     console.log(response)
-//                 }).fail(error => {
-//                     console.log(error)
-//                 })
+                ]
+            }
+          ]          
+        };
+        // Start the request
+        requestify.post(`https://graph.facebook.com/v2.6/me/messenger_profile?access_token=${pageaccesstoken}`, messageData
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })
             
-//     }
+    }
 
     //end of menubar
 
