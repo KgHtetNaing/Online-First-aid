@@ -299,7 +299,7 @@ app.post('/webhook', (req, res) => {
                                     {
                                         "title": "Welcome!",
                                         "image_url": "https://www.jehangirhospital.com/images/centres-of-excellence-image/coe_inside_emergency_trauma.jpg",
-                                        "subtitle": " ပါဝင်သည်.ကုသနည်များ (ရေနစ်ခြင်း,မြွေကိုက်ဒဏ်ရာ, CPR ကုသမှုနည်းလမ်း)",
+                                        "subtitle": " (Drowning, Snakebite, CPR)",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -308,15 +308,15 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",                                               
-                                                "title": "အရေးပေါ် ကုသမှု",
-                                                "payload": "အရေးပေါ် ကုသမှု"
+                                                "title": "Emergency",
+                                                "payload": "emergency"
                                             }
                                         ]
                                     },
                                     {
                                         "title": "Welcome!",                                        
                                         "image_url": "https://previews.123rf.com/images/yupiramos/yupiramos1506/yupiramos150610219/41427239-first-aid-design-over-white-background-vector-illustration-.jpg",
-                                        "subtitle": "ဒဏ်ရာကုသရန်နည်းများ.",
+                                        "subtitle": "Shows treatments for injuries",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -325,15 +325,15 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",                                               
-                                                "title": "သာမန်ကုသမှုနည်းလမ်းများ",
-                                                "payload": "သာမန်ကုသမှုနည်းလမ်းများ"
+                                                "title": "Normal Treatment",
+                                                "payload": "normal"
                                             }
                                         ]
                                     },
                                     {
                                         "title": "Welcome!",
                                         "image_url": "https://stylesatlife.com/wp-content/uploads/2018/03/Daily-Health-Tips.png",
-                                        "subtitle": "သင်၏အ‌‌ခြေအနေပေါ်မူတည်၍နေ့စဉ် ကျမ်းမာစွာနေနိုင်ရန် နည်းလမ်းမျာ:",
+                                        "subtitle": "Show tips for daily healthy life",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -342,8 +342,8 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",
-                                                "title": "နေ့စဉ်ကျန်းမာရေ:",
-                                                "payload": "နေ့စဉ်ကျန်းမာရေ:"
+                                                "title": "Health Tips",
+                                                "payload": "tips"
                                             }
                                         ]
                                     }
