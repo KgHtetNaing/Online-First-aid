@@ -1927,7 +1927,7 @@ app.post('/webhook', (req, res) => {
                                     {
                                         "title": "Welcome!",
                                         "image_url": "https://www.jehangirhospital.com/images/centres-of-excellence-image/coe_inside_emergency_trauma.jpg",
-                                        "subtitle": "(Drowning, Snakebite, CPR)")
+                                        "subtitle": "(Drowning, Snakebite, CPR)"
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -1992,7 +1992,7 @@ app.post('/webhook', (req, res) => {
 
             } //Welcome end
 
-    //         else if(userInput == 'tip' || userButton == 'tips'){
+    //         else if(userInput == 'tip' || userButton == 'tip'){
     //             let buttonMesage = {
     //                 "recipient": {
     //                     "id": webhook_event.sender.id
