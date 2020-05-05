@@ -284,7 +284,7 @@ app.post('/webhook', (req, res) => {
 
             } //Welcome end
 
-             else if (userInput == 'eng' || userButton == 'eng') {
+            else if (userInput == 'eng' || userButton == 'eng') {
                 
                 let buttonMesage = {
                     "recipient": {
@@ -299,7 +299,7 @@ app.post('/webhook', (req, res) => {
                                     {
                                         "title": "Welcome!",
                                         "image_url": "https://www.jehangirhospital.com/images/centres-of-excellence-image/coe_inside_emergency_trauma.jpg",
-                                        "subtitle": "(Drowning, Snakebite, CPR)"
+                                        "subtitle": " ပါဝင်သည်.ကုသနည်များ (ရေနစ်ခြင်း,မြွေကိုက်ဒဏ်ရာ, CPR ကုသမှုနည်းလမ်း)",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -308,15 +308,15 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",                                               
-                                                "title": "Emergency Treatment",
-                                                "payload": "emergency"
+                                                "title": "အရေးပေါ် ကုသမှု",
+                                                "payload": "အရေးပေါ် ကုသမှု"
                                             }
                                         ]
                                     },
                                     {
                                         "title": "Welcome!",                                        
                                         "image_url": "https://previews.123rf.com/images/yupiramos/yupiramos1506/yupiramos150610219/41427239-first-aid-design-over-white-background-vector-illustration-.jpg",
-                                        "subtitle": "Shows treatment for wounds and injuries.",
+                                        "subtitle": "ဒဏ်ရာကုသရန်နည်းများ.",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -325,15 +325,15 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",                                               
-                                                "title": "Normal Treatment",
-                                                "payload": "normal"
+                                                "title": "သာမန်ကုသမှုနည်းလမ်းများ",
+                                                "payload": "သာမန်ကုသမှုနည်းလမ်းများ"
                                             }
                                         ]
                                     },
                                     {
                                         "title": "Welcome!",
                                         "image_url": "https://stylesatlife.com/wp-content/uploads/2018/03/Daily-Health-Tips.png",
-                                        "subtitle": "Healthy tips for your daily life",
+                                        "subtitle": "သင်၏အ‌‌ခြေအနေပေါ်မူတည်၍နေ့စဉ် ကျမ်းမာစွာနေနိုင်ရန် နည်းလမ်းမျာ:",
                                         "default_action": {
                                             "type": "web_url",
                                             "url": "https://petersfancybrownhats.com/view?item=103",
@@ -342,8 +342,8 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",
-                                                "title": "Health tips",
-                                                "payload": "tips"
+                                                "title": "နေ့စဉ်ကျန်းမာရေ:",
+                                                "payload": "နေ့စဉ်ကျန်းမာရေ:"
                                             }
                                         ]
                                     }
@@ -352,6 +352,86 @@ app.post('/webhook', (req, res) => {
                         }
                     }
                 };
+
+
+
+                requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })
+
+            }
+
+             // else if (userInput == 'eng' || userButton == 'eng') {
+                
+             //    let buttonMesage = {
+             //        "recipient": {
+             //            "id": webhook_event.sender.id
+             //        },
+             //        "message": {
+             //            "attachment": {
+             //                "type": "template",
+             //                "payload": {
+             //                    "template_type": "generic",
+             //                    "elements": [
+             //                        {
+             //                            "title": "Welcome!",
+             //                            "image_url": "https://www.jehangirhospital.com/images/centres-of-excellence-image/coe_inside_emergency_trauma.jpg",
+             //                            "subtitle": "(Drowning, Snakebite, CPR)"
+             //                            "default_action": {
+             //                                "type": "web_url",
+             //                                "url": "https://petersfancybrownhats.com/view?item=103",
+             //                                "webview_height_ratio": "tall",
+             //                            },
+             //                            "buttons": [
+             //                                {
+             //                                    "type": "postback",                                               
+             //                                    "title": "Emergency Treatment",
+             //                                    "payload": "emergency"
+             //                                }
+             //                            ]
+             //                        },
+             //                        {
+             //                            "title": "Welcome!",                                        
+             //                            "image_url": "https://previews.123rf.com/images/yupiramos/yupiramos1506/yupiramos150610219/41427239-first-aid-design-over-white-background-vector-illustration-.jpg",
+             //                            "subtitle": "Shows treatment for wounds and injuries.",
+             //                            "default_action": {
+             //                                "type": "web_url",
+             //                                "url": "https://petersfancybrownhats.com/view?item=103",
+             //                                "webview_height_ratio": "tall",
+             //                            },
+             //                            "buttons": [
+             //                                {
+             //                                    "type": "postback",                                               
+             //                                    "title": "Normal Treatment",
+             //                                    "payload": "normal"
+             //                                }
+             //                            ]
+             //                        },
+             //                        {
+             //                            "title": "Welcome!",
+             //                            "image_url": "https://stylesatlife.com/wp-content/uploads/2018/03/Daily-Health-Tips.png",
+             //                            "subtitle": "Healthy tips for your daily life",
+             //                            "default_action": {
+             //                                "type": "web_url",
+             //                                "url": "https://petersfancybrownhats.com/view?item=103",
+             //                                "webview_height_ratio": "tall",
+             //                            },
+             //                            "buttons": [
+             //                                {
+             //                                    "type": "postback",
+             //                                    "title": "Health tips",
+             //                                    "payload": "tips"
+             //                                }
+             //                            ]
+             //                        }
+             //                    ]
+             //                }
+             //            }
+             //        }
+             //    };
 
 
 
