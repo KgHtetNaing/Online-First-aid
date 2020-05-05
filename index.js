@@ -364,85 +364,7 @@ app.post('/webhook', (req, res) => {
 
             }
 
-            //  else if (userInput == 'eng' || userButton == 'eng') {
-                
-            //     let buttonMesage = {
-            //         "recipient": {
-            //             "id": webhook_event.sender.id
-            //         },
-            //         "message": {
-            //             "attachment": {
-            //                 "type": "template",
-            //                 "payload": {
-            //                     "template_type": "generic",
-            //                     "elements": [
-            //                         {
-            //                             "title": "Welcome!",
-            //                             "image_url": "https://www.jehangirhospital.com/images/centres-of-excellence-image/coe_inside_emergency_trauma.jpg",
-            //                             "subtitle": "(Drowning, Snakebite, CPR)"
-            //                             "default_action": {
-            //                                 "type": "web_url",
-            //                                 "url": "https://petersfancybrownhats.com/view?item=103",
-            //                                 "webview_height_ratio": "tall",
-            //                             },
-            //                             "buttons": [
-            //                                 {
-            //                                     "type": "postback",                                               
-            //                                     "title": "Emergency Treatment",
-            //                                     "payload": "emergency"
-            //                                 }
-            //                             ]
-            //                         },
-            //                         {
-            //                             "title": "Welcome!",                                        
-            //                             "image_url": "https://previews.123rf.com/images/yupiramos/yupiramos1506/yupiramos150610219/41427239-first-aid-design-over-white-background-vector-illustration-.jpg",
-            //                             "subtitle": "Shows treatment for wounds and injuries.",
-            //                             "default_action": {
-            //                                 "type": "web_url",
-            //                                 "url": "https://petersfancybrownhats.com/view?item=103",
-            //                                 "webview_height_ratio": "tall",
-            //                             },
-            //                             "buttons": [
-            //                                 {
-            //                                     "type": "postback",                                               
-            //                                     "title": "Normal Treatment",
-            //                                     "payload": "normal"
-            //                                 }
-            //                             ]
-            //                         },
-            //                         {
-            //                             "title": "Welcome!",
-            //                             "image_url": "https://stylesatlife.com/wp-content/uploads/2018/03/Daily-Health-Tips.png",
-            //                             "subtitle": "Healthy tips for your daily life",
-            //                             "default_action": {
-            //                                 "type": "web_url",
-            //                                 "url": "https://petersfancybrownhats.com/view?item=103",
-            //                                 "webview_height_ratio": "tall",
-            //                             },
-            //                             "buttons": [
-            //                                 {
-            //                                     "type": "postback",
-            //                                     "title": "Health tips",
-            //                                     "payload": "tips"
-            //                                 }
-            //                             ]
-            //                         }
-            //                     ]
-            //                 }
-            //             }
-            //         }
-            //     };
-
-
-
-            //     requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-            //     ).then(response => {
-            //         console.log(response)
-            //     }).fail(error => {
-            //         console.log(error)
-            //     })
-
-            // } 
+         
 
             else if(userInput == 'နေ့စဉ်ကျန်းမာရေ:' || userButton == 'နေ့စဉ်ကျန်းမာရေ:'){
                 let buttonMesage = {
@@ -2074,1365 +1996,1365 @@ app.post('/webhook', (req, res) => {
 
          //Welcome end
 
-    //         else if(userInput == 'tip' || userButton == 'tip'){
-    //             let buttonMesage = {
-    //                 "recipient": {
-    //                     "id": webhook_event.sender.id
-    //                 },
-    //                "message": { 
-    //             "attachment" : {
-    //                 "type" : "template",
-    //                 "payload": {
-    //                     "template_type": "button",
-    //                     "text": "Do you have any disease?",
-    //                     "buttons": [
-    //                      {
-    //                      "type":"postback",
-    //                      "title":"No",
-    //                      "payload":"nodiseaseeng"
-    //                      }, 
+            else if(userInput == 'tip' || userButton == 'tip'){
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                   "message": { 
+                "attachment" : {
+                    "type" : "template",
+                    "payload": {
+                        "template_type": "button",
+                        "text": "Do you have any disease?",
+                        "buttons": [
+                         {
+                         "type":"postback",
+                         "title":"No",
+                         "payload":"nodiseaseeng"
+                         }, 
 
-    //                      {
-    //                         "type": "postback",
-    //                         "title": "Yes",
-    //                         "payload": "yesdiseaseeng"
-    //                     },
+                         {
+                            "type": "postback",
+                            "title": "Yes",
+                            "payload": "yesdiseaseeng"
+                        },
 
                          
-    //                     ]
-    //                 }
-    //             }
+                        ]
+                    }
+                }
      
-    //          }
+             }
 
 
-    //         };
+            };
 
-    //             requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-    //             ).then(response => {
-    //                 console.log(response)
-    //             }).fail(error => {
-    //                 console.log(error)
-    //             })
+                requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })
 
-    //         }
-    //         //dailyhealthlife end
+            }
+            //dailyhealthlife end
 
-    //         else if(userInput == 'yesdiseaseeng' || userButton == 'yesdiseaseeng'){
-    //            let buttonMesage = {
-    //                 "recipient": {
-    //                     "id": webhook_event.sender.id
-    //                 },
-    //                 "message":{
-    //                     "attachment": {
-    //                         "type": "template",
-    //                         "payload": {
-    //                             "template_type": "generic",
-    //                             "elements": [
-    //                                 {
-    //                                     "title": "Eat Heathy!!, Live Long!!, Live Strong!!",
-    //                                     "image_url": "https://www.wellnessgarage.ca/uploads/4/8/6/0/48604247/hypertension_orig.png",
-    //                                     "subtitle": "Healthy tips for your daily lifes",
+            else if(userInput == 'yesdiseaseeng' || userButton == 'yesdiseaseeng'){
+               let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "attachment": {
+                            "type": "template",
+                            "payload": {
+                                "template_type": "generic",
+                                "elements": [
+                                    {
+                                        "title": "Eat Heathy!!, Live Long!!, Live Strong!!",
+                                        "image_url": "https://www.wellnessgarage.ca/uploads/4/8/6/0/48604247/hypertension_orig.png",
+                                        "subtitle": "Healthy tips for your daily lifes",
                                        
-    //                                     "buttons": [
-    //                                         {
-    //                                             "type": "postback",                                               
-    //                                             "title": "High blood pressure",
-    //                                             "payload": "hbp"
-    //                                         },
+                                        "buttons": [
+                                            {
+                                                "type": "postback",                                               
+                                                "title": "High blood pressure",
+                                                "payload": "hbp"
+                                            },
 
                                              
-    //                                     ]
-    //                                 },
+                                        ]
+                                    },
 
 
-    //                                {
-    //                                     "title": "Eat Heathy!!, Live Long!!, Live Strong!!",
-    //                                     "image_url": "https://www8.miamidade.gov/resources/images/news/2019-02-26-heart-attack-evergreen.jpg",
-    //                                     "subtitle": "Tips for daily healthy life",
-    //                                     "default_action": {
-    //                                         "type": "web_url",
-    //                                         "url": "https://petersfancybrownhats.com/view?item=103",
-    //                                         "webview_height_ratio": "tall",
-    //                                     },
-    //                                     "buttons": [
-    //                                         {
-    //                                             "type": "postback",
-    //                                             "title": "Heart Disease",
-    //                                             "payload": "heartdisease"
-    //                                         }
-    //                                     ]
-    //                                 },
+                                   {
+                                        "title": "Eat Heathy!!, Live Long!!, Live Strong!!",
+                                        "image_url": "https://www8.miamidade.gov/resources/images/news/2019-02-26-heart-attack-evergreen.jpg",
+                                        "subtitle": "Tips for daily healthy life",
+                                        "default_action": {
+                                            "type": "web_url",
+                                            "url": "https://petersfancybrownhats.com/view?item=103",
+                                            "webview_height_ratio": "tall",
+                                        },
+                                        "buttons": [
+                                            {
+                                                "type": "postback",
+                                                "title": "Heart Disease",
+                                                "payload": "heartdisease"
+                                            }
+                                        ]
+                                    },
 
-    //                                 {
-    //                                     "title": "Eat Heathy!!, Live Long!!, Live Strong!!",
-    //                                     "image_url": "https://res.cloudinary.com/grohealth/image/upload/v1581695681/DCUK/Content/causes-of-diabetes.png",
-    //                                     "subtitle": "Tips for daily healthy life",
-    //                                     "default_action": {
-    //                                         "type": "web_url",
-    //                                         "url": "https://petersfancybrownhats.com/view?item=103",
-    //                                         "webview_height_ratio": "tall",
-    //                                     },
-    //                                     "buttons": [
-    //                                         {
-    //                                             "type": "postback",
-    //                                             "title": "Diabetes",
-    //                                             "payload": "diabetes"
-    //                                         }
-    //                                     ]
-    //                                 },
+                                    {
+                                        "title": "Eat Heathy!!, Live Long!!, Live Strong!!",
+                                        "image_url": "https://res.cloudinary.com/grohealth/image/upload/v1581695681/DCUK/Content/causes-of-diabetes.png",
+                                        "subtitle": "Tips for daily healthy life",
+                                        "default_action": {
+                                            "type": "web_url",
+                                            "url": "https://petersfancybrownhats.com/view?item=103",
+                                            "webview_height_ratio": "tall",
+                                        },
+                                        "buttons": [
+                                            {
+                                                "type": "postback",
+                                                "title": "Diabetes",
+                                                "payload": "diabetes"
+                                            }
+                                        ]
+                                    },
 
-    //                                 {
-    //                                     "title": "Eat Heathy!!, Live Long!!, Live Strong!!",
-    //                                     "image_url": "https://imagevars.gulfnews.com/2019/07/18/190718-asthma-patient_16c05a51ac4_large.jpg",
-    //                                     "subtitle": "Tips for daily healthy life",
-    //                                     "default_action": {
-    //                                         "type": "web_url",
-    //                                         "url": "https://petersfancybrownhats.com/view?item=103",
-    //                                         "webview_height_ratio": "tall",
-    //                                     },
-    //                                     "buttons": [
-    //                                         {
-    //                                             "type": "postback",
-    //                                             "title": "Asthma",
-    //                                             "payload": "asthma"
-    //                                         }
-    //                                     ]
-    //                                 },
+                                    {
+                                        "title": "Eat Heathy!!, Live Long!!, Live Strong!!",
+                                        "image_url": "https://imagevars.gulfnews.com/2019/07/18/190718-asthma-patient_16c05a51ac4_large.jpg",
+                                        "subtitle": "Tips for daily healthy life",
+                                        "default_action": {
+                                            "type": "web_url",
+                                            "url": "https://petersfancybrownhats.com/view?item=103",
+                                            "webview_height_ratio": "tall",
+                                        },
+                                        "buttons": [
+                                            {
+                                                "type": "postback",
+                                                "title": "Asthma",
+                                                "payload": "asthma"
+                                            }
+                                        ]
+                                    },
                                     
-    //                              ]
-    //                         }
-    //                     }
+                                 ]
+                            }
+                        }
                     
-    //                 }
-    //             };
+                    }
+                };
 
-    //             requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-    //             ).then(response => {
-    //                 console.log(response)
-    //             }).fail(error => {
-    //                 console.log(error)
-    //             })
+                requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })
 
-    //         }//diseaseselection end
-
-
-    //     else if(userInput == 'hbp' || userButton == 'hbp')
-    //          {
-    //             let buttonMesage = {
-    //                 "recipient": {
-    //                     "id": webhook_event.sender.id
-    //                 },
-    //                 "message":{
-    //                     "text":`\n\n1.Eat fruits and vegetables which are rich in potassium\n\n2.Drink a lot of water.\n\n3.Do exercises regularly\n\n4.Cut off cigarettes and alcohol\n\n5.Reduce salt\n\n6.Reduce stress\n\n6.Try to stay fit.`
-    //                 }
+            }//diseaseselection end
 
 
-    //         }
-
-    //         requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-    //             ).then(response => {
-    //                 console.log(response)
-    //             }).fail(error => {
-    //                 console.log(error)
-    //             })  
-
-
-    //     }
+        else if(userInput == 'hbp' || userButton == 'hbp')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`\n\n1.Eat fruits and vegetables which are rich in potassium\n\n2.Drink a lot of water.\n\n3.Do exercises regularly\n\n4.Cut off cigarettes and alcohol\n\n5.Reduce salt\n\n6.Reduce stress\n\n6.Try to stay fit.`
+                    }
 
 
-    //      else if(userInput == 'heartdisease' || userButton == 'heartdisease')
-    //          {
-    //             let buttonMesage = {
-    //                 "recipient": {
-    //                     "id": webhook_event.sender.id
-    //                 },
-    //                 "message":{
-    //                     "text":`\n\n1.Eat vegetables..\n\n2.Do exercises.\n\n3.Try to stay fit\n\n4.Cut off alcohol and cigarettes.။\n\n5.Control cholestrol and blood pressure\n\n6.Ensure there is no stress.`
-    //                 }
+            }
+
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
 
 
-    //         }
-    //         requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-    //             ).then(response => {
-    //                 console.log(response)
-    //             }).fail(error => {
-    //                 console.log(error)
-    //             })  
+        }
+
+
+         else if(userInput == 'heartdisease' || userButton == 'heartdisease')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`\n\n1.Eat vegetables..\n\n2.Do exercises.\n\n3.Try to stay fit\n\n4.Cut off alcohol and cigarettes.။\n\n5.Control cholestrol and blood pressure\n\n6.Ensure there is no stress.`
+                    }
+
+
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
             
 
-    //     }//heartdiseaseend
+        }//heartdiseaseend
 
-    //       else if(userInput == 'diabetes' || userButton == 'diabetes')
-    //          {
-    //             let buttonMesage = {
-    //                 "recipient": {
-    //                     "id": webhook_event.sender.id
-    //                 },
-    //                 "message":{
-    //                     "text":`\n\n1.Reduce salt, oily food and potassium.\n\n2.Always eat food in the right time.\n\n3.Do exercises regularly.\n\n4.Eat fruits and vegetables which are rich in protein.။\n\n5.Check the consistency of surgar in blood three times a day.\n\n6.If surgar consistency is too low, disucss it with doctors`
-    //                 }
+          else if(userInput == 'diabetes' || userButton == 'diabetes')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`\n\n1.Reduce salt, oily food and potassium.\n\n2.Always eat food in the right time.\n\n3.Do exercises regularly.\n\n4.Eat fruits and vegetables which are rich in protein.။\n\n5.Check the consistency of surgar in blood three times a day.\n\n6.If surgar consistency is too low, disucss it with doctors`
+                    }
 
 
-    //         }
-    //         requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-    //             ).then(response => {
-    //                 console.log(response)
-    //             }).fail(error => {
-    //                 console.log(error)
-    //             })  
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
             
 
-    //     }//diabetesend
+        }//diabetesend
 
-    //     else if(userInput == 'asthma' || userButton == 'asthma')
-    //          {
-    //             let buttonMesage = {
-    //                 "recipient": {
-    //                     "id": webhook_event.sender.id
-    //                 },
-    //                 "message":{
-    //                     "text":`\n\n1.Stop smoking.\n\n2.Do exercises regularly.\n\n3.Mental health can affect on the disease.\n\n4.Takes medicine regularly\n\n5.Take Vitamin D and Magnesium.`
-    //                 }
+        else if(userInput == 'asthma' || userButton == 'asthma')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`\n\n1.Stop smoking.\n\n2.Do exercises regularly.\n\n3.Mental health can affect on the disease.\n\n4.Takes medicine regularly\n\n5.Take Vitamin D and Magnesium.`
+                    }
 
 
-    //         }
-    //         requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-    //             ).then(response => {
-    //                 console.log(response)
-    //             }).fail(error => {
-    //                 console.log(error)
-    //             })  
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
             
 
-    //     }//asthmaend
+        }//asthmaend
 
-    //      else if(userInput == 'nodiseaseeng' || userButton == 'nodiseaseeng')
-    //          {
-    //             let buttonMesage = {
-    //                 "recipient": {
-    //                     "id": webhook_event.sender.id
-    //                 },
-    //                 "message":{
-    //                     "text":`။\n\n1.Exercise at least 30 min a day.\n\n2.Touch with sunlight.\n\n3.Reduce salt and sugar\n\n4.Drink at least two litres of water\n\n5\n\n6,ညတိုင်း ၁၀ နာရီခန့်တွင်အိပ်ရာ၀င်ပါ။ တစ်နေ့အိပ်ချိန် ၇ နာရီမှ ၉နာရီ အတွင်းရှိပါစေ။`
-    //                 }
+         else if(userInput == 'nodiseaseeng' || userButton == 'nodiseaseeng')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`။\n\n1.Exercise at least 30 min a day.\n\n2.Touch with sunlight.\n\n3.Reduce salt and sugar\n\n4.Drink at least two litres of water\n\n5\n\n6,ညတိုင်း ၁၀ နာရီခန့်တွင်အိပ်ရာ၀င်ပါ။ တစ်နေ့အိပ်ချိန် ၇ နာရီမှ ၉နာရီ အတွင်းရှိပါစေ။`
+                    }
 
 
-    //         }
-    //         requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-    //             ).then(response => {
-    //                 console.log(response)
-    //             }).fail(error => {
-    //                 console.log(error)
-    //             })  
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
             
 
-    //     }//normalhealthned
+        }//normalhealthned
 
 
-    //     else if(userInput == 'normal' || userButton == 'normal'){
-    //             let buttonMesage = {
-    //                 "recipient": {
-    //                     "id": webhook_event.sender.id
-    //                 },
-    //                 "message":{
-    //                     "attachment": {
-    //                         "type": "template",
-    //                         "payload": {
-    //                             "template_type": "generic",
-    //                             "elements": [
-    //                                 {
-    //                                     "title": "Choose your injury type!",
-    //                                     "image_url": "https://cdn3.vectorstock.com/i/1000x1000/90/27/finger-with-blood-drop-on-white-background-vector-19899027.jpg",
-    //                                     "subtitle": "Nosebleeding, Normal wounds, Overbleeding Wounds ",
-    //                                     "default_action": {
-    //                                         "type": "web_url",
-    //                                         "url": "https://petersfancybrownhats.com/view?item=103",
-    //                                         "webview_height_ratio": "tall",
-    //                                     },
-    //                                     "buttons": [
-    //                                         {
-    //                                             "type": "postback",                                               
-    //                                             "title": "Bleeding wounds",
-    //                                             "payload": "bleedingwounds"
-    //                                         },
+        else if(userInput == 'normal' || userButton == 'normal'){
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "attachment": {
+                            "type": "template",
+                            "payload": {
+                                "template_type": "generic",
+                                "elements": [
+                                    {
+                                        "title": "Choose your injury type!",
+                                        "image_url": "https://cdn3.vectorstock.com/i/1000x1000/90/27/finger-with-blood-drop-on-white-background-vector-19899027.jpg",
+                                        "subtitle": "Nosebleeding, Normal wounds, Overbleeding Wounds ",
+                                        "default_action": {
+                                            "type": "web_url",
+                                            "url": "https://petersfancybrownhats.com/view?item=103",
+                                            "webview_height_ratio": "tall",
+                                        },
+                                        "buttons": [
+                                            {
+                                                "type": "postback",                                               
+                                                "title": "Bleeding wounds",
+                                                "payload": "bleedingwounds"
+                                            },
 
                                              
-    //                                     ]
-    //                                 },
+                                        ]
+                                    },
 
 
-    //                                {
-    //                                     "title": "Choose your injury type!",
-    //                                     "image_url": "https://cdn1.pegasaas.io/2d65/img/wp-content/uploads/2019/09/Brauns-Law-Burn-Injury-Lawyer-e1568040798860-524x402---524x402.jpg",
-    //                                     "subtitle": "Steam burn, Electric burn, Chemical Burn",
-    //                                     "default_action": {
-    //                                         "type": "web_url",
-    //                                         "url": "https://petersfancybrownhats.com/view?item=103",
-    //                                         "webview_height_ratio": "tall",
-    //                                     },
-    //                                     "buttons": [
-    //                                         {
-    //                                             "type": "postback",
-    //                                             "title": "Burnt Wounds",
-    //                                             "payload": "burntwounds"
-    //                                         }
-    //                                     ]
-    //                                 },
+                                   {
+                                        "title": "Choose your injury type!",
+                                        "image_url": "https://cdn1.pegasaas.io/2d65/img/wp-content/uploads/2019/09/Brauns-Law-Burn-Injury-Lawyer-e1568040798860-524x402---524x402.jpg",
+                                        "subtitle": "Steam burn, Electric burn, Chemical Burn",
+                                        "default_action": {
+                                            "type": "web_url",
+                                            "url": "https://petersfancybrownhats.com/view?item=103",
+                                            "webview_height_ratio": "tall",
+                                        },
+                                        "buttons": [
+                                            {
+                                                "type": "postback",
+                                                "title": "Burnt Wounds",
+                                                "payload": "burntwounds"
+                                            }
+                                        ]
+                                    },
 
-    //                                 {
-    //                                     "title": "Choose your injury type!",
-    //                                     "image_url": "https://images.ctfassets.net/cnu0m8re1exe/2QNU6xdc3SfDWEroBDqMJg/7f5af4db4c432f265e22259b64ff02fa/bee-poison.jpg?w=650&h=433&fit=fill",
-    //                                     "subtitle": "Overdose, Poision in the eye, insect bite",
-    //                                     "default_action": {
-    //                                         "type": "web_url",
-    //                                         "url": "https://petersfancybrownhats.com/view?item=103",
-    //                                         "webview_height_ratio": "tall",
-    //                                     },
-    //                                     "buttons": [
-    //                                         {
-    //                                             "type": "postback",
-    //                                             "title": "Poison",
-    //                                             "payload": "poison"
-    //                                         }
-    //                                     ]
-    //                                 },
+                                    {
+                                        "title": "Choose your injury type!",
+                                        "image_url": "https://images.ctfassets.net/cnu0m8re1exe/2QNU6xdc3SfDWEroBDqMJg/7f5af4db4c432f265e22259b64ff02fa/bee-poison.jpg?w=650&h=433&fit=fill",
+                                        "subtitle": "Overdose, Poision in the eye, insect bite",
+                                        "default_action": {
+                                            "type": "web_url",
+                                            "url": "https://petersfancybrownhats.com/view?item=103",
+                                            "webview_height_ratio": "tall",
+                                        },
+                                        "buttons": [
+                                            {
+                                                "type": "postback",
+                                                "title": "Poison",
+                                                "payload": "poison"
+                                            }
+                                        ]
+                                    },
 
-    //                                 {
-    //                                     "title": "Choose your injury type!",
-    //                                     "image_url": "https://st4.depositphotos.com/7477946/19915/i/1600/depositphotos_199156806-stock-photo-first-aid-hand-broken-hand.jpg",
-    //                                     "subtitle": "Bone fracture,Bone Discolation",
-    //                                     "default_action": {
-    //                                         "type": "web_url",
-    //                                         "url": "https://petersfancybrownhats.com/view?item=103",
-    //                                         "webview_height_ratio": "tall",
-    //                                     },
-    //                                     "buttons": [
-    //                                         {
-    //                                             "type": "postback",
-    //                                             "title": "Bone Injury",
-    //                                             "payload": "boneinjury"
-    //                                         }
-    //                                     ]
-    //                                 },
+                                    {
+                                        "title": "Choose your injury type!",
+                                        "image_url": "https://st4.depositphotos.com/7477946/19915/i/1600/depositphotos_199156806-stock-photo-first-aid-hand-broken-hand.jpg",
+                                        "subtitle": "Bone fracture,Bone Discolation",
+                                        "default_action": {
+                                            "type": "web_url",
+                                            "url": "https://petersfancybrownhats.com/view?item=103",
+                                            "webview_height_ratio": "tall",
+                                        },
+                                        "buttons": [
+                                            {
+                                                "type": "postback",
+                                                "title": "Bone Injury",
+                                                "payload": "boneinjury"
+                                            }
+                                        ]
+                                    },
                                     
-    //                              ]
-    //                         }
-    //                     }
+                                 ]
+                            }
+                        }
                     
-    //                 }
-    //             };
+                    }
+                };
 
-    //             requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-    //             ).then(response => {
-    //                 console.log(response)
-    //             }).fail(error => {
-    //                 console.log(error)
-    //             })
+                requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })
 
-    //         } //Injurytype end
+            } //Injurytype end
 
-    //         else if(userInput == 'bleedingwounds' || userButton == 'bleedingwounds'){
-    //             let buttonMesage = {
-    //                 "recipient": {
-    //                     "id": webhook_event.sender.id
-    //                 },
-    //                 "message":{
-    //                     "attachment": {
-    //                         "type": "template",
-    //                         "payload": {
-    //                             "template_type": "generic",
-    //                             "elements": [
-    //                                 {
-    //                                     "title": "Choose your injury!",
-    //                                     "image_url": "https://cdn.cdnparenting.com/articles/2018/01/704685511-H.jpg",
-    //                                     "subtitle": "Please seek medical service even after the treatment!.",
-    //                                     "default_action": {
-    //                                         "type": "web_url",
-    //                                         "url": "https://petersfancybrownhats.com/view?item=103",
-    //                                         "webview_height_ratio": "tall",
-    //                                     },
-    //                                     "buttons": [
-    //                                         {
-    //                                             "type": "postback",                                               
-    //                                             "title": "Nose Bleeding",
-    //                                             "payload": "nosebleed"
-    //                                         },
-    //                                         {
-    //                                             "type": "postback",                                               
-    //                                             "title": "About Nose Bleeding",
-    //                                             "payload": "aboutnosebleed"
-    //                                         },
+            else if(userInput == 'bleedingwounds' || userButton == 'bleedingwounds'){
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "attachment": {
+                            "type": "template",
+                            "payload": {
+                                "template_type": "generic",
+                                "elements": [
+                                    {
+                                        "title": "Choose your injury!",
+                                        "image_url": "https://cdn.cdnparenting.com/articles/2018/01/704685511-H.jpg",
+                                        "subtitle": "Please seek medical service even after the treatment!.",
+                                        "default_action": {
+                                            "type": "web_url",
+                                            "url": "https://petersfancybrownhats.com/view?item=103",
+                                            "webview_height_ratio": "tall",
+                                        },
+                                        "buttons": [
+                                            {
+                                                "type": "postback",                                               
+                                                "title": "Nose Bleeding",
+                                                "payload": "nosebleed"
+                                            },
+                                            {
+                                                "type": "postback",                                               
+                                                "title": "About Nose Bleeding",
+                                                "payload": "aboutnosebleed"
+                                            },
 
                                              
-    //                                     ]
-    //                                 },
+                                        ]
+                                    },
 
 
-    //                                {
-    //                                     "title": "Choose your injury!",
-    //                                     "image_url": "https://nkilmer2016.weebly.com/uploads/6/0/7/5/60755477/9132875.jpg?1452002303",
-    //                                     "subtitle": "Please seek medical attention even after the treatment",
-    //                                     "default_action": {
-    //                                         "type": "web_url",
-    //                                         "url": "https://petersfancybrownhats.com/view?item=103",
-    //                                         "webview_height_ratio": "tall",
-    //                                     },
-    //                                     "buttons": [
-    //                                         {
-    //                                             "type": "postback",
-    //                                             "title": "Overbleeding",
-    //                                             "payload": "overbleeding"
-    //                                         },
-    //                                          {
-    //                                             "type": "postback",                                               
-    //                                             "title": "About Overbeeding",
-    //                                             "payload": "aboutoverbleeding"
-    //                                         },
-    //                                     ]
-    //                                 },
+                                   {
+                                        "title": "Choose your injury!",
+                                        "image_url": "https://nkilmer2016.weebly.com/uploads/6/0/7/5/60755477/9132875.jpg?1452002303",
+                                        "subtitle": "Please seek medical attention even after the treatment",
+                                        "default_action": {
+                                            "type": "web_url",
+                                            "url": "https://petersfancybrownhats.com/view?item=103",
+                                            "webview_height_ratio": "tall",
+                                        },
+                                        "buttons": [
+                                            {
+                                                "type": "postback",
+                                                "title": "Overbleeding",
+                                                "payload": "overbleeding"
+                                            },
+                                             {
+                                                "type": "postback",                                               
+                                                "title": "About Overbeeding",
+                                                "payload": "aboutoverbleeding"
+                                            },
+                                        ]
+                                    },
 
-    //                                 {
-    //                                     "title": "Choose Your injury!",
-    //                                     "image_url": "https://www.wikihow.com/images/thumb/5/5d/Treat-a-Minor-Cut-Step-1-Version-2.jpg/aid2103769-v4-728px-Treat-a-Minor-Cut-Step-1-Version-2.jpg.webp",
-    //                                     "subtitle": "Please seek medical attention even after the treatment",
-    //                                     "default_action": {
-    //                                         "type": "web_url",
-    //                                         "url": "https://petersfancybrownhats.com/view?item=103",
-    //                                         "webview_height_ratio": "tall",
-    //                                     },
-    //                                     "buttons": [
-    //                                         {
-    //                                             "type": "postback",
-    //                                             "title": "Normal Wound",
-    //                                             "payload": "normalwound"
-    //                                         },
-    //                                          {
-    //                                             "type": "postback",                                               
-    //                                             "title": "About Normal Wound:",
-    //                                             "payload": "aboutnormalwound:"
-    //                                         },
-    //                                     ]
-    //                                 },
+                                    {
+                                        "title": "Choose Your injury!",
+                                        "image_url": "https://www.wikihow.com/images/thumb/5/5d/Treat-a-Minor-Cut-Step-1-Version-2.jpg/aid2103769-v4-728px-Treat-a-Minor-Cut-Step-1-Version-2.jpg.webp",
+                                        "subtitle": "Please seek medical attention even after the treatment",
+                                        "default_action": {
+                                            "type": "web_url",
+                                            "url": "https://petersfancybrownhats.com/view?item=103",
+                                            "webview_height_ratio": "tall",
+                                        },
+                                        "buttons": [
+                                            {
+                                                "type": "postback",
+                                                "title": "Normal Wound",
+                                                "payload": "normalwound"
+                                            },
+                                             {
+                                                "type": "postback",                                               
+                                                "title": "About Normal Wound:",
+                                                "payload": "aboutnormalwound:"
+                                            },
+                                        ]
+                                    },
 
                                  
                                     
-    //                              ]
-    //                         }
-    //                     }
+                                 ]
+                            }
+                        }
                     
-    //                 }
-    //             };
+                    }
+                };
 
-    //             requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-    //             ).then(response => {
-    //                 console.log(response)
-    //             }).fail(error => {
-    //                 console.log(error)
-    //             })
+                requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })
 
-    //         } //Injury end
+            } //Injury end
 
-    //      else if(userInput == 'nosebleed' || userButton == 'nosebleed')
-    //          {
-    //             let buttonMesage = {
-    //                 "recipient": {
-    //                     "id": webhook_event.sender.id
-    //                 },
-    //                 "message":{
-    //                     "text":`\n\n1.Stay straight.\n\n2.Press the nose for about 10 min.\n\n3.Use a pack on ice on the nose\n\n4.If it does not stop bleeding, keep pressin the nose slightly.`
-    //                 }
+         else if(userInput == 'nosebleed' || userButton == 'nosebleed')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`\n\n1.Stay straight.\n\n2.Press the nose for about 10 min.\n\n3.Use a pack on ice on the nose\n\n4.If it does not stop bleeding, keep pressin the nose slightly.`
+                    }
 
 
-    //         }
-    //         requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-    //             ).then(response => {
-    //                 console.log(response)
-    //             }).fail(error => {
-    //                 console.log(error)
-    //             })  
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
             
 
-    //     } //nosebleed end
+        } //nosebleed end
 
-    //      else if(userInput == 'normalwound' || userButton == 'normalwound')
-    //          {
-    //             let buttonMesage = {
-    //                 "recipient": {
-    //                     "id": webhook_event.sender.id
-    //                 },
-    //                 "message":{
-    //                     "text":`\n\n1. Wash the wound with water and soap.\n\n2. Use antiseptic and bandage.\n\n3.Change bandage daily.`
-    //                 }
+         else if(userInput == 'normalwound' || userButton == 'normalwound')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`\n\n1. Wash the wound with water and soap.\n\n2. Use antiseptic and bandage.\n\n3.Change bandage daily.`
+                    }
 
 
-    //         }
-    //         requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-    //             ).then(response => {
-    //                 console.log(response)
-    //             }).fail(error => {
-    //                 console.log(error)
-    //             })  
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
             
 
-    //     } //bleeding wound end
+        } //bleeding wound end
 
-    //     else if(userInput == 'overbleeding' || userButton == 'overbleeding')
-    //          {
-    //             let buttonMesage = {
-    //                 "recipient": {
-    //                     "id": webhook_event.sender.id
-    //                 },
-    //                 "message":{
-    //                     "text":`\n\n1. Wrap the wound with clean clothes.\n\n2.If blood soaks through the clothes, use another layer of clothes.\n\n3.If the wound is on leg or hand, raise it above the heart to slow bleeding`
-    //                 }
+        else if(userInput == 'overbleeding' || userButton == 'overbleeding')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`\n\n1. Wrap the wound with clean clothes.\n\n2.If blood soaks through the clothes, use another layer of clothes.\n\n3.If the wound is on leg or hand, raise it above the heart to slow bleeding`
+                    }
 
 
-    //         }
-    //         requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-    //             ).then(response => {
-    //                 console.log(response)
-    //             }).fail(error => {
-    //                 console.log(error)
-    //             })  
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
             
 
-    //     } //Overbleeding end
+        } //Overbleeding end
 
       
 
-    //      else if(userInput == 'burntwounds' || userButton == 'burntwounds'){
-    //             let buttonMesage = {
-    //                 "recipient": {
-    //                     "id": webhook_event.sender.id
-    //                 },
-    //                 "message":{
-    //                     "attachment": {
-    //                         "type": "template",
-    //                         "payload": {
-    //                             "template_type": "generic",
-    //                             "elements": [
-    //                                 {
-    //                                     "title": "Choose your injury !",
-    //                                     "image_url": "https://library.kissclipart.com/20181218/cxe/kissclipart-burn-child-first-aid-patient-fcca7c43278b9d02.png",
-    //                                     "subtitle": "Please seek medical attention even after the treatment!",
-    //                                     "default_action": {
-    //                                         "type": "web_url",
-    //                                         "url": "https://petersfancybrownhats.com/view?item=103",
-    //                                         "webview_height_ratio": "tall",
-    //                                     },
-    //                                     "buttons": [
-    //                                         {
-    //                                             "type": "postback",                                               
-    //                                             "title": "Steam burn",
-    //                                             "payload": "steamburn"
-    //                                         },
-    //                                          {
-    //                                             "type": "postback",                                               
-    //                                             "title": "About steam burn",
-    //                                             "payload": "aboutsteamburn"
-    //                                         },
+         else if(userInput == 'burntwounds' || userButton == 'burntwounds'){
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "attachment": {
+                            "type": "template",
+                            "payload": {
+                                "template_type": "generic",
+                                "elements": [
+                                    {
+                                        "title": "Choose your injury !",
+                                        "image_url": "https://library.kissclipart.com/20181218/cxe/kissclipart-burn-child-first-aid-patient-fcca7c43278b9d02.png",
+                                        "subtitle": "Please seek medical attention even after the treatment!",
+                                        "default_action": {
+                                            "type": "web_url",
+                                            "url": "https://petersfancybrownhats.com/view?item=103",
+                                            "webview_height_ratio": "tall",
+                                        },
+                                        "buttons": [
+                                            {
+                                                "type": "postback",                                               
+                                                "title": "Steam burn",
+                                                "payload": "steamburn"
+                                            },
+                                             {
+                                                "type": "postback",                                               
+                                                "title": "About steam burn",
+                                                "payload": "aboutsteamburn"
+                                            },
 
                                              
-    //                                     ]
-    //                                 },
+                                        ]
+                                    },
 
 
-    //                                 {
-    //                                     "title": "Choose your injury!",
-    //                                     "image_url": "https://www.wikihow.com/images/thumb/d/d7/Treat-Electrical-Burns-Step-20.jpg/aid544981-v4-728px-Treat-Electrical-Burns-Step-20.jpg",
-    //                                     "subtitle": "Please seek medical attention even after the treatment!",
-    //                                     "default_action": {
-    //                                         "type": "web_url",
-    //                                         "url": "https://petersfancybrownhats.com/view?item=103",
-    //                                         "webview_height_ratio": "tall",
-    //                                     },
-    //                                     "buttons": [
-    //                                         {
-    //                                             "type": "postback",
-    //                                             "title": "Eletcirc burn",
-    //                                             "payload": "electriclburn"
-    //                                         },
-    //                                          {
-    //                                             "type": "postback",                                               
-    //                                             "title": "About electric burn:",
-    //                                             "payload": "aboutelectricburn:"
-    //                                         },
-    //                                     ]
-    //                                 },
+                                    {
+                                        "title": "Choose your injury!",
+                                        "image_url": "https://www.wikihow.com/images/thumb/d/d7/Treat-Electrical-Burns-Step-20.jpg/aid544981-v4-728px-Treat-Electrical-Burns-Step-20.jpg",
+                                        "subtitle": "Please seek medical attention even after the treatment!",
+                                        "default_action": {
+                                            "type": "web_url",
+                                            "url": "https://petersfancybrownhats.com/view?item=103",
+                                            "webview_height_ratio": "tall",
+                                        },
+                                        "buttons": [
+                                            {
+                                                "type": "postback",
+                                                "title": "Eletcirc burn",
+                                                "payload": "electriclburn"
+                                            },
+                                             {
+                                                "type": "postback",                                               
+                                                "title": "About electric burn:",
+                                                "payload": "aboutelectricburn:"
+                                            },
+                                        ]
+                                    },
 
-    //                                 {
-    //                                     "title": "Choose your injury!",
-    //                                     "image_url": "https://comps.canstockphoto.com/drain-cleaner-burn-illustration_csp5353742.jpg",
-    //                                     "subtitle": "Please seek medical attention even after the treatment!",
-    //                                     "default_action": {
-    //                                         "type": "web_url",
-    //                                         "url": "https://petersfancybrownhats.com/view?item=103",
-    //                                         "webview_height_ratio": "tall",
-    //                                     },
-    //                                     "buttons": [
-    //                                         {
-    //                                             "type": "postback",
-    //                                             "title": "Chemical Burn",
-    //                                             "payload": "chemcialburn"
-    //                                         },
-    //                                          {
-    //                                             "type": "postback",                                               
-    //                                             "title": "About Chemical burn",
-    //                                             "payload": "aboutchemicalburn"
-    //                                         },
-    //                                     ]
-    //                                 },
+                                    {
+                                        "title": "Choose your injury!",
+                                        "image_url": "https://comps.canstockphoto.com/drain-cleaner-burn-illustration_csp5353742.jpg",
+                                        "subtitle": "Please seek medical attention even after the treatment!",
+                                        "default_action": {
+                                            "type": "web_url",
+                                            "url": "https://petersfancybrownhats.com/view?item=103",
+                                            "webview_height_ratio": "tall",
+                                        },
+                                        "buttons": [
+                                            {
+                                                "type": "postback",
+                                                "title": "Chemical Burn",
+                                                "payload": "chemcialburn"
+                                            },
+                                             {
+                                                "type": "postback",                                               
+                                                "title": "About Chemical burn",
+                                                "payload": "aboutchemicalburn"
+                                            },
+                                        ]
+                                    },
                                     
-    //                              ]
-    //                         }
-    //                     }
+                                 ]
+                            }
+                        }
                     
-    //                 }
-    //             };
+                    }
+                };
 
-    //             requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-    //             ).then(response => {
-    //                 console.log(response)
-    //             }).fail(error => {
-    //                 console.log(error)
-    //             })
+                requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })
 
-    //         }//burninjury end
+            }//burninjury end
 
-    //        else if(userInput == 'steamburn' || userButton == 'steamburn')
-    //          {
-    //             let buttonMesage = {
-    //                 "recipient": {
-    //                     "id": webhook_event.sender.id
-    //                 },
-    //                 "message":{
-    //                     "text":`\n\n1.Pour cool water onto the wound.\n\n2.Do not use toothpaste\n\n3.Use  painkiller if necessary\n\n4.Avoid contact with sunlight`
-    //                 }
+           else if(userInput == 'steamburn' || userButton == 'steamburn')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`\n\n1.Pour cool water onto the wound.\n\n2.Do not use toothpaste\n\n3.Use  painkiller if necessary\n\n4.Avoid contact with sunlight`
+                    }
 
 
-    //         }
-    //         requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-    //             ).then(response => {
-    //                 console.log(response)
-    //             }).fail(error => {
-    //                 console.log(error)
-    //             })  
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
             
 
-    //     } //steamburn end
+        } //steamburn end
 
-    // else if(userInput == 'electricburn'|| userButton == 'electricburn')
-    //          {
-    //             let buttonMesage = {
-    //                 "recipient": {
-    //                     "id": webhook_event.sender.id
-    //                 },
-    //                 "message":{
-    //                     "text":`\n\n1.Do not use water or clothes on the wound\n\n2.Use clean or sterile bandage။.\n\n3.Use medicines the doctors recommended`
-    //                 }
+    else if(userInput == 'electricburn'|| userButton == 'electricburn')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`\n\n1.Do not use water or clothes on the wound\n\n2.Use clean or sterile bandage။.\n\n3.Use medicines the doctors recommended`
+                    }
 
 
-    //         }
-    //         requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-    //             ).then(response => {
-    //                 console.log(response)
-    //             }).fail(error => {
-    //                 console.log(error)
-    //             })  
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
             
 
-    //     } //electriclaburn end
+        } //electriclaburn end
 
-    // else if(userInput == 'chemcialburn' || userButton == 'chemcialburn')
-    //          {
-    //             let buttonMesage = {
-    //                 "recipient": {
-    //                     "id": webhook_event.sender.id
-    //                 },
-    //                 "message":{
-    //                     "text":`\n\n1.Remove chemical from the skin\n\n2.Remove clothes and acessory which have contact with the chemical\n\n3.Use sterile bandage on the wound.`
-    //                 }
+    else if(userInput == 'chemcialburn' || userButton == 'chemcialburn')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`\n\n1.Remove chemical from the skin\n\n2.Remove clothes and acessory which have contact with the chemical\n\n3.Use sterile bandage on the wound.`
+                    }
 
 
-    //         }
-    //         requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-    //             ).then(response => {
-    //                 console.log(response)
-    //             }).fail(error => {
-    //                 console.log(error)
-    //             })  
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
             
 
-    //     } //chemcialburn end
+        } //chemcialburn end
 
-    //      else if(userInput == 'poison' || userButton == 'poison'){
-    //             let buttonMesage = {
-    //                 "recipient": {
-    //                     "id": webhook_event.sender.id
-    //                 },
-    //                 "message":{
-    //                     "attachment": {
-    //                         "type": "template",
-    //                         "payload": {
-    //                             "template_type": "generic",
-    //                             "elements": [
-    //                                 {
-    //                                     "title": "Choose your injury !",
-    //                                     "image_url": "https://apps-cloud.n-tv.de/img/20947246-1554366750000/16-9/750/34725025.jpg",
-    //                                     "subtitle": "Please get proper healthcare even after the treatment!",
-    //                                     "default_action": {
-    //                                         "type": "web_url",
-    //                                         "url": "https://petersfancybrownhats.com/view?item=103",
-    //                                         "webview_height_ratio": "tall",
-    //                                     },
-    //                                     "buttons": [
-    //                                         {
-    //                                             "type": "postback",                                               
-    //                                             "title": "Overdose",
-    //                                             "payload": "overdose"
-    //                                         },
-    //                                          {
-    //                                             "type": "postback",                                               
-    //                                             "title": "About Overdose:",
-    //                                             "payload": "aboutoverdose:"
-    //                                         },
+         else if(userInput == 'poison' || userButton == 'poison'){
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "attachment": {
+                            "type": "template",
+                            "payload": {
+                                "template_type": "generic",
+                                "elements": [
+                                    {
+                                        "title": "Choose your injury !",
+                                        "image_url": "https://apps-cloud.n-tv.de/img/20947246-1554366750000/16-9/750/34725025.jpg",
+                                        "subtitle": "Please get proper healthcare even after the treatment!",
+                                        "default_action": {
+                                            "type": "web_url",
+                                            "url": "https://petersfancybrownhats.com/view?item=103",
+                                            "webview_height_ratio": "tall",
+                                        },
+                                        "buttons": [
+                                            {
+                                                "type": "postback",                                               
+                                                "title": "Overdose",
+                                                "payload": "overdose"
+                                            },
+                                             {
+                                                "type": "postback",                                               
+                                                "title": "About Overdose:",
+                                                "payload": "aboutoverdose:"
+                                            },
 
                                              
-    //                                     ]
-    //                                 },
+                                        ]
+                                    },
 
 
-    //                                 {
-    //                                     "title": "Choose your injury!",
-    //                                     "image_url": "https://lh6.googleusercontent.com/proxy/0DYatcTMLCU7sx07kORhF4Xoqd4_-IW-GOj04sKoyIJohoG0ObUNmASxtcSp87wEJ1x8nG1xNS4hXc56dHojfzmDD12w33PqpFOL6bAepUir-7AYua9X4YjgSWxVSs-eZG8",
-    //                                     "subtitle": "Please get proper healthcare even after the treatment!.",
-    //                                     "default_action": {
-    //                                         "type": "web_url",
-    //                                         "url": "https://petersfancybrownhats.com/view?item=103",
-    //                                         "webview_height_ratio": "tall",
-    //                                     },
-    //                                     "buttons": [
-    //                                         {
-    //                                             "type": "postback",
-    //                                             "title": "Poison in the eye",
-    //                                             "payload": "poisonintheeye"
-    //                                         },
-    //                                          {
-    //                                             "type": "postback",                                               
-    //                                             "title": "About Poison in the eye:",
-    //                                             "payload": "aboutpoisonintheeye:"
-    //                                         },
-    //                                     ]
-    //                                 },
+                                    {
+                                        "title": "Choose your injury!",
+                                        "image_url": "https://lh6.googleusercontent.com/proxy/0DYatcTMLCU7sx07kORhF4Xoqd4_-IW-GOj04sKoyIJohoG0ObUNmASxtcSp87wEJ1x8nG1xNS4hXc56dHojfzmDD12w33PqpFOL6bAepUir-7AYua9X4YjgSWxVSs-eZG8",
+                                        "subtitle": "Please get proper healthcare even after the treatment!.",
+                                        "default_action": {
+                                            "type": "web_url",
+                                            "url": "https://petersfancybrownhats.com/view?item=103",
+                                            "webview_height_ratio": "tall",
+                                        },
+                                        "buttons": [
+                                            {
+                                                "type": "postback",
+                                                "title": "Poison in the eye",
+                                                "payload": "poisonintheeye"
+                                            },
+                                             {
+                                                "type": "postback",                                               
+                                                "title": "About Poison in the eye:",
+                                                "payload": "aboutpoisonintheeye:"
+                                            },
+                                        ]
+                                    },
 
                                    
 
-    //                                  {
-    //                                     "title": "Choose your injury!",
-    //                                     "image_url": "https://media.istockphoto.com/photos/bug-bites-picture-id519420274",
-    //                                     "subtitle": "Please get proper healthcare even after the treatment!.",
-    //                                     "default_action": {
-    //                                         "type": "web_url",
-    //                                         "url": "https://petersfancybrownhats.com/view?item=103",
-    //                                         "webview_height_ratio": "tall",
-    //                                     },
-    //                                     "buttons": [
-    //                                         {
-    //                                             "type": "postback",
-    //                                             "title": "Insect bite",
-    //                                             "payload": "insectbite"
-    //                                         },
-    //                                          {
-    //                                             "type": "postback",                                               
-    //                                             "title": "About Insect bite",
-    //                                             "payload": "aboutinsectbite:"
-    //                                         },
-    //                                     ]
-    //                                 },
+                                     {
+                                        "title": "Choose your injury!",
+                                        "image_url": "https://media.istockphoto.com/photos/bug-bites-picture-id519420274",
+                                        "subtitle": "Please get proper healthcare even after the treatment!.",
+                                        "default_action": {
+                                            "type": "web_url",
+                                            "url": "https://petersfancybrownhats.com/view?item=103",
+                                            "webview_height_ratio": "tall",
+                                        },
+                                        "buttons": [
+                                            {
+                                                "type": "postback",
+                                                "title": "Insect bite",
+                                                "payload": "insectbite"
+                                            },
+                                             {
+                                                "type": "postback",                                               
+                                                "title": "About Insect bite",
+                                                "payload": "aboutinsectbite:"
+                                            },
+                                        ]
+                                    },
                                     
-    //                              ]
-    //                         }
-    //                     }
+                                 ]
+                            }
+                        }
                     
-    //                 }
-    //             };
+                    }
+                };
 
-    //             requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-    //             ).then(response => {
-    //                 console.log(response)
-    //             }).fail(error => {
-    //                 console.log(error)
-    //             })
+                requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })
 
-    //         }//Poisontype end
+            }//Poisontype end
 
-    //     else if(userInput == 'overdose' || userButton == 'overdose')
-    //          {
-    //             let buttonMesage = {
-    //                 "recipient": {
-    //                     "id": webhook_event.sender.id
-    //                 },
-    //                 "message":{
-    //                     "text":`\n\n1.First, ensure that the patient can breath easily\n2.Press the stomach to make the undigested medicine to come out\n\n3.Use activated charcoal to remove the medince in the body.\n\n5.Take the medicines to the ospital.`
-    //                 }
+        else if(userInput == 'overdose' || userButton == 'overdose')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`\n\n1.First, ensure that the patient can breath easily\n2.Press the stomach to make the undigested medicine to come out\n\n3.Use activated charcoal to remove the medince in the body.\n\n5.Take the medicines to the ospital.`
+                    }
 
 
-    //         }
-    //         requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-    //             ).then(response => {
-    //                 console.log(response)
-    //             }).fail(error => {
-    //                 console.log(error)
-    //             })  
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
             
 
-    //     }//drugtoxicity end
+        }//drugtoxicity end
 
-    // else if(userInput == 'poisonintheeye' || userButton == 'poisonintheeye')
-    //          {
-    //             let buttonMesage = {
-    //                 "recipient": {
-    //                     "id": webhook_event.sender.id
-    //                 },
-    //                 "message":{
-    //                     "text":`\n\n1.Wash the eye with the warm water.\n\n2. Do not touch or rup the eye\.\n\n3.Use sunglassess to reduce the contact of sun light and the eye.`
-    //                 }
+    else if(userInput == 'poisonintheeye' || userButton == 'poisonintheeye')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`\n\n1.Wash the eye with the warm water.\n\n2. Do not touch or rup the eye\.\n\n3.Use sunglassess to reduce the contact of sun light and the eye.`
+                    }
 
 
-    //         }
-    //         requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-    //             ).then(response => {
-    //                 console.log(response)
-    //             }).fail(error => {
-    //                 console.log(error)
-    //             })  
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
             
 
-    //     }//poisonintheeye end
+        }//poisonintheeye end
 
-    // else if(userInput == 'insectbite' || userButton == 'insectbite')
-    //          {
-    //             let buttonMesage = {
-    //                 "recipient": {
-    //                     "id": webhook_event.sender.id
-    //                 },
-    //                 "message":{
-    //                     "text":`\n\n1.Remove the part of insect if it still avaible on the skin\n\n2.Wash it with water.\n\n3.Press it with ice or cold water`
-    //                 },
+    else if(userInput == 'insectbite' || userButton == 'insectbite')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`\n\n1.Remove the part of insect if it still avaible on the skin\n\n2.Wash it with water.\n\n3.Press it with ice or cold water`
+                    },
                 
 
 
-    //         }
-    //         requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-    //             ).then(response => {
-    //                 console.log(response)
-    //             }).fail(error => {
-    //                 console.log(error)
-    //             })  
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
             
 
-    //     } //bugbite end
+        } //bugbite end
 
-    // else if(userInput == 'boneinjury' || userButton == 'boneinjury'){
-    //             let buttonMesage = {
-    //                 "recipient": {
-    //                     "id": webhook_event.sender.id
-    //                 },
-    //                 "message":{
-    //                     "attachment": {
-    //                         "type": "template",
-    //                         "payload": {
-    //                             "template_type": "generic",
-    //                             "elements": [
-    //                                 {
-    //                                     "title": "Choose your injury!",
-    //                                     "image_url": "https://cdn.24.co.za/files/Cms/General/d/5259/ea5f47648615427182386d541d1dc1ea.jpg",
-    //                                     "subtitle": "Please get proper healthcare even after the treatment!.",
-    //                                     "default_action": {
-    //                                         "type": "web_url",
-    //                                         "url": "https://petersfancybrownhats.com/view?item=103",
-    //                                         "webview_height_ratio": "tall",
-    //                                     },
-    //                                     "buttons": [
-    //                                         {
-    //                                             "type": "postback",                                               
-    //                                             "title": "Bone fracture:",
-    //                                             "payload": "bonefracture:"
-    //                                         },
-    //                                         {
-    //                                             "type": "postback",                                               
-    //                                             "title": "About Bone fracture",
-    //                                             "payload": "aboutbonefracture:"
-    //                                         },
+    else if(userInput == 'boneinjury' || userButton == 'boneinjury'){
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "attachment": {
+                            "type": "template",
+                            "payload": {
+                                "template_type": "generic",
+                                "elements": [
+                                    {
+                                        "title": "Choose your injury!",
+                                        "image_url": "https://cdn.24.co.za/files/Cms/General/d/5259/ea5f47648615427182386d541d1dc1ea.jpg",
+                                        "subtitle": "Please get proper healthcare even after the treatment!.",
+                                        "default_action": {
+                                            "type": "web_url",
+                                            "url": "https://petersfancybrownhats.com/view?item=103",
+                                            "webview_height_ratio": "tall",
+                                        },
+                                        "buttons": [
+                                            {
+                                                "type": "postback",                                               
+                                                "title": "Bone fracture:",
+                                                "payload": "bonefracture:"
+                                            },
+                                            {
+                                                "type": "postback",                                               
+                                                "title": "About Bone fracture",
+                                                "payload": "aboutbonefracture:"
+                                            },
 
                                              
-    //                                     ]
-    //                                 },
+                                        ]
+                                    },
 
 
-    //                                {
-    //                                     "title": "Choose your injury!",
-    //                                     "image_url": "https://www.summitmedicalgroup.com/media/db/relayhealth-images/fingdisl_3.jpg",
-    //                                     "subtitle": "Please get proper healthcare even after the treatment!",
-    //                                     "default_action": {
-    //                                         "type": "web_url",
-    //                                         "url": "https://petersfancybrownhats.com/view?item=103",
-    //                                         "webview_height_ratio": "tall",
-    //                                     },
-    //                                     "buttons": [
-    //                                         {
-    //                                             "type": "postback",
-    //                                             "title": "Bone dislocation",
-    //                                             "payload": "bonedislocation"
-    //                                         },
-    //                                          {
-    //                                             "type": "postback",                                               
-    //                                             "title": "About Bone Dislocation",
-    //                                             "payload": "aboutbonedislocation"
-    //                                         },
-    //                                     ]
-    //                                 },
+                                   {
+                                        "title": "Choose your injury!",
+                                        "image_url": "https://www.summitmedicalgroup.com/media/db/relayhealth-images/fingdisl_3.jpg",
+                                        "subtitle": "Please get proper healthcare even after the treatment!",
+                                        "default_action": {
+                                            "type": "web_url",
+                                            "url": "https://petersfancybrownhats.com/view?item=103",
+                                            "webview_height_ratio": "tall",
+                                        },
+                                        "buttons": [
+                                            {
+                                                "type": "postback",
+                                                "title": "Bone dislocation",
+                                                "payload": "bonedislocation"
+                                            },
+                                             {
+                                                "type": "postback",                                               
+                                                "title": "About Bone Dislocation",
+                                                "payload": "aboutbonedislocation"
+                                            },
+                                        ]
+                                    },
 
                                                                  
                                     
-    //                              ]
-    //                         }
-    //                     }
+                                 ]
+                            }
+                        }
                     
-    //                 }
-    //             };
+                    }
+                };
 
-    //             requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-    //             ).then(response => {
-    //                 console.log(response)
-    //             }).fail(error => {
-    //                 console.log(error)
-    //             })
+                requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })
 
-    //         }//bonefracture end
+            }//bonefracture end
 
-    // else if(userInput == 'bonefracture' || userButton == 'bonefracture')
-    //          {
-    //             let buttonMesage = {
-    //                 "recipient": {
-    //                     "id": webhook_event.sender.id
-    //                 },
-    //                 "message":{
-    //                     "text":`\n\n1.Use bandage if the wound is bleeding\n\n2.Make user that the limb which has the wound does not move\n\n3.Press the ice on the wound`
-    //                 }
+    else if(userInput == 'bonefracture' || userButton == 'bonefracture')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`\n\n1.Use bandage if the wound is bleeding\n\n2.Make user that the limb which has the wound does not move\n\n3.Press the ice on the wound`
+                    }
 
 
-    //         }
-    //         requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-    //             ).then(response => {
-    //                 console.log(response)
-    //             }).fail(error => {
-    //                 console.log(error)
-    //             })  
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
             
 
-    //     }//brokenbone end
+        }//brokenbone end
 
-    // else if(userInput == 'bonedisclocation' || userButton == 'bonedisclocation')
-    //          {
-    //             let buttonMesage = {
-    //                 "recipient": {
-    //                     "id": webhook_event.sender.id
-    //                 },
-    //                 "message":{
-    //                     "text":`\n\n1. Do not press or relocate the wound.\n\n2. Press the wounded area with a pack of ice\n\n3. Use painkiller if necessary.`
-    //                 }
+    else if(userInput == 'bonedisclocation' || userButton == 'bonedisclocation')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`\n\n1. Do not press or relocate the wound.\n\n2. Press the wounded area with a pack of ice\n\n3. Use painkiller if necessary.`
+                    }
 
 
-    //         }
-    //         requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-    //             ).then(response => {
-    //                 console.log(response)
-    //             }).fail(error => {
-    //                 console.log(error)
-    //             })  
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
             
 
-    //     } //bonedisclocation end
+        } //bonedisclocation end
 
        
 
-    // else if(userInput == 'emergency' || userButton == 'emergency')
-    //          {
-    //             let buttonMesage = {
-    //                 "recipient": {
-    //                     "id": webhook_event.sender.id
-    //                 },
-    //                "message": { 
-    //             "attachment" : {
-    //                 "type" : "template",
-    //                 "payload": {
-    //                     "template_type": "button",
-    //                     "text": "Emergency Treatment",
-    //                     "buttons": [
-    //                     {
-    //                         "type": "postback",
-    //                         "title": "Drowning",
-    //                         "payload": "drowning"
-    //                     },
+    else if(userInput == 'emergency' || userButton == 'emergency')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                   "message": { 
+                "attachment" : {
+                    "type" : "template",
+                    "payload": {
+                        "template_type": "button",
+                        "text": "Emergency Treatment",
+                        "buttons": [
+                        {
+                            "type": "postback",
+                            "title": "Drowning",
+                            "payload": "drowning"
+                        },
 
-    //                      {
-    //                         "type": "postback",
-    //                         "title": "Snake Bite",
-    //                         "payload": "snakebite"
-    //                     },
+                         {
+                            "type": "postback",
+                            "title": "Snake Bite",
+                            "payload": "snakebite"
+                        },
 
-    //                       {
-    //                         "type": "postback",
-    //                         "title": "CPR",
-    //                         "payload": "cpr"
-    //                     },
-
-
+                          {
+                            "type": "postback",
+                            "title": "CPR",
+                            "payload": "cpr"
+                        },
 
 
-    //                     ]
-    //                 }
-    //             }
+
+
+                        ]
+                    }
+                }
      
-    //          }
+             }
 
 
-    //         }
-    //         requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-    //             ).then(response => {
-    //                 console.log(response)
-    //             }).fail(error => {
-    //                 console.log(error)
-    //             })     
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })     
 
             
-    //            }//emergency
+               }//emergency
 
 
-    //       else if(userInput == 'aboutnosebleed:' || userButton == 'aboutnosebleed:')
-    //          {
-    //             let buttonMesage = {
-    //                 "recipient": {
-    //                     "id": webhook_event.sender.id
-    //                 },
-    //                 "message":{
-    //                     "text":`Nose bleeding can occur due to the sudden weather changes or due to the concussion. Though it is not lethal, if the blood flow inside the nose, it can create trouble in breathing.`
-    //                 },
+          else if(userInput == 'aboutnosebleed:' || userButton == 'aboutnosebleed:')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`Nose bleeding can occur due to the sudden weather changes or due to the concussion. Though it is not lethal, if the blood flow inside the nose, it can create trouble in breathing.`
+                    },
                 
 
 
-    //         }
-    //         requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-    //             ).then(response => {
-    //                 console.log(response)
-    //             }).fail(error => {
-    //                 console.log(error)
-    //             })  
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
             
 
-    //     }//about nose bleed end
+        }//about nose bleed end
 
-    //      else if(userInput == 'aboutoverbleeding' || userButton == 'aboutoverbleeding')
-    //          {
-    //             let buttonMesage = {
-    //                 "recipient": {
-    //                     "id": webhook_event.sender.id
-    //                 },
-    //                 "message":{
-    //                     "text":`Overbleeding is the injury where the wound cannot or hard to be stopped from bleeding. This is lethal and can cause blood loss`
-    //                 },
+         else if(userInput == 'aboutoverbleeding' || userButton == 'aboutoverbleeding')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`Overbleeding is the injury where the wound cannot or hard to be stopped from bleeding. This is lethal and can cause blood loss`
+                    },
                 
 
 
-    //         }
-    //         requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-    //             ).then(response => {
-    //                 console.log(response)
-    //             }).fail(error => {
-    //                 console.log(error)
-    //             })  
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
             
 
-    //     }//about over bleeding end
+        }//about over bleeding end
 
-    //      else if(userInput == 'aboutnormalwound:' || userButton == 'aboutnormalwound:')
-    //          {
-    //             let buttonMesage = {
-    //                 "recipient": {
-    //                     "id": webhook_event.sender.id
-    //                 },
-    //                 "message":{
-    //                     "text":`Normal wound is the normal injury where it is not lethal but can result in infection if not treated well.`
-    //                 },
+         else if(userInput == 'aboutnormalwound:' || userButton == 'aboutnormalwound:')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`Normal wound is the normal injury where it is not lethal but can result in infection if not treated well.`
+                    },
                 
 
 
-    //         }
-    //         requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-    //             ).then(response => {
-    //                 console.log(response)
-    //             }).fail(error => {
-    //                 console.log(error)
-    //             })  
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
             
 
-    //     }//about bleeding wound end
+        }//about bleeding wound end
 
-    //      else if(userInput == 'aboutsteamburn' || userButton == 'aboutsteamburn')
-    //          {
-    //             let buttonMesage = {
-    //                 "recipient": {
-    //                     "id": webhook_event.sender.id
-    //                 },
-    //                 "message":{
-    //                     "text":`Steam burn can be caused by hot water or oil. Can be lethal depending on the wound.`
-    //                 },
+         else if(userInput == 'aboutsteamburn' || userButton == 'aboutsteamburn')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`Steam burn can be caused by hot water or oil. Can be lethal depending on the wound.`
+                    },
                 
 
 
-    //         }
-    //         requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-    //             ).then(response => {
-    //                 console.log(response)
-    //             }).fail(error => {
-    //                 console.log(error)
-    //             })  
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
             
 
-    //     }//steamburn end
+        }//steamburn end
 
-    //     else if(userInput == 'aboutelectricburn' || userButton == 'aboutelectricburn')
-    //          {
-    //             let buttonMesage = {
-    //                 "recipient": {
-    //                     "id": webhook_event.sender.id
-    //                 },
-    //                 "message":{
-    //                     "text":`Electric burn can occured when strong electric current make contact with the skin. Can be lethal depending on the wound.`
-    //                 },
+        else if(userInput == 'aboutelectricburn' || userButton == 'aboutelectricburn')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`Electric burn can occured when strong electric current make contact with the skin. Can be lethal depending on the wound.`
+                    },
                 
 
 
-    //         }
-    //         requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-    //             ).then(response => {
-    //                 console.log(response)
-    //             }).fail(error => {
-    //                 console.log(error)
-    //             })  
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
             
 
-    //     }//about electricalburn end
+        }//about electricalburn end
 
-    //     else if(userInput == 'aboutchemicalburn' || userButton == 'aboutchemicalburn')
-    //          {
-    //             let buttonMesage = {
-    //                 "recipient": {
-    //                     "id": webhook_event.sender.id
-    //                 },
-    //                 "message":{
-    //                     "text":`Chemical burn occured when the skin make contact with chemical substances which is toxic with skin. Can be letah depending on the wound. `
-    //                 }
+        else if(userInput == 'aboutchemicalburn' || userButton == 'aboutchemicalburn')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`Chemical burn occured when the skin make contact with chemical substances which is toxic with skin. Can be letah depending on the wound. `
+                    }
                 
 
 
-    //         }
-    //         requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-    //             ).then(response => {
-    //                 console.log(response)
-    //             }).fail(error => {
-    //                 console.log(error)
-    //             })  
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
             
 
-    //     }//about chemical burn end
+        }//about chemical burn end
 
-    //     else if(userInput == 'aboutoverdose' || userButton == 'aboutoverdose')
-    //          {
-    //             let buttonMesage = {
-    //                 "recipient": {
-    //                     "id": webhook_event.sender.id
-    //                 },
-    //                 "message":{
-    //                     "text":`Overdose occured when a person take drugs more than he should be. Can be lethal`
-    //                 },
+        else if(userInput == 'aboutoverdose' || userButton == 'aboutoverdose')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`Overdose occured when a person take drugs more than he should be. Can be lethal`
+                    },
                 
 
 
-    //         }
-    //         requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-    //             ).then(response => {
-    //                 console.log(response)
-    //             }).fail(error => {
-    //                 console.log(error)
-    //             })  
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
             
 
-    //     }//about drug toxicity end
+        }//about drug toxicity end
 
-    //     else if(userInput == 'aboutpoisonintheeye' || userButton == 'aboutpoisonintheeye')
-    //          {
-    //             let buttonMesage = {
-    //                 "recipient": {
-    //                     "id": webhook_event.sender.id
-    //                 },
-    //                 "message":{
-    //                     "text":`This occured when toxic material enter the eye. Can be lethal if did not recieve treatment immediately `
-    //                 },
+        else if(userInput == 'aboutpoisonintheeye' || userButton == 'aboutpoisonintheeye')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`This occured when toxic material enter the eye. Can be lethal if did not recieve treatment immediately `
+                    },
                 
 
 
-    //         }
-    //         requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-    //             ).then(response => {
-    //                 console.log(response)
-    //             }).fail(error => {
-    //                 console.log(error)
-    //             })  
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
             
 
-    //     }//about poisonintheeye end
+        }//about poisonintheeye end
 
-    //         else if(userInput == 'aboutinsectbite' || userButton == 'aboutinsectbite:')
-    //          {
-    //             let buttonMesage = {
-    //                 "recipient": {
-    //                     "id": webhook_event.sender.id
-    //                 },
-    //                 "message":{
-    //                     "text":`This occured when an insect which has poison bite. It is not lethal`
-    //                 },
+            else if(userInput == 'aboutinsectbite' || userButton == 'aboutinsectbite:')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`This occured when an insect which has poison bite. It is not lethal`
+                    },
                 
 
 
-    //         }
-    //         requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-    //             ).then(response => {
-    //                 console.log(response)
-    //             }).fail(error => {
-    //                 console.log(error)
-    //             })  
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
             
 
-    //     }//about bug bite end
+        }//about bug bite end
 
-    //      else if(userInput == 'aboutbonefracture' || userButton == 'aboutbonefracture')
-    //          {
-    //             let buttonMesage = {
-    //                 "recipient": {
-    //                     "id": webhook_event.sender.id
-    //                 },
-    //                 "message":{
-    //                     "text":`This occured when the bone break or get fractureed. It is not lethal`
-    //                 },
+         else if(userInput == 'aboutbonefracture' || userButton == 'aboutbonefracture')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`This occured when the bone break or get fractureed. It is not lethal`
+                    },
                 
 
 
-    //         }
-    //         requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-    //             ).then(response => {
-    //                 console.log(response)
-    //             }).fail(error => {
-    //                 console.log(error)
-    //             })  
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })  
             
 
-    //     }//about brokenbone end
+        }//about brokenbone end
 
-    //         else if(userInput == 'aboutbonedislocation' || userButton == 'aboutbonedislocation')
-    //          {
-    //             let buttonMesage = {
-    //                 "recipient": {
-    //                     "id": webhook_event.sender.id
-    //                 },
-    //                 "message":{
-    //                     "text":`This occured when one of the bone move or slip out from the junction of two bones. It is not lethal`
-    //                 },
+            else if(userInput == 'aboutbonedislocation' || userButton == 'aboutbonedislocation')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`This occured when one of the bone move or slip out from the junction of two bones. It is not lethal`
+                    },
                 
 
 
-    //         }
-    //         requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-    //             ).then(response => {
-    //                 console.log(response)
-    //             }).fail(error => {
-    //                 console.log(error)
-    //             })
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })
             
 
-    //     }//about bonedislocaton end
+        }//about bonedislocaton end
 
-    //      else if(userInput == 'drowning' || userButton == 'drowning')
-    //          {
-    //             let buttonMesage = {
-    //                 "recipient": {
-    //                     "id": webhook_event.sender.id
-    //                 },
-    //                 "message":{
-    //                     "text":`1.Try to wake up the patient.\n\n2. Ensure that the patient can breath easily.\n\n3.Perform CPR`
-    //                 },
+         else if(userInput == 'drowning' || userButton == 'drowning')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`1.Try to wake up the patient.\n\n2. Ensure that the patient can breath easily.\n\n3.Perform CPR`
+                    },
                 
 
 
-    //         }
-    //         requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-    //             ).then(response => {
-    //                 console.log(response)
-    //             }).fail(error => {
-    //                 console.log(error)
-    //             })
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })
             
 
-    //     }//drowning end
+        }//drowning end
 
-    //      else if(userInput == 'snakebite' || userButton == 'snakebite')
-    //          {
-    //             let buttonMesage = {
-    //                 "recipient": {
-    //                     "id": webhook_event.sender.id
-    //                 },
-    //                 "message":{
-    //                     "text":`1. Try to calm the patient\n\n2.If it is difficult, do not catch or identify the snake\n3.Wrape bandage around the wound.\n\n4.Use elastic material if bandage is not available\n5.Make sure that the limb with the wound cannot move.\n\n6. Do not wash the wound with water. `
-    //                 },
+         else if(userInput == 'snakebite' || userButton == 'snakebite')
+             {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`1. Try to calm the patient\n\n2.If it is difficult, do not catch or identify the snake\n3.Wrape bandage around the wound.\n\n4.Use elastic material if bandage is not available\n5.Make sure that the limb with the wound cannot move.\n\n6. Do not wash the wound with water. `
+                    },
                 
 
 
-    //         }
-    //         requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-    //             ).then(response => {
-    //                 console.log(response)
-    //             }).fail(error => {
-    //                 console.log(error)
-    //             })
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })
             
 
-    //      }//snakebite end
+         }//snakebite end
 
         
-    //      else if(userInput == "CPR" || userButton == "CPR")
-    //       {
-    //             let buttonMesage = {
-    //                 "recipient": {
-    //                     "id": webhook_event.sender.id
-    //                 },
-    //                 "message":{
-    //                     "text":`1.Place your hand onto the chest of the patient\n\n2.Place one hand on another.\n\n3.Bend forward and press the patient's chest about 2 inches down\n\n4.၊After that reduce the pressure. Do not remove the hand\n\n5.Make sure that the patient can breath easily\n\n6.Squeeze the nose and breath into the mouth of the patient`
-    //                 },
+         else if(userInput == "CPR" || userButton == "CPR")
+          {
+                let buttonMesage = {
+                    "recipient": {
+                        "id": webhook_event.sender.id
+                    },
+                    "message":{
+                        "text":`1.Place your hand onto the chest of the patient\n\n2.Place one hand on another.\n\n3.Bend forward and press the patient's chest about 2 inches down\n\n4.၊After that reduce the pressure. Do not remove the hand\n\n5.Make sure that the patient can breath easily\n\n6.Squeeze the nose and breath into the mouth of the patient`
+                    },
                 
 
 
-    //         }
-    //         requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
-    //             ).then(response => {
-    //                 console.log(response)
-    //             }).fail(error => {
-    //                 console.log(error)
-    //             })
+            }
+            requestify.post(`https://graph.facebook.com/v5.0/me/messages?access_token=${pageaccesstoken}`, buttonMesage
+                ).then(response => {
+                    console.log(response)
+                }).fail(error => {
+                    console.log(error)
+                })
             
 
-    //      }
+         }
 
 
 
