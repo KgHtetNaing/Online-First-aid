@@ -2431,8 +2431,8 @@ app.post('/webhook', (req, res) => {
                                             },
                                              {
                                                 "type": "postback",                                               
-                                                "title": "About Normal Wound:",
-                                                "payload": "aboutnormalwound:"
+                                                "title": "About Normal Wound",
+                                                "payload": "aboutnormalwound"
                                             },
                                         ]
                                     },
