@@ -2236,7 +2236,7 @@ app.post('/webhook', (req, res) => {
                         "id": webhook_event.sender.id
                     },
                     "message":{
-                        "text":`။\n\n1.Exercise at least 30 min a day.\n\n2.Touch with sunlight.\n\n3.Reduce salt and sugar\n\n4.Drink at least two litres of water\n\n5\n\n6,ညတိုင်း ၁၀ နာရီခန့်တွင်အိပ်ရာ၀င်ပါ။ တစ်နေ့အိပ်ချိန် ၇ နာရီမှ ၉နာရီ အတွင်းရှိပါစေ။`
+                        "text":`။\n\n1.Exercise at least 30 min a day.\n\n2.Touch with sunlight.\n\n3.Reduce salt and sugar\n\n4.Drink at least two litres of water\n\n5. Sleep for at least 7 to 9 hoursa a day.`
                     }
 
 
