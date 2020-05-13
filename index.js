@@ -132,7 +132,7 @@ app.post('/webhook', (req, res) => {
                         "buttons": [
                       	 {
            				 "type":"phone_number",
-           				 "title":'အရေးပေါ်ခေါ်ဆိုမှု\n Emergency call',
+           				 "title":'Emergency call \n အရေးပေါ်ခေါ်ဆိုမှု ',
            				 "payload":"+95119"
          				 }, 
 
