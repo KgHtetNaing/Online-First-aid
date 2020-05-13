@@ -2573,12 +2573,12 @@ app.post('/webhook', (req, res) => {
                                             {
                                                 "type": "postback",
                                                 "title": "Eletcirc burn",
-                                                "payload": "electriclburn"
+                                                "payload": "electricburn"
                                             },
                                              {
                                                 "type": "postback",                                               
-                                                "title": "About electric burn:",
-                                                "payload": "aboutelectricburn:"
+                                                "title": "About electric burn",
+                                                "payload": "aboutelectricburn"
                                             },
                                         ]
                                     },
@@ -2743,7 +2743,7 @@ app.post('/webhook', (req, res) => {
                                              {
                                                 "type": "postback",                                               
                                                 "title": "About Poison in the eye:",
-                                                "payload": "aboutpoisonintheeye:"
+                                                "payload": "aboutpoisonintheeye"
                                             },
                                         ]
                                     },
@@ -2768,7 +2768,7 @@ app.post('/webhook', (req, res) => {
                                              {
                                                 "type": "postback",                                               
                                                 "title": "About Insect bite",
-                                                "payload": "aboutinsectbite:"
+                                                "payload": "aboutinsectbite"
                                             },
                                         ]
                                     },
@@ -2879,13 +2879,13 @@ app.post('/webhook', (req, res) => {
                                         "buttons": [
                                             {
                                                 "type": "postback",                                               
-                                                "title": "Bone fracture:",
-                                                "payload": "bonefracture:"
+                                                "title": "Bone fracture",
+                                                "payload": "bonefracture"
                                             },
                                             {
                                                 "type": "postback",                                               
                                                 "title": "About Bone fracture",
-                                                "payload": "aboutbonefracture:"
+                                                "payload": "aboutbonefracture"
                                             },
 
                                              
@@ -2956,7 +2956,7 @@ app.post('/webhook', (req, res) => {
 
         }//brokenbone end
 
-    else if(userInput == 'bonedisclocation' || userButton == 'bonedisclocation')
+    else if(userInput == 'bonedislocation' || userButton == 'bonedislocation')
              {
                 let buttonMesage = {
                     "recipient": {
@@ -3217,7 +3217,7 @@ app.post('/webhook', (req, res) => {
 
         }//about poisonintheeye end
 
-            else if(userInput == 'aboutinsectbite' || userButton == 'aboutinsectbite:')
+            else if(userInput == 'aboutinsectbite' || userButton == 'aboutinsectbite')
              {
                 let buttonMesage = {
                     "recipient": {
