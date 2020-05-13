@@ -3033,7 +3033,7 @@ app.post('/webhook', (req, res) => {
                }//emergency
 
 
-          else if(userInput == 'aboutnosebleed:' || userButton == 'aboutnosebleed:')
+          else if(userInput == 'aboutnosebleed' || userButton == 'aboutnosebleed')
              {
                 let buttonMesage = {
                     "recipient": {
@@ -3079,7 +3079,7 @@ app.post('/webhook', (req, res) => {
 
         }//about over bleeding end
 
-         else if(userInput == 'aboutnormalwound:' || userButton == 'aboutnormalwound:')
+         else if(userInput == 'aboutnormalwound' || userButton == 'aboutnormalwound')
              {
                 let buttonMesage = {
                     "recipient": {
