@@ -1996,7 +1996,7 @@ app.post('/webhook', (req, res) => {
 
          //Welcome end
 
-            else if(userInput == 'tip' || userButton == 'tip'){
+            else if(userInput == 'tips' || userButton == 'tips'){
                 let buttonMesage = {
                     "recipient": {
                         "id": webhook_event.sender.id
@@ -2716,8 +2716,8 @@ app.post('/webhook', (req, res) => {
                                             },
                                              {
                                                 "type": "postback",                                               
-                                                "title": "About Overdose:",
-                                                "payload": "aboutoverdose:"
+                                                "title": "About Overdose",
+                                                "payload": "aboutoverdose"
                                             },
 
                                              
